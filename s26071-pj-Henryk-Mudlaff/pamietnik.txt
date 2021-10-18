@@ -1,0 +1,5 @@
+2021-10-09
+Na dzisiejszych zajeciach z UKOS nauczylem sie:
+- Podstaw dzialania serwisu github
+- generowania klucza ssh poprzez terminal tekstowy 
+- klonowania repozytorium poprzez terminal tekstowy
