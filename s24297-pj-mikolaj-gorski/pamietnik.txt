@@ -1,0 +1,3 @@
+10.09.2021
+Na dzisiejszych ćwiczeniach nauczyłem się do czego złużą katalogi w głównym systemie plików na Ubulntu linux oraz w jaki sposób połączyć githuba oraz wgrywać pliki na repozytorium.
+
