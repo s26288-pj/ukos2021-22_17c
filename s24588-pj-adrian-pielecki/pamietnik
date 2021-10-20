@@ -4,3 +4,30 @@ Na dzisiejszych zajeciach nauczylem sie:
 - jak stawiac wirtualna maszyne
 - podstawowych polecen w linuxie
 - tworzenia i wysylania na githuba
+
+2021-10-20
+
+wykonalem zadania z ukos_z1.png nauczylem sie:
+
+- poslugiwania poleceniami ls, pwd, cd, rm, rmdir, mkdir... oraz ich parametrow
+- tworzenia plikow oraz ich usuwania
+- nauczylem sie wchodzic to konsoli za pomoca ctrl alt f1
+
+wykonalem zadania z ukos_z2.png nauczylem sie:
+
+- jak wykorzystywac polecenie ls z parametrem -l
+- nauczylem sie poslugiwac poleceniem chmod oraz umask
+- zrozumialem czym rozni sie > od >> oraz jak umask zmienia maske
+
+wykonalem zadania z ukos_z3.png nauczylem sie:
+
+- polecenia ls -a
+- do czego sluzy |, dzieki ktorej mozna laczyc polecenia w jeden ciag 
+- stosuje polecenie ps do sprawdzania aktulanie przetawrzanych procesow oraz kill do ich wylaczania
+- posluguje sie pgrep w celu znalezienia wszyustkich procesow np. bash
+- za pomoca ps -u root wyswietlam wszystkie procesy uzytkownika root
+- ps -e pokazuje wszystkie procesy
+- znam roznice pomiedzy ctrl+c a ctrl+d
+- wykorzystuje ctrl+z do zatrzymywania oraz bg (bg do odblokwania) i fg (fg odblokowuje oraz jednoczesnie uruchamia program tam gdzie skonczylismy )
+- polecenie jobs pokazuje wszysatkie wstrzymane programy
+
