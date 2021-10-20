@@ -1,0 +1,58 @@
+Zadanie 1
+1. Uruchom terminal.
+
+2. Wyswietl zawartosc aktualnego katalogu.
+ubuntu@bss-ubu1804:~$ ls 
+Desktop    Downloads  Pictures  repo       testy
+Documents  Music      Public    Templates  Videos
+
+3. Sprawdz gdzie aktualnie sie znajdujesz. Porownaj z tym co mozesz zobaczyc w interfejsie graficznym.
+ubuntu@bss-ubu1804:~$ pwd
+/home/ubuntu
+Interfejs graficzny wyswietla ta sama sciezke: /home/ubuntu
+
+4. Przejdz do katalogu Pulpit za pomoca sciezki wzglednej.
+ubuntu@bss-ubu1804:~$ cd Desktop
+ubuntu@bss-ubu1804:~/Desktop$ 
+
+5. Sprawdz gdzie jestes.
+ubuntu@bss-ubu1804:~/Desktop$ pwd
+/home/ubuntu/Desktop
+
+6. Wyswietl zawartosc biezacego katalogu.
+ubuntu@bss-ubu1804:~/Desktop$ ls
+adding-packages-permanently-info.txt  passwords-info.txt
+
+7.Zobacz, czy przechodzac do tego katalogu w sposob graficzny otrzymamy to samo?
+Tak, przechodzac w sposob graficzny otrzymujemy ta sama sciezke wzgledna oraz zawartosc pliku.
+
+8.Wyswietl zawartosc swojego katalogu domowego bez przechodzenia do niego (ls z odpowiednim parametrem).
+ubuntu@bss-ubu1804:~/Desktop$ ls /home
+ubuntu  vagrant
+
+9. Przejdz do katalogu Obrazy w twoim katalogu domowym za pomoca sciezki wzglednej.
+ubuntu@bss-ubu1804:~/Desktop$ cd ../Pictures
+ubuntu@bss-ubu1804:~/Pictures$ 
+
+10.Sprawdz gdzie jestes.
+ubuntu@bss-ubu1804:~/Pictures$ pwd
+/home/ubuntu/Pictures
+
+11.Zobacz do jakiego katalogu przejdziesz uzywajac sciezki ././././././
+ubuntu@bss-ubu1804:~/Pictures$ cd ././././././
+ubuntu@bss-ubu1804:~/Pictures$ 
+Pozostaje w tym samym folderze.
+
+12. Przejdz do swojego katalogu domowego za pomoca sciezki bezwzglednej.
+ubuntu@bss-ubu1804:~/Pictures$ cd /home
+
+13. Zobacz co sie stanie jak wpiszesz komende 'cd /root'. Jak juz to zrobisz, zastanow co sie stalo.
+ubuntu@bss-ubu1804:/home$ cd /root
+bash: cd: /root: Permission denied
+Konsola odmawia mi dostepu do folderu root. Uprawnienia do pliku ma tylko uzytkownik, ktory stworzyl folder.
+ubuntu@bss-ubu1804:/home$ ls -l /
+...
+drwx------   5 root   root        4096 Oct 19 18:44 root
+
+14.Zobacz co sie stanie, jesli wcisniesz kombinacje klawiszy Ctrl+Alt+F1.
+Nastepuje wylogowanie z systemu.
