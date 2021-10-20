@@ -1,0 +1,6 @@
+2021-10-20
+
+Drogi pamietniczku na dzisiejszych zajeciach nauczylem sie: 
+- jak wyglada struktura katalogow systemu linux
+- jak skonfigurowac wirtualna maszyne
+- kilka podstawowych komend do pracy z linuxem
