@@ -1,0 +1,6 @@
+2021-10-18
+Moj drogi pamietniczku dzis nauczylem sie jak:
+- stworzyc katalog z terminala 'mkdir'
+- jak stworzyc plik .txt 'vim nazwapliku.txt'
+- jak edytowac stworzony plik .txt 'i'
+- jak zapisac stworzony plik .txt 'esc-:wq'
