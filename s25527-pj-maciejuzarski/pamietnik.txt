@@ -1,0 +1,5 @@
+Drogi pamietniczku,
+na dzisiejszych zajeciach z UKOS, nauczylem sie podstawowych koment do poruszania sie po systemie Ubuntu za pomoca terminala;
+nauczylem sie rowniez, jak stworzyc repozytorium oraz jak ' wypchnac' swoje pliki lokalne do repozytorium zdalnego za pomoca Git-a;
+do zobaczenia na nastepnych zajeciach pamietniczku,
+Maciej 9.10.2021
