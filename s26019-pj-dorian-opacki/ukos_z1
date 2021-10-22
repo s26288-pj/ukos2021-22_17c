@@ -1,0 +1,29 @@
+1. 
+	1. /home/ubuntu: ls -l        	 * Desktop, Documents, Downloads, Music etc.
+	2. /home/ubuntu: pwd		* /home/ubuntu
+	3. /home/ubuntu: cd Desktop	
+	4. /home/ubuntu/Desktop: pwd		*/home/ubuntu/Desktop
+	5. /home/ubuntu/Desktop: ls -		*adding-packages-permanently-info.txt  passwords-info.txt 
+	6. * Tak
+	7. /home/ubuntu/Desktop: ls -p ~	* Desktop, Documents, Downloads, Music etc.
+	8. /home/ubuntu/Desktop: cd ../Pictures	*home/ubuntu/Pictures
+	9. /home/ubuntu/Pictures: pwd 		*/home/ubuntu/Pictures
+	10. * Zostane w tym samym katalogu
+	11. /home/ubuntu/Pictures: cd /home/ubuntu	*/home/ubuntu/
+	12. * Permission denied
+	13. * Zostanę wylogowany
+2.
+	1. /home/ubuntu: mkdir ukos  	* /home/ubuntu
+	2. /home/ubuntu: cd ukos	* /home/ubuntu/ukos
+	3. /home/ubuntu/ukos: mkdir klamka katalog
+	4. /home/ubuntu/ukos: cd katalog
+	5. /home/ubuntu/ukos/katalog: mkdir katalog2 katalog3
+	6. /home/ubuntu/ukos/katalog: cd ../klamka
+	7. /home/ubuntu/ukos/klamka: touch zajęcia2.txt zajęcia2.log inny.txt nowy.txt
+	8. /home/ubuntu/ukos/klamka: mkdir ukos/to/jest/dluga/nazwa
+	9. /home/ubuntu/ukos/klamka: mkdir -p ../to/jest/dluga/nazwa
+	10. /home/ubuntu/ukos/klamka: rm *.txt
+	11. /home/ubuntu/ukos/klamka: cd ../katalog
+	12. /home/ubuntu/ukos/katalog: rmdir katalog2
+	13. /home/ubuntu/ukos/katalog: cd ../
+	14. /home/ubuntu/ukos: rm -rf 
