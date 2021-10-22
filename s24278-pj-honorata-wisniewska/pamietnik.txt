@@ -1,0 +1,10 @@
+Pamietnik
+
+2021-10-09
+
+Na dzisiejszych zajeciach nauczylam sie:
+- czym jest wirtualna maszyna i jak uruchomic jej obraz
+- czym sa poszczegolne polecenia systemu Linux i gdzie ich szukac operujac w terminalu
+- w jaki spozob zalozyc konto na Github
+- w jaki sposob zalozyc repozytorium i zforkowac sie pod repozytorium innego uzytkownika na Github
+- jak stworzyc foldery, pliki i zpushowac je do Github.
