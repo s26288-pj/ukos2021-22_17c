@@ -1,1 +1,4 @@
-siema
+Na zajęciach nauczyłem się: 
+-VM
+-Github
+-Git
