@@ -1,0 +1,28 @@
+1)
+urchoienie terminala
+
+2) polecenie ls
+
+3) polecenie pwd
+
+4) polecenie cd Desktop
+
+5) polecenie pwd
+
+6) polecenie ls
+
+7) tak, otrzymamy to samo
+
+8) polecenie ls ~
+
+9) polecenie cd ../Pictures
+
+10) polecenie pwd
+
+11) pozostane w tym samym folderze
+
+12) polecenie cd ~
+
+13) nie mam dostepu do folderu, ponieważ nie mam uprawnień su
+
+14) wylogowanie
