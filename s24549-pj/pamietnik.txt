@@ -33,3 +33,22 @@ Drogi pamietniczku, dzis robilem zadanie ukos_z1:
 - wcisnalem CTRL+ALT+F1 - dalem sie na to nabrac za pierwszym razem, teraz gdy Prowadzacy mi wytlumaczyl co to robi
 	wrocilem do interfejsu graficznego wciskajac ALT+F7
 
+FOLDERY
+- wyszukałem jak stworzyć jednym poleceniem wiele katalogów
+- przeszedlem na Desktop/
+- wpisałem "mkdir -p ukos/{klamka/ katalog/{katalog2/ katalog3/}}"
+- to było zle wpisane polecenie, usunalem katalogi recznie i wpisalem "mkdir -p ukos/{klamka,katalog/{katalog2,katalog3}}"
+- tym razem sie udalo
+- probowalem podobnie stworzyc pliki ale sie nie udalo:
+	touch ukos/klamka/zajecia2.txt zajecia2.log inny.txt nowy.txt
+	touch ukos/klamka/{zajecia2.txt zajecia2.log inny.txt nowy.txt}
+	touch ukos/klamka/zajecia2.txt,zajecia2.log,inny.txt,nowy.txt
+- usunalem pliki i stworzylem je pojedynczo "touch ukos/klamka/nazwapliku.rozszerzenie"
+- cd ukos/
+- "mkdir -p to/jest/dluga/nazwa" - stworzyl siatke folderow
+- "touch to/jest/dluga/nazwa/dane.txt"
+- "rm klamka/*.txt"
+- "rmdir katalog/katalog2"
+- "tree" - zgadza sie
+- "rmdir klamka/ --ignore-fail-on-non-empty" - nie dziala, sprawdzilem "tree"
+- "rm -rf klamka/" - to zadzialalo
