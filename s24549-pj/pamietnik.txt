@@ -4,3 +4,32 @@ Moj drogi pamietniczku dzis nauczylem sie jak:
 - jak stworzyc plik .txt 'vim nazwapliku.txt'
 - jak edytowac stworzony plik .txt 'i'
 - jak zapisac stworzony plik .txt 'esc-:wq'
+
+2021-10-24
+Drogi pamietniczku, dzis robilem zadanie ukos_z1:
+- uruchomilem terminal
+- wyswietlilem zawartosc aktualnego katalogu "ls"
+- przeszedlem do repo "cd repo/"
+- wrocilem do katalogu nadrzednego "cd .."
+- porownujac "ls" z interfacem graficznym, wiecej widze w folderze poniewaz pokazuje mi foldery i pliki
+- wiecej w terminalu moge zobaczyc wpisujac "ls -la"
+- przy "ls -a" tez widze wiecej plikow ale nie w formie listy od gory do dolu
+- wszedłem do folderu Desktop "cd Desktop/"
+- sprawdzam gdzie jestem "ls" "tree"
+- w sposobie graficznym widze te same pliki
+- z tej lokalizacji wpisuje "ls /home/"
+- zapomnialem sprawdzic gdzie jestem, sprawdzam "pwd" -> /home/ubuntu/Desktop
+- sprawdzam katalogi zeby przejsc do Obrazy "ls /home/ubuntu/
+- przechodze "cd /home/ubuntu/Pictures"
+- przechodzac, po wspisanu "cd /home/ubuntu/P" przypadkiem nacisnalem 2 razy Tab i pokazaly mi 
+	sie 2 podpowiedzi katalogow na P "Pictures/ Public/", przy czym w konsoli zostala powielona niedokonczona komenda
+- calkiem ciekawe
+- sprawdzam gdzie jestem "pwd" "/home/ubuntu/Pictures"
+- uwaga, przechodze "cd ././././././"
+- nic sie nie stalo, zostalem w katalogu Pictures/
+- nie uzywam polskich znakow bo nie wiem czy w vim to nie wywola jakiegos problemu
+- wpisalem "cd /root" i otrzymalem "bash: cd: /root: Permission denied" ale nie wiem dlaczego, czy potrzebuje do tego uprawnien
+	administratora?
+- wcisnalem CTRL+ALT+F1 - dalem sie na to nabrac za pierwszym razem, teraz gdy Prowadzacy mi wytlumaczyl co to robi
+	wrocilem do interfejsu graficznego wciskajac ALT+F7
+
