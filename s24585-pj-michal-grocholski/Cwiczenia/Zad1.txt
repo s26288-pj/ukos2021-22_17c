@@ -1,0 +1,68 @@
+1.	Uruchomiono terminal
+
+2.	ubuntu@bss-ubu1804:~$ ls
+  	Desktop  Documents  Downloads  Music  Pictures  Public  repo  Templates  Videos
+
+3.	ubuntu@bss-ubu1804:~$ pwd
+	/home/ubuntu
+
+	#W interfejsie graficznym też można zobaczyć gdzię się znajdujesz.
+
+4.	ubuntu@bss-ubu1804:~$ cd Desktop/
+
+5.	ubuntu@bss-ubu1804:~/Desktop$ pwd
+	/home/ubuntu/Desktop
+
+6.	ubuntu@bss-ubu1804:~/Desktop$ ls
+	adding-packages-permanently-info.txt  passwords-info.txt
+
+7.	#Tak otrzymamy to samo.
+
+8.	ubuntu@bss-ubu1804:~/Desktop$ ls /home
+	ubuntu  vagrant
+
+9.	ubuntu@bss-ubu1804:~/Desktop$ cd ../Pictures/
+
+10.	ubuntu@bss-ubu1804:~/Pictures$ pwd
+	/home/ubuntu/Pictures
+
+11.	ubuntu@bss-ubu1804:~/Pictures$ ././././././
+	bash: ././././././: Is a directory
+
+	#Wyskakuje coś takiego bash: ././././././: Is a directory.
+
+
+12.	ubuntu@bss-ubu1804:~/Pictures$ cd /home
+	ubuntu@bss-ubu1804:/home$ cd /root
+
+13.	bash: cd: /root: Permission denied
+	
+	#Odmowa dostępu.
+
+14.	#Następuje wylogowanie. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Zad 1.2 Mkidr, cd
+
+ubuntu@bss-ubu1804:~$ mkdir ukos
+ubuntu@bss-ubu1804:~$ cd ukos/
+ubuntu@bss-ubu1804:~/ukos$ mkdir katalog
+ubuntu@bss-ubu1804:~/ukos$ cd katalog/
+ubuntu@bss-ubu1804:~/ukos/katalog$ mkdir katalog2
+ubuntu@bss-ubu1804:~/ukos/katalog$ mkdir katalog3
+ubuntu@bss-ubu1804:~/ukos/katalog$ cd ..
+ubuntu@bss-ubu1804:~/ukos$ mkdir klamka
+ubuntu@bss-ubu1804:~/ukos$ cd klamka/
+ubuntu@bss-ubu1804:~/ukos/klamka$ touch zajęcia2.txt
+ubuntu@bss-ubu1804:~/ukos/klamka$ touch zajęcia2.log
+ubuntu@bss-ubu1804:~/ukos/klamka$ touch inny.txt
+ubuntu@bss-ubu1804:~/ukos/klamka$ touch nowy.txt										#Zakończenie tworzenia wszystkich wymaganych plików.
+ubuntu@bss-ubu1804:~/ukos/klamka$ cd ..
+ubuntu@bss-ubu1804:~/ukos$ mkdir -p ukos/to/jest/dluga/nazwa							 #Uworzenie rodziny katalogów.
+ubuntu@bss-ubu1804:~/ukos$ cd ukos/to/jest/dluga/nazwa
+ubuntu@bss-ubu1804:~/ukos/ukos/to/jest/dluga/nazwa$ touch dane.txt					 #Umieszczenie pliku "dane.txt" w katalogu "nazwa".
+ubuntu@bss-ubu1804:~/ukos/ukos/to/jest/dluga/nazwa$ cd /home/ubuntu/ukos/klamka	 
+ubuntu@bss-ubu1804:~/ukos/klamka$ rm *.txt												 #Usuwanie wszystkich plików z rozszeżeniem txt z katalogu "klamka".
+ubuntu@bss-ubu1804:~/ukos/klamka$ rmdir /home/ubuntu/ukos/katalog/katalog2		 #Usunięcie katalogu "katalog2".
+ubuntu@bss-ubu1804:~/ukos/klamka$ rm -rf /home/ubuntu/ukos/klamka                                     #Usuwanie całego katalogu "klamka" z zawartością.

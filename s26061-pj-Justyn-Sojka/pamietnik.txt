@@ -1,0 +1,7 @@
+22.10.2021
+
+Na dzisiejszych zajeciach nauczylam sie:
+- do czeglo sluza katalogi w glownym systemie plikow na linuxie
+- poznalam i zalozylam konto na git hubie
+
+
