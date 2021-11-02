@@ -3,4 +3,12 @@ W dniu dzisiejszym nauczyłem się:
 -Do czego służą katalogi w glównym systemie linux i gdzie są przechowywane pliki
 -Jak stworzyć i odpalić wirtualna maszynę
 -Jak tworzyc katalogi i pliki w wirtualnej maszynie oraz jak pushnąc je na github
--Kilku komend, które mogę wykorzystać w terminalu na linuxie
+-Kilku komend, które mogę wykorzystać w terminalu na linuxie 
+2021-10-23
+W dniu dzisiejszym :
+-Poznałem komendę chmod
+-Nauczyłem się jak zmieniać uprawnienia do plików i katalogów w systemie linux
+-Dowiedziałem się jakie uprawnienia opisują dane oznaczenia, oraz w jaki sposób sprawdzić uprawnienia do plików
+ i katalogów
+-Poznałem listę użytkowników linuxa
+-
