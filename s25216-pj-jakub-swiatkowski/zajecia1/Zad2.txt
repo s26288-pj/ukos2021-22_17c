@@ -1,0 +1,7 @@
+1) polecenie mkdir ukos && cd ukos && mkdir katalog && cd katalog && mkdir katalog2 && mkdir katalog3 && cd .. && mkdir klamka
+2) cd klamka && touch zajecia2.txt && touch zajecia2.log && touch inny.txt && touch nowy.txt
+3) polecenie mkdir to && mkdir to/jest && mkdir to/jest/dluga && mkdir to/jest/dluga/nazwa
+4) touch to/jest/dluga/nazwa/dane.txt
+5) cd katalog && rm *.txt
+6) rmdir katalog2
+7) rm -r ../klamka
