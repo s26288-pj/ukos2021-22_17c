@@ -1,0 +1,231 @@
+Zadanie 3 Aby wykonac zadania pracowalam razem z Adrianna Potrykus.
+
+1.
+a)Gdy po raz pierwszy polaczylam sie poprzez szuflandie z folderem Adrianny nie mialam zadnych uprawnien, aby stworzyc jej folderu, albo pliku.
+
+s24278@szuflandia:/home/PJWSTK/s26018$ vim BOMBA   //nie pozwolilo mi stworzyc pliku tekstowego
+s24278@szuflandia:/home/PJWSTK/s26018$ ls -lha
+razem 92K
+drwxr-xr-x    3 s26018 pjwstk 4,0K paź  9 10:46 .
+drwxr-xr-x 3230 root   root    68K paź 22 01:30 ..
+-rw-r--r--    1 s26018 pjwstk  220 wrz 25 01:30 .bash_logout
+-rw-r--r--    1 s26018 pjwstk 3,4K wrz 25 01:30 .bashrc
+-rw-r--r--    1 s26018 pjwstk  675 wrz 25 01:30 .profile
+drwxr-xr-x    3 s26018 pjwstk 4,0K paź  9 10:46 windows
+s24278@szuflandia:/home/PJWSTK/s26018$ mkdir BOMBA
+mkdir: nie można utworzyć katalogu „BOMBA”: Brak dostępu   //nie pozwolilo mi stworzyc folderu
+
+b) Stworzylam kilka katalogow i plikow na swojej czesci serwera. Dalam Adzie dostep w - prawa do zapisu w folderze Ada.
+
+s24278@szuflandia:~/UKOS/demo$ chmod g+w Ada
+s24278@szuflandia:~/UKOS/demo$ ls -la
+razem 16
+drwxr-xr-x 4 s24278 pjwstk 4096 paź 25 20:08 .
+drwxr-xr-x 3 s24278 pjwstk 4096 paź 25 20:08 ..
+drwxrwxr-x 2 s24278 pjwstk 4096 paź 25 20:08 Ada
+drwxr-xr-x 2 s24278 pjwstk 4096 paź 25 20:08 testo
+s24278@szuflandia:~/UKOS/demo$ cd Ada
+s24278@szuflandia:~/UKOS/demo/Ada$ vim kopytko
+s24278@szuflandia:~/UKOS/demo/Ada$ ls
+kopytko  toja
+s24278@szuflandia:~/UKOS/demo/Ada$ ls -lha
+razem 16K
+drwxrwxr-x 3 s24278 pjwstk 4,0K paź 25 20:14 .
+drwxr-xr-x 4 s24278 pjwstk 4,0K paź 25 20:08 ..
+-rw-r--r-- 1 s24278 pjwstk    9 paź 25 20:14 kopytko
+drwxr-xr-x 2 s26018 pjwstk 4,0K paź 25 20:14 toja
+Dzieki temu Ada stworzyla w moim folderze swoj katalog toja.
+
+c) Nadalam grupie uprawnienia write i dzieki temu Ada mogla edytowac plik kopytko dopisujac "Guten Tag!"
+s24278@szuflandia:~/UKOS/demo/Ada$ cat kopytko
+
+Hello!
+
+s24278@szuflandia:~/UKOS/demo/Ada$ chmod g+w kopytko
+s24278@szuflandia:~/UKOS/demo/Ada$ cat kopytko
+
+Hello!
+Guten Tag!
+
+d) Natrafilam na katalog desktop, ktory prawdopodobnie jest katalogiem ktory stworzony zostal na komputerze na uczelni.
+Jak widac dla group ma nadal uprawnienia rwx. Terminal pozwolil mi wejsc do tego katalogu, ale nie moglam wylistowac zawartosci ls.
+Przy uprawnieniach desktop pojawia sie plus (drwxrwx--x+) podejrzewam, że mogą być to jakies dodatkowe zabezpieczenia, ktore przejsc moze tylko user pliku.
+
+s24278@szuflandia:/home/PJWSTK/s26018/windows/desktop$ ls
+ls: nie można otworzyć katalogu '.': Brak dostępu
+s24278@szuflandia:/home/PJWSTK/s26018/windows/desktop$ ls -lha
+ls: nie można otworzyć katalogu '.': Brak dostępu
+s24278@szuflandia:/home/PJWSTK/s26018/windows/desktop$ cd ..
+s24278@szuflandia:/home/PJWSTK/s26018/windows$ ls -lha
+razem 16K
+drwxr-xr-x  3 s26018 pjwstk 4,0K paź  9 10:46 .
+drwxr-xr-x  3 s26018 pjwstk 4,0K paź 25 20:21 ..
+drwxrwx--x+ 3 s26018 pjwstk 4,0K paź  9 14:00 desktop
+
+e) Ada stworzyla w moim folderze plik kukulczejajko i pomimo zabrania uprawnien moglam je usunac. Jednakże terminal zapytal mnie "rm: usunąć zabezpieczony przed zapisem pusty zwykły plik 'kukulczejajko'?"
+
+s24278@szuflandia:~/UKOS/demo/Ada$ ls
+kopytko  kukulczejajko  toja
+s24278@szuflandia:~/UKOS/demo/Ada$ rm kukulczejajko
+rm: usunąć zabezpieczony przed zapisem pusty zwykły plik 'kukulczejajko'?
+s24278@szuflandia:~/UKOS/demo/Ada$ ls
+kopytko  kukulczejajko  toja
+s24278@szuflandia:~/UKOS/demo/Ada$ rm kukulczejajko
+rm: usunąć zabezpieczony przed zapisem pusty zwykły plik 'kukulczejajko'? yes
+s24278@szuflandia:~/UKOS/demo/Ada$ ls
+kopytko  toja
+
+f) Majac odebrane uprawnienia nie moglam odczytac zawartosci pliku kukulczejajko.
+
+s24278@szuflandia:~/UKOS/demo/Ada$ cat kukulczejajko
+cat: kukulczejajko: Brak dostępu
+s24278@szuflandia:~/UKOS/demo/Ada$ ls -lha
+razem 20K
+drwxrwxr-x  3 s24278 pjwstk 4,0K paź 25 20:46 .
+drwxr-xr-x  4 s24278 pjwstk 4,0K paź 25 20:08 ..
+-rw-rw-r--  1 s24278 pjwstk   19 paź 25 20:21 kopytko
+-rw----r--+ 1 s26018 pjwstk   18 paź 25 20:46 kukulczejajko
+drwxr-xr-x  2 s26018 pjwstk 4,0K paź 25 20:14 toja
+
+g)Odwrocilysmy role. Otrzymalam calkowity dostep do folderu owoce i pliku pomodor.
+
+s24278@szuflandia:/home/PJWSTK/s26018$ cd owoce
+s24278@szuflandia:/home/PJWSTK/s26018/owoce$ ls -lha
+razem 16K
+drwxr-xr-x 3 s26018 pjwstk 4,0K paź 25 20:50 .
+drwxr-xr-x 4 s26018 pjwstk 4,0K paź 25 20:50 ..
+drwxr-xr-x 2 s26018 pjwstk 4,0K paź 25 20:48 niewarzywa
+-rw-r--r-- 1 s26018 pjwstk    0 paź 25 20:49 pomidor
+-rw-r--r-- 1 s26018 pjwstk   39 paź 25 20:50 pomodor
+s24278@szuflandia:/home/PJWSTK/s26018/owoce$ cat pomodor
+Witaj,
+
+czym jestem?
+owocem?
+warzywem?
+s24278@szuflandia:/home/PJWSTK/s26018/owoce$ vim pomodor
+s24278@szuflandia:/home/PJWSTK/s26018/owoce$ cat pomodor
+Witaj,
+
+czym jestem?
+owocem?
+warzywem?
+
+
+SALATKA! omnomnom
+ chmod 777 <- dla przyśpieszenia uzylysmy komendy 777, czyli calkowitego oddania kontroli
+//Zedytowalam jej plik tekstowy.
+
+h) Stworzylam w jej folderze plik tekstowy kukuleczka i zabralam dostepy. Po odebraniu dostepow Ada nie mogla zobaczyc co jest w srodku pliku.
+Ja za to moglam usunac plik pomidor do ktorego mialam dostepy.
+
+s24278@szuflandia:/home/PJWSTK/s26018/owoce$ vim kukuleczka
+s24278@szuflandia:/home/PJWSTK/s26018/owoce$ ls
+kukuleczka  niewarzywa  pomidor  pomodor
+s24278@szuflandia:/home/PJWSTK/s26018/owoce$ rm -f pomidor
+s24278@szuflandia:/home/PJWSTK/s26018/owoce$ ls
+kukuleczka  niewarzywa  pomodor
+
+i) Stworzylam u Ady katalog kopytko, do ktorego miala dostep tylko r. Nie mogla do niego wejsc, ale mogla go usunac.
+
+s24278@szuflandia:/home/PJWSTK/s26018/owoce$ mkdir kopytko
+s24278@szuflandia:/home/PJWSTK/s26018/owoce$ chmod g-w,g-x kopytko
+s24278@szuflandia:/home/PJWSTK/s26018/owoce$ ls -lha
+razem 20K
+drwxrwxrwx 4 s26018 pjwstk 4,0K paź 25 21:02 .
+drwxr-xr-x 4 s26018 pjwstk 4,0K paź 25 20:58 ..
+drwxr--r-x 2 s24278 pjwstk 4,0K paź 25 21:02 kopytko
+drwxr-xr-x 2 s26018 pjwstk 4,0K paź 25 20:48 niewarzywa
+-rw-rw-r-- 1 s26018 pjwstk   59 paź 25 20:53 pomodor
+
+j) Podsumowując zadanie. Brak dostepu do plikow, czy folderow nie pozwala nam na wykonanie roznych czynnosci. Jednak wlasciciel czesci serwera jest w stanie usunac pliki do ktorych nie ma dostepow.
+s24278@szuflandia:~/UKOS/demo$ chmod u-r,u-w,u-x,g-r,g-w,g-x,o-r,o-w,o-x testo
+s24278@szuflandia:~/UKOS/demo$ cd testo
+-shell: cd: testo: Brak dostępu
+s24278@szuflandia:~/UKOS/demo$ ls -lha
+razem 16K
+drwxr-xr-x 4 s24278 pjwstk 4,0K paź 25 20:08 .
+drwxr-xr-x 3 s24278 pjwstk 4,0K paź 25 20:08 ..
+drwxrwxr-x 3 s24278 pjwstk 4,0K paź 25 20:46 Ada
+d--------- 2 s24278 pjwstk 4,0K paź 25 20:08 testo
+s24278@szuflandia:~/UKOS/demo$ rm -r -f testo
+s24278@szuflandia:~/UKOS/demo$ ls
+Ada
+Sprawdzilam to jeszcze raz odbierajac sobie wszelkie mozliwe uprawnienia. Nie moge wejsc, nie moge odczytac, ale bez problemu usunelam katalog.
+
+KOMENTARZ DO ZADANIA: Zauwazylam robiac zadanie 3, ze to co napisalam w tym zadaniu to nie do konca prawda. Uzytkownik jest w stanie usunac pliki bez prawa dostepu pod warunkiem, ze sa one puste. Jezeli w folderze znajduje sie inny folder do ktorego nie mamy dostepu wyświetla sie komunikat:
+s24278@szuflandia:~$ rm -r -f test
+rm: nie można usunąć 'test/test2': Brak dostępu
+
+2.Stworzylam grupe katalogow /home/PJWSTK/s24278/test/test2/test3.
+a) Bedac w biezacym katalogu, odebralam sobie prawa do biezacego katalogu poprzez polecenie:
+s24278@szuflandia:~/test/test2$ chmod 000 . //kropka oznacza biezacy folder
+b) Przez odebrane prawa dostepu do test2 system nie pozwala mi zmienic uprawnien do test3
+s24278@szuflandia:~/test/test2$ chmod 000 test3
+chmod: nie ma dostępu do 'test3': Brak dostępu
+Nie moge równiez przeniesc sie do test3
+s24278@szuflandia:~/test/test2$ cd test3
+-shell: cd: test3: Brak dostępu
+Polecenia cd moge uzyc tylko w wypadku gdy chce wrocic do katalogu wczesniejszego test.
+Tak samo polecenia chmod mogę użyć tylko z katalogu w którym mam uprawnienia w tym wypadku test.
+
+
+s24278@szuflandia:~/test/test2$ cd test3
+-shell: cd: test3: Brak dostępu
+Przez zablokowany dostęp do katalogu test3 nie moge rowniez wejsc w katalog test4.
+s24278@szuflandia:~/test/test2$ cd test3/test4
+-shell: cd: test3/test4: Brak dostępu
+s24278@szuflandia:~$ cd /home/PJWSTK/s24278/test/test2/test3/test4
+-shell: cd: /home/PJWSTK/s24278/test/test2/test3/test4: Brak dostępu
+
+3.a) Uzywajac polecenia echo bezposrednio z terminala mozna zapisywac tekst w danym pliku tekstowym. Operator > powoduje nadpisanie linijki tekstu na tej ktora juz byla, natomiast >> dodaje enter i zapisuje tekst linijke nizej.
+Zachowujac historie tekstu.
+s24278@szuflandia:/home/PJWSTK/s26018/zad3$ ls -lha
+razem 8,0K
+drwxrwxrwx 2 s26018 pjwstk 4,0K paź 25 21:14 .
+drwxr-xr-x 5 s26018 pjwstk 4,0K paź 25 21:12 ..
+-rwxrwxrwx 1 s26018 pjwstk    0 paź 25 21:14 plikwspolny
+s24278@szuflandia:/home/PJWSTK/s26018/zad3$ cat plikwspolny
+Hello!
+s24278@szuflandia:/home/PJWSTK/s26018/zad3$ cat plikwspolny
+witaj honia
+s24278@szuflandia:/home/PJWSTK/s26018/zad3$ echo no dzem dobry Ada > plikwspolny
+s24278@szuflandia:/home/PJWSTK/s26018/zad3$ cat plikwspolny
+no dzem dobry Ada
+
+// zmiana na >>
+s24278@szuflandia:/home/PJWSTK/s26018/zad3$ cat plikwspolny
+no dzem dobry Ada
+kopytka?
+s24278@szuflandia:/home/PJWSTK/s26018/zad3$ echo mmm pelny brzuszek >> plikwspolny
+s24278@szuflandia:/home/PJWSTK/s26018/zad3$ cat plikwspolny
+no dzem dobry Ada
+kopytka?
+mmm pelny brzuszek
+
+b) Polecenie tail -f pozwala na wyswietlenie tekstu wysylanego przez echo z innego terminala, na zywo.
+Jedynym minusem tail jest to, ze aby odpisac na tekst online trzeba miec wlaczona druga konsole z ktorej mozan wysylac polecenia echo.
+
+s24278@szuflandia:/home/PJWSTK/s26018/zad3$ tail -f plikwspolny
+halo jestem na bierzaco
+piszu piszu
+online
+jappko
+lubie placki
+
+Zaobserwowalysmy, ze wiadomosci maja ograniczona dlugosc. Gdy jest ona za dluga wyswietla sie taki komunikat z jeje fragmentem.
+tail: plikwspolny: plik obcięty < - za dlugi tekst
+test
+
+4.W ramach zadania stworzylam katalog public_html, a w nim plik strona.html.
+Skierowalam sie do przegladarki, sprawdzajac na poczatek czy wszystko dziala i strona wyswietlila sie prawidlowo.
+
+a) Po wpisaniu komendy w katalogu home i odebraniu uprawnien z wyjatkiem user:
+s24278@szuflandia:~$ chmod 700 .
+strona internetowa przestala dzialac wyswietlajac "Forbidden".
+Po wyprobowaniu wszystkich mozliwosci okazalo sie ze aby strona dzialala wystarczy, ze grupa other ma uprawnienie execute do mojego folderu home.
+b)d--------x    2 s24278 pjwstk 4,0K paź 26 18:11 public_html
+Tak samo w wypadku katalogu public_html wystarczy execute w other.
+c) W pliku html, aby strona dzialala nalezy dac uprawnienie read other.
+-------r-- 1 s24278 pjwstk   73 paź 26 18:11 strona.html
+Uprawnienie x w katalogu pozwala na wejscie do niego, w wypadku pliku potrzeba uprawnienia r, aby go odczytac.
