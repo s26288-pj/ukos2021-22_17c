@@ -1,0 +1,321 @@
+zad 1.
+
+Aby wykonac zadanie pracowalam z Honoratą Wiśniewską.
+- probowalam wejsc i edytowac katalogi utworzonych na koncie Honoraty w zaleznosci od przydzielenia przez nia uprawnien nich
+- stworzylam folder i plik tekstowy (kukulcze jajko) w folderach u Honoraty
+- bez udzielonych przez nia uprawnien nie moglam nic zmienic w jej folderach 
+- w swoich folderach utworzylam katalog i podkatalog z plikeim tekstowym, ktorym udzielilam rozne uprawnienia (sprawdzalysmy co mozemy zapisywac i wyswietlac)
+- mimo uprawnien nadal moglysmy usuwac pliki i katalogi miedzy soba 
+
+s26018@szuflandia:/home/PJWSTK$ cd s24278
+s26018@szuflandia:/home/PJWSTK/s24278$ cd UKOS
+s26018@szuflandia:/home/PJWSTK/s24278/UKOS$ cd demo
+s26018@szuflandia:/home/PJWSTK/s24278/UKOS/demo$ ls
+Ada  testo
+s26018@szuflandia:/home/PJWSTK/s24278/UKOS/demo$ cd Ada
+s26018@szuflandia:/home/PJWSTK/s24278/UKOS/demo/Ada$ ls
+s26018@szuflandia:/home/PJWSTK/s24278/UKOS/demo/Ada$ mkdir toja
+mkdir: nie można utworzyć katalogu „toja”: Brak dostępu
+s26018@szuflandia:/home/PJWSTK/s24278/UKOS/demo/Ada$ ls -la
+razem 8
+drwxr-xr-x 2 s24278 pjwstk 4096 paź 25 20:08 .			(user-read,write,execute; group-execute,read; other-execute(honorata ma pełen dostęp, a ja moge tylko odczytac i wejsc))
+drwxr-xr-x 4 s24278 pjwstk 4096 paź 25 20:08 ..
+s26018@szuflandia:/home/PJWSTK/s24278/UKOS/demo/Ada$ ls
+s26018@szuflandia:/home/PJWSTK/s24278/UKOS/demo/Ada$ mkdir toja
+s26018@szuflandia:/home/PJWSTK/s24278/UKOS/demo/Ada$ ls
+kopytko  toja
+s26018@szuflandia:/home/PJWSTK/s24278/UKOS/demo/Ada$ cat kopytko
+
+Hello!								(wyswietla sie edycja honoraty)
+
+s26018@szuflandia:/home/PJWSTK/s24278/UKOS/demo/Ada$ vim kopytko
+s26018@szuflandia:/home/PJWSTK/s24278/UKOS/demo/Ada$ touch kukulcze jajko
+s26018@szuflandia:/home/PJWSTK/s24278/UKOS/demo/Ada$ rm kukulcze
+s26018@szuflandia:/home/PJWSTK/s24278/UKOS/demo/Ada$ touch kukulczejajko
+s26018@szuflandia:/home/PJWSTK/s24278/UKOS/demo/Ada$ ls -la
+razem 16
+drwxrwxr-x 3 s24278 pjwstk 4096 paź 25 20:41 .
+drwxr-xr-x 4 s24278 pjwstk 4096 paź 25 20:08 ..
+-rw-rw-r-- 1 s24278 pjwstk   19 paź 25 20:21 kopytko
+drwxr-xr-x 2 s26018 pjwstk 4096 paź 25 20:14 toja 
+s26018@szuflandia:/home/PJWSTK/s24278/UKOS/demo/Ada$ chmod g-r kukulczejajko
+s26018@szuflandia:/home/PJWSTK/s24278/UKOS/demo/Ada$ vim kukulczejajko
+s26018@szuflandia:/home/PJWSTK/s24278/UKOS/demo/Ada$ cd /home/PJWSTK/s26018
+s26018@szuflandia:~$ ls
+windows
+s26018@szuflandia:~$ mkdir owoce
+s26018@szuflandia:~$ cd owoce
+s26018@szuflandia:~/owoce$ mkdir niewarzywa
+s26018@szuflandia:~/owoce$ touch pomidor
+s26018@szuflandia:~/owoce$ vim pomodor 
+s26018@szuflandia:~/owoce$ ls 
+niewarzywa  pomidor  pomodor
+s26018@szuflandia:~/owoce$ chmod g+w pomodor
+s26018@szuflandia:~/owoce$ cat pomodor
+Witaj,
+czym jestem?
+owocem?
+warzywem?
+SALATKA! omnomnom
+s26018@szuflandia:~/owoce$ 
+s26018@szuflandia:~/owoce$ cd ..
+s26018@szuflandia:~$ chmod 777 owoce
+s26018@szuflandia:~$ cd owoce/
+s26018@szuflandia:~/owoce$ ls
+kukuleczka  niewarzywa  pomidor  pomodor
+s26018@szuflandia:~/owoce$ 			
+s26018@szuflandia:~/owoce$ vim kukuleczka 	(nie mogę edytować kukulki)
+s26018@szuflandia:~/owoce$ rm kukuleczka	
+rm: usunąć zabezpieczony przed zapisem zwykły plik 'kukuleczka'? yes
+s26018@szuflandia:~/owoce$ ls 			(ale mogę usunac)
+niewarzywa  pomodor
+s26018@szuflandia:~/owoce$ 
+kopytko  niewarzywa  pomodor			(po stworzeniu pliku nie mam do niego dostępu, ale mogę go nadal usunac)
+s26018@szuflandia:~/owoce$ cd kopytko/
+-shell: cd: kopytko/: Brak dostępu
+s26018@szuflandia:~/owoce$ rmdir kopytko
+s26018@szuflandia:~/owoce$ ls
+niewarzywa  pomodor
+kopytko  niewarzywa  pomodor
+s26018@szuflandia:~/owoce$ cd kopytko
+-shell: cd: kopytko: Brak dostępu
+s26018@szuflandia:~/owoce$ ls -la
+razem 20
+drwxrwxrwx 4 s26018 pjwstk 4096 paź 25 21:06 .
+drwxr-xr-x 4 s26018 pjwstk 4096 paź 25 20:58 ..
+drwx------ 2 s24278 pjwstk 4096 paź 25 21:06 kopytko
+drwxr-xr-x 2 s26018 pjwstk 4096 paź 25 20:48 niewarzywa
+-rw-rw-r-- 1 s26018 pjwstk   59 paź 25 20:53 pomodor
+s26018@szuflandia:~/owoce$ rmdir kopytko
+s26018@szuflandia:~/owoce$ ls
+niewarzywa  pomodor
+
+
+zad 3.
+
+Aby wykonać zadanie pracowałam z Honoratą Wiśniewską.
+- stworzylam osobny katalog do zadania 3 i dalam pelne prawa do katalogu, gdzie stworzylam plik wspolny, w ktorym probowalysmy komendy echo
+- echo > nadpisuje plik i nie ma dostepu do wczesniejszych wpisow
+- echo >> dodaje zawarosc do pliku
+- przy otworzeniu kolejnego okna terminala osoba ktora wysyła plik w poleceniu echo pojawiaja sie na biezaco u osoby ktora ma odpalone komende tail
+- dzieki poleceniu cat wyslwietlalam zawartosc pliku tekstowego
+
+s26018@szuflandia:~/owoce$ cd ..
+s26018@szuflandia:~$ ls
+owoce  windows
+s26018@szuflandia:~$ mkdir zad3
+s26018@szuflandia:~$ chmod 777 zad3
+s26018@szuflandia:~$ cd zad3
+s26018@szuflandia:~/zad3$ touch plikwspolny
+s26018@szuflandia:~/zad3$ chmod 777 plikwspolny 
+s26018@szuflandia:~/zad3$ cat plikwspolny
+Hello!
+s26018@szuflandia:~/zad3$ echo witaj honia > plikwpolny
+s26018@szuflandia:~/zad3$ cat plikwspolny
+Hello!
+s26018@szuflandia:~/zad3$ echo witaj honia > plikwspolny
+s26018@szuflandia:~/zad3$ cat plikwspolny
+no dzem dobry Ada
+s26018@szuflandia:~/zad3$ echo kopytka? >> plikwspolny
+s26018@szuflandia:~/zad3$ cat plikwspolny
+no dzem dobry Ada
+kopytka?
+mmm pelny brzuszek
+s26018@szuflandia:~/zad3$ tail -f plikwspolny
+no dzem dobry Ada
+kopytka?
+mmm pelny brzuszek
+bardzo
+s26018@szuflandia:~/zad3$ ^C
+s26018@szuflandia:~/zad3$ cat plikwspolny
+no dzem dobry Ada
+kopytka?
+mmm pelny brzuszek
+s26018@szuflandia:~/zad3$ tail -f plikwspolny
+halo jestem na bierzaco
+eeeej
+faktycznie 
+
+
+zad 2.
+
+ubuntu@bss-ubu1804:~/ukos$ mkdir zad2
+ubuntu@bss-ubu1804:~/ukos$ cd zad2/
+ubuntu@bss-ubu1804:~/ukos/zad2$ mkdir eksperyment
+ubuntu@bss-ubu1804:~/ukos/zad2$ cd eksperyment/
+ubuntu@bss-ubu1804:~/ukos/zad2/eksperyment$ mkdir dorsz
+ubuntu@bss-ubu1804:~/ukos/zad2/eksperyment$ cd dorsz
+ubuntu@bss-ubu1804:~/ukos/zad2/eksperyment/dorsz$ chmod 000 .
+ubuntu@bss-ubu1804:~/ukos/zad2/eksperyment/dorsz$ ls
+ls: cannot open directory '.': Permission denied
+ubuntu@bss-ubu1804:~/ukos/zad2/eksperyment/dorsz$ ls -l ..
+ls: cannot access '..': Permission denied
+ubuntu@bss-ubu1804:~/ukos/zad2/eksperyment/dorsz$ cd ..
+ubuntu@bss-ubu1804:~/ukos/zad2/eksperyment$ cd dorsz/
+bash: cd: dorsz/: Permission denied
+ubuntu@bss-ubu1804:~/ukos/zad2/eksperyment$ chmod 777 dorsz
+ubuntu@bss-ubu1804:~/ukos/zad2/eksperyment$ cd dorsz
+ubuntu@bss-ubu1804:~/ukos/zad2/eksperyment/dorsz$ chmod 000 .
+ubuntu@bss-ubu1804:~/ukos/zad2/eksperyment/dorsz$ chmod 777 .
+chmod: cannot access '.': Permission denied
+ubuntu@bss-ubu1804:~/ukos/zad2/eksperyment/dorsz$ cd .
+bash: cd: .: Permission denied
+ubuntu@bss-ubu1804:~/ukos/zad2/eksperyment/dorsz$ 
+- usuwajac wszelkie prawa do katalogu biezacego:
+	- nie moge uzyc chmod i cd z poziomu biezacego katalogu na biezacym katalogu
+	- nie moge wyswietlic zawartosci katalogu 
+	- moge przywrocic sobie uprawnienia z poziomu katalogu nadrzednego
+	- za pomoca cd .. moge wyjsc z biezacego katalogu, ale juz nie mam mozliwosci powrotu
+
+ubuntu@bss-ubu1804:~/ukos/zad2$ chmod a-rwx eksperyment
+ubuntu@bss-ubu1804:~/ukos/zad2$ cd eksperyment 
+bash: cd: eksperyment: Permission denied
+ubuntu@bss-ubu1804:~/ukos/zad2$ cd eksperyment/dorsz
+bash: cd: eksperyment/dorsz: Permission denied
+- usuwajac wszelkie prawa do katalogu eksperyment:
+	- nie moge wejsc do folderu dorsz nawet znajac sciezke 
+
+
+zad 4.
+
+s26018@szuflandia:~$ ls -la
+razem 120
+drwxr-xr-x    5 s26018 pjwstk  4096 paź 26 00:01 .
+drwxr-xr-x 3231 root   root   69632 paź 27 01:30 ..
+-rw-------    1 s26018 pjwstk  1120 paź 26 00:01 .bash_history
+-rw-r--r--    1 s26018 pjwstk   220 wrz 25 01:30 .bash_logout
+-rw-r--r--    1 s26018 pjwstk  3392 wrz 25 01:30 .bashrc
+drwxrwxrwx    3 s26018 pjwstk  4096 paź 25 21:08 owoce
+-rw-r--r--    1 s26018 pjwstk   675 wrz 25 01:30 .profile
+-rw-------    1 s26018 pjwstk 13128 paź 25 20:58 .viminfo
+drwxr-xr-x    3 s26018 pjwstk  4096 paź  9 10:46 windows
+drwxrwxrwx    2 s26018 pjwstk  4096 paź 25 21:47 zad3
+s26018@szuflandia:~$ ls -la windows
+razem 16
+drwxr-xr-x  3 s26018 pjwstk 4096 paź  9 10:46 .
+drwxr-xr-x  5 s26018 pjwstk 4096 paź 26 00:01 ..
+drwxrwx--x+ 3 s26018 pjwstk 4096 paź  9 14:00 desktop
+s26018@szuflandia:~$ mkdir public_html
+s26018@szuflandia:~$ cd public_html/
+s26018@szuflandia:~/public_html$ touch strona.html
+s26018@szuflandia:~/public_html$ vim strona.html
+s26018@szuflandia:~/public_html$ cat strona.html 
+<HTML>
+	<BODY>
+		<H1> to jest moja strona domowa </H1>
+	</BODY>
+</HTML>
+
+s26018@szuflandia:~$ ls -l
+razem 16
+drwxrwxrwx 3 s26018 pjwstk 4096 paź 25 21:08 owoce
+drwxr-xr-x 2 s26018 pjwstk 4096 paź 31 22:13 public_html
+drwxr-xr-x 3 s26018 pjwstk 4096 paź  9 10:46 windows
+drwxrwxrwx 2 s26018 pjwstk 4096 paź 25 21:47 zad3
+drwxrwxrwx 3 s26018 pjwstk 4096 paź 25 21:08 owoce
+d-wx--x--x 2 s26018 pjwstk 4096 paź 31 22:13 public_html
+drwxr-xr-x 3 s26018 pjwstk 4096 paź  9 10:46 windows
+drwxrwxrwx 2 s26018 pjwstk 4096 paź 25 21:47 zad3
+s26018@szuflandia:~$ chmod a-x public_html/
+s26018@szuflandia:~$ chmod a+x public_html/
+s26018@szuflandia:~$ cd public_html/
+s26018@szuflandia:~/public_html$ ls -l
+ls: nie można otworzyć katalogu '.': Brak dostępu
+s26018@szuflandia:~$ chmod a+rw public_html/
+s26018@szuflandia:~$ ls -l public_html/
+razem 4
+-rw-r--r-- 1 s26018 pjwstk 73 paź 31 22:13 strona.html
+s26018@szuflandia:~$ chmod a-rw public_html/
+s26018@szuflandia:~$ 
+
+- aby strona dzialala minimalne prawa dostepu do folderu public_html to samo
+ wykonywanie - x, a dla pliku strona.html sam odczyt - r.
+- z takimi prawami nikt nie wyswietli calego folderu public_html, ale moze
+ wyswietlic strone za pomoca bezposredniego linku:
+http://szuflandia.pjwstk.edu.pl/~s26018/strona.html
+
+
+zadanie:
+
+s26018@szuflandia:~$ pwd
+/home/PJWSTK/s26018
+s26018@szuflandia:~$ ls
+owoce  public_html  testy  windows  zad3
+s26018@szuflandia:~$ man umask
+s26018@szuflandia:~$ ls -la
+razem 128
+drwxr-xr-x    7 s26018 pjwstk  4096 paź 31 22:44 .
+drwxr-xr-x 3231 root   root   69632 paź 27 01:30 ..
+-rw-------    1 s26018 pjwstk  1120 paź 26 00:01 .bash_history
+-rw-r--r--    1 s26018 pjwstk   220 wrz 25 01:30 .bash_logout
+-rw-r--r--    1 s26018 pjwstk  3392 wrz 25 01:30 .bashrc
+drwxrwxrwx    3 s26018 pjwstk  4096 paź 25 21:08 owoce
+-rw-r--r--    1 s26018 pjwstk   675 wrz 25 01:30 .profile
+d--x--x--x    2 s26018 pjwstk  4096 paź 31 22:13 public_html
+drwxr-xr-x    3 s26018 pjwstk  4096 paź 31 22:44 testy
+-rw-------    1 s26018 pjwstk 12824 paź 31 22:13 .viminfo
+drwxr-xr-x    3 s26018 pjwstk  4096 paź  9 10:46 windows
+drwxrwxrwx    2 s26018 pjwstk  4096 paź 25 21:47 zad3
+s26018@szuflandia:~$ umask
+0022
+s26018@szuflandia:~$ umask 033
+s26018@szuflandia:~$ umask
+0033
+s26018@szuflandia:~$ mkdir zadanie5
+s26018@szuflandia:~$ touch test-z5
+s26018@szuflandia:~$ ls -la
+razem 132
+drwxr-xr-x    8 s26018 pjwstk  4096 lis  2 22:14 .
+drwxr-xr-x 3231 root   root   69632 paź 27 01:30 ..
+-rw-------    1 s26018 pjwstk  1120 paź 26 00:01 .bash_history
+-rw-r--r--    1 s26018 pjwstk   220 wrz 25 01:30 .bash_logout
+-rw-r--r--    1 s26018 pjwstk  3392 wrz 25 01:30 .bashrc
+drwxrwxrwx    3 s26018 pjwstk  4096 paź 25 21:08 owoce
+-rw-r--r--    1 s26018 pjwstk   675 wrz 25 01:30 .profile
+d--x--x--x    2 s26018 pjwstk  4096 paź 31 22:13 public_html
+drwxr-xr-x    3 s26018 pjwstk  4096 paź 31 22:44 testy
+-rw-r--r--    1 s26018 pjwstk     0 lis  2 22:14 test-z5
+-rw-------    1 s26018 pjwstk 12824 paź 31 22:13 .viminfo
+drwxr-xr-x    3 s26018 pjwstk  4096 paź  9 10:46 windows
+drwxrwxrwx    2 s26018 pjwstk  4096 paź 25 21:47 zad3
+drwxr--r--    2 s26018 pjwstk  4096 lis  2 22:14 zadanie5
+s26018@szuflandia:~$ umask 022
+s26018@szuflandia:~$ umask
+0022
+s26018@szuflandia:~$ mkdir zadadnie5b
+s26018@szuflandia:~$ touch pliktest5b
+s26018@szuflandia:~$ ls -la
+razem 136
+drwxr-xr-x    9 s26018 pjwstk  4096 lis  2 22:15 .
+drwxr-xr-x 3231 root   root   69632 paź 27 01:30 ..
+-rw-------    1 s26018 pjwstk  1120 paź 26 00:01 .bash_history
+-rw-r--r--    1 s26018 pjwstk   220 wrz 25 01:30 .bash_logout
+-rw-r--r--    1 s26018 pjwstk  3392 wrz 25 01:30 .bashrc
+drwxrwxrwx    3 s26018 pjwstk  4096 paź 25 21:08 owoce
+-rw-r--r--    1 s26018 pjwstk     0 lis  2 22:15 pliktest5b
+-rw-r--r--    1 s26018 pjwstk   675 wrz 25 01:30 .profile
+d--x--x--x    2 s26018 pjwstk  4096 paź 31 22:13 public_html
+drwxr-xr-x    3 s26018 pjwstk  4096 paź 31 22:44 testy
+-rw-r--r--    1 s26018 pjwstk     0 lis  2 22:14 test-z5
+-rw-------    1 s26018 pjwstk 12824 paź 31 22:13 .viminfo
+drwxr-xr-x    3 s26018 pjwstk  4096 paź  9 10:46 windows
+drwxrwxrwx    2 s26018 pjwstk  4096 paź 25 21:47 zad3
+drwxr-xr-x    2 s26018 pjwstk  4096 lis  2 22:15 zadadnie5b
+drwxr--r--    2 s26018 pjwstk  4096 lis  2 22:14 zadanie5
+
+
+- komenda umask dziala tak, ze na uprawnieniach 777 dla folderow wykonuje operacje logiczna AND (&) z liczba kryjaca sie
+pod umask, a dla plikow - 666
+- majac umask ustawiony na 022 domyslne uprawnienia dla forderow beda wynosic 755, a dla plikow 644
+- w przypadku ustawienia na umask 033 domyslne uprawnienia dla folderow wynosza 744, a dla plikow 633
+przyklady dla folderow:
+
+domyslnie	777 = 111 111 111 &
+umask		033 = 000 011 011
+skutek		744 = 111 100 100
+
+domyslnie	777 = 111 111 111 &
+umask		022 = 000 010 010
+skutek		755 = 111 101 101
+
+
