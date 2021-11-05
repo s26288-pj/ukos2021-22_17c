@@ -28,12 +28,13 @@ ubuntu@bss-ubu1804:~/ukos/ukos/to/jest/dluga/nazwa$ touch dane.txt
 ubuntu@bss-ubu1804:~/ukos/ukos/to/jest/dluga/nazwa$ ls
 dane.txt
 
+
 5.Usun z katalogu ukos/klamka wszystkie pliki z rozszerzeniem txt.
 ubuntu@bss-ubu1804:~/ukos/klamka$ ls
 inny.txt  nowy.txt  zajecia2.log  zajecia2.txt
 ubuntu@bss-ubu1804:~/ukos/klamka$ rm *txt
 ubuntu@bss-ubu1804:~/ukos/klamka$ ls
-zajecia2.log
+
 
 6. Usun katalog ukos/katalog/katalog2
 ubuntu@bss-ubu1804:~/ukos/katalog$ rmdir katalog2
