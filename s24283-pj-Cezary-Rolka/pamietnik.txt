@@ -1,2 +1,14 @@
 20.10.2021r
 Drogi pamietniku, próbuje nauczyc się obsługi githuba, linuxa, vima i wiele innych, nie jest łatwo ale trzeba sobie dawac radę, oby jakos to poszło.. :)
+
+4.11.21r. 
+Dzisiaj uczylem sie nadawać dostepy za pomoca komendy chmod na serwerze szuflandia. to czego sie uczyłem to:
+1)- tworzenie drzewa katalogów z różnymi prawami , próba połączenia z poszczególnymi katalogiami i srawdzenie co sie stanie
+- wejscie do katalogu kolegi  podrzucenie kukułczego jaja i zmiana uprawnień, aby nie mogł nic zrobic z tym plikiem.
+rm: usunąć zabezpieczony przed zapisem zwykły plik 'jajo.txt'? tak
+
+2)
+- po usunięciu praw do katalogu folder_700 kolega i ja nie mieliśmy absolutnie żadnego dostępu. Jedynie ja jako właściciel mogłem zmienić prawa do katalogu komenda chmod
+- próboweano równiez edytowac zawartośc katalogu podrzednego z odebranymi uprawnieniami, również brak dostępu po obu stronach 
+
+Dalej jednak duże problemy sprawia mi poruszanie się po githubie i korzystanie z komend gitowych...
