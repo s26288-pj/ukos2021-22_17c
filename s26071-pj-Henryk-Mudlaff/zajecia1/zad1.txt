@@ -1,5 +1,5 @@
 Zadanie 1
-1. Uruchom terminal.
+1.Uruchom terminal.
 
 2. Wyswietl zawartosc aktualnego katalogu.
 ubuntu@bss-ubu1804:~$ ls 
