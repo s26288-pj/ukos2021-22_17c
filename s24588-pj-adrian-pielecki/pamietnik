@@ -5,7 +5,7 @@ Na dzisiejszych zajeciach nauczylem sie:
 - podstawowych polecen w linuxie
 - tworzenia i wysylania na githuba
 
-2021-10-20
+2021-10-20 -> myslalem ze z zadan tez mamy zapisac czego sie dowiedzielismy
 
 wykonalem zadania z ukos_z1.png nauczylem sie:
 
@@ -31,3 +31,19 @@ wykonalem zadania z ukos_z3.png nauczylem sie:
 - wykorzystuje ctrl+z do zatrzymywania oraz bg (bg do odblokwania) i fg (fg odblokowuje oraz jednoczesnie uruchamia program tam gdzie skonczylismy )
 - polecenie jobs pokazuje wszysatkie wstrzymane programy
 
+2021-10-23
+
+Z dzisiejszych zajec dowiedzialem sie:
+
+- jak laczyc sie z putty oraz jak wejsc na czyjesc konto
+- czym grozi zmiana uprawnien dla wszystkich do wszystkiego (rwx)
+- jak sprawdzac i nadawac uprawnienia
+
+2021-11-06
+
+Z zajec wynioslem nastepujaca wiedze:
+
+- w jaki sposob zatrzymywac i przywracac procesy
+- dowiedzialem sie ze mozna automatyzowac pewne procesy, np. linux bedzie mi przygotowywal najnowsza wersje   programu przed rozpoczeciem pracy
+- wiem juz ze Wget jest przydatnym poleceniem, dzieki niemu moge pobrac storne lub cos z strony
+- oraz rozrozniam roznice w tym zalety bzip i gzip (pierwszy dokladniejszy, lepsza kompresja a drugi szybszy ale gorsza kompresja danych)
