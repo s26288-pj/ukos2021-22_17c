@@ -1,0 +1,35 @@
+Zad.1.
+Utworzyłam na swoim koncie w szuflandii trzy katalogii i kilka plików tekstowych
+Używając polecenia chmod z różnymi parametrami takimi dodawałam i odbierałam prawa 
+dostępu użytkownikom (u,g,o).
+-w trybie mc wchodziłam w menu i wybierałam zakładkę file, tam można zmieniać prawa dostępu w zakładce chmod
+-w trybie graficznym klikamy prawym przyciskiem i w zakładce permission możey zaznaczać lub odznaczać k
+to użytkowników przy view, change content -write oraz execute.
+
+Weszłam na konta dwóch innych studentów i założyłam plik tekst niespodzianka. 
+Znalazłam taki plik również u siebie. 
+
+
+Zad2.
+Nie mogę usunąć wszystkich praw dostępu do katalogu w którym się aktualnie znajduję.
+Mogę usunąć prawa dostępu do katalogu nadrzędnego. Nie będę mogła przejść do tego katalogu cd .. – permission denied
+Mając układ katalogów abc/xyz nie da rady wejść bezpośrednio z abc do xyz jeśli odebrane jest prawo x-execut
+e do katalogu abc
+
+
+
+
+Zad.3.
+Komunikat echo treść > plik – zamienia zawartość pliku na nową treść
+echo treść>>pliku  - dodaje nową treść w nowej linii, pod zapisanym już tekstem.
+
+Komenda tail -f plik pozwala śledzić na żywo zmiany jakie są wprowadzane w pliku.
+
+
+Zad.4
+
+utworzyłam w szuflandii katalog home, w nim katalog public_html, w tym katalogu stworzyłam plik strona.html z 
+podaną zawartścią,  niestety strona się nie wyświetla, komunikat forbidden nawet przy nadanych wszystkich 
+uprawnieniach w katalogach i samym pliku :/
+
+

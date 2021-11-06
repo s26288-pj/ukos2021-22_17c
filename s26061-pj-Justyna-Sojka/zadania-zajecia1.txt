@@ -1,0 +1,89 @@
+zad2.
+Zawartość aktualnego katalogu wyświetlam za pomocą komendy ls
+
+zad.3
+aby określić dokładne położenie używam komendy pwd
+która wypisuje mi bezwzględą ścieżkę dostępu do aktualnego katalogu
+w interfejsie graficznym wchodząc w kolejne katalogi ścieżka wygląda tak samo.
+
+zad.4
+aby przejść do katalogu pulpit z katalogu domowego za pomocą ścieżki względnej wpisuję komendę
+cd Desktop
+
+zad.5
+pwd pokazuje mi gdzie jestem
+
+zad.6
+ls wyświetla zawartość bieżącego katalogu 
+
+zad.7
+tak, przechodząć w sposób graficzny idziemy tę samą drogą, przez te same katalogi
+
+zad.8
+ls /home/ 
+wyświetli mi zawartość katalogu domowego bez przechodzenia do niego
+
+zad.9
+aby przejśc do katalogu obrazy w moim katalogu domowym przy użyciu ścieżki wględnej wpisuję komendę
+cd Pictures
+
+zad.10
+pwd - pokazuje gdzie jestem
+jestem w katalogu Pictures
+
+zad.11
+za pomocą ścieżki ././././././
+nie przechodzę do innego katalogu
+wpisując cd ././././././ zostaję wciąż w katalogu pictures
+./ wskazuje na katalog biezacy
+
+zad.12
+aby przejść do katalogu home z katalogu pictures za poocą ścieżki bezwzględnej wpisuję
+cd /home/
+
+zad.13
+gdy wpiszę komendę cd /root otrzymuję komunikat permission denied - to oznacza że nie mam uprawnień administratora
+nie mam upranienia execute żeby wejść do tego katalogu
+
+
+zad.14
+kombinacja klawiszy ctr alt f1 - przeląćza na pierwszą konsolę
+ctr alt f7 przywraca konsolę graficzną
+w macu niestety nie działa.
+
+
+zadania dalsze:
+1. tworzę drzewo katalogów
+tworze katalog ukos mkdir ukos 
+wchodze w ukos cd ukod
+tworzę katalog mkdir katalog
+wchodzę do katalogu cd katalog
+tworzę katalogi katalog2 i katalog3: mkdir katalog2 katalog3
+wracam do ukos: cd ..
+tworzę katalog klamka: mkdir klamka
+
+2. wchodze do katalogu klamka cd klamka
+tworzę pliki:
+touch zajecia2.txt zajecia2.log inny.txt nowy.txt
+
+3. tworzę katalog ukos/to/jest/dluga/nazwa
+wychodze z katalogu klamka do katalogu ukos cd..
+wpisuje komende mkdir -p ukos/to/jest/dluga/nazwa
+
+4. w tym katalogu ukos/to/jest/dluga/nazwa tworze plik dane.txt
+touch ukos/to/jest/dluga/nazwa/dane.txt
+
+5.usuwam z katalogu ukos/klamka wszytskie pliki z rozszerzeniem .txt
+
+rm ukos/klamka/*.txt
+
+6.usuwam katalog ukos/katalog/katalog2
+rmdir ukos/katalog/katalog2
+
+7.usuwam cały katalog klamka
+rm -rf ukos/klamka
+
+
+
+
+

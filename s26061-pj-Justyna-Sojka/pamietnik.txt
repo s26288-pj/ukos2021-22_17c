@@ -1,0 +1,15 @@
+22.10.2021
+
+Na dzisiejszych zajeciach nauczylam sie:
+- do czeglo sluza katalogi w glownym systemie plikow na linuxie
+- poznalam i zalozylam konto na git hubie
+
+23.10
+
+Na tych zajęciach nauczyłam się: 
+- jak wejść do katalogów innych studentów na szuflandii;
+- jak nadawać i odbierać uprawnienia do działań na plikach i katalogach trzem grupom użytkowników (user, group i other);
+- jak podrzucić komuś tzw.  "kukułcze jajo";
+- jak zmieniać uprawnienia dla nowych katalogów i plików przy użyciu komendy umask;
+-  co oznacza i skąd się wziął zapis liczowy przy komendzie chmod np 777
+
