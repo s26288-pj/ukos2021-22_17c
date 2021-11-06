@@ -1,0 +1,258 @@
+zadanie
+ubuntu@bss-ubu1804:~$ pwd 
+/home/ubuntu
+ubuntu@bss-ubu1804:~$ ls -a
+.              .gitconfig                 Templates
+..             .gnupg                     .thumbnails
+.bash_history  .local                     ukos
+.bash_logout   .mozilla                   .vboxclient-clipboard.pid
+.bashrc        Music                      .vboxclient-display.pid
+.cache         Pictures                   .vboxclient-draganddrop.pid
+.config        .profile                   .vboxclient-seamless.pid
+.dbus          Public                     Videos
+Desktop        repo                       .Xauthority
+Documents      .ssh                       .xscreensaver
+Downloads      .sudo_as_admin_successful  .xsession-errors
+.gimp-2.8      temp                       .xsession-errors.old
+ubuntu@bss-ubu1804:~$ ls -a | grep D
+Desktop
+Documents
+Downloads
+ubuntu@bss-ubu1804:~$ ls -a | grep D > listaplikowzliterkad.txt
+ubuntu@bss-ubu1804:~$ ls
+Desktop    Downloads                 Music     Public  temp       ukos
+Documents  listaplikowzliterkad.txt  Pictures  repo    Templates  Videos
+ubuntu@bss-ubu1804:~$ cat listaplikowzliterkad.txt 
+Desktop
+Documents
+Downloads
+- po wpisaniu grep D wyswietlily mi sie wszystkie procesy na litere D
+- dzieki > przekierowalam standardowe wyjscie polecenia ls -a | grep D do pliku tekstowego, ktory stworzylam
+
+
+
+zadanie 1.
+ubuntu@bss-ubu1804:~$ ps
+  PID TTY          TIME CMD
+ 1115 pts/0    00:00:00 bash
+16189 pts/0    00:00:00 ps
+ubuntu@bss-ubu1804:~$ ps -a
+  PID TTY          TIME CMD
+16190 pts/0    00:00:00 ps
+ubuntu@bss-ubu1804:~$ ps -x
+  PID TTY      STAT   TIME COMMAND
+  744 ?        Ss     0:00 /lib/systemd/systemd --user
+  745 ?        S      0:00 (sd-pam)
+  757 ?        Ssl    0:00 /usr/bin/lxsession -s Lubuntu -e LXDE
+  772 ?        Ss     0:00 /usr/bin/dbus-daemon --session --address=systemd: --n
+  808 ?        S      0:00 /usr/bin/VBoxClient --clipboard
+  809 ?        Sl     0:00 /usr/bin/VBoxClient --clipboard
+  821 ?        S      0:00 /usr/bin/VBoxClient --seamless
+  822 ?        Sl     0:00 /usr/bin/VBoxClient --seamless
+  823 ?        S      0:00 /usr/bin/VBoxClient --display
+  825 ?        S      0:00 /usr/bin/VBoxClient --display
+  827 ?        S      0:00 /usr/bin/VBoxClient --draganddrop
+  835 ?        Sl     0:03 /usr/bin/VBoxClient --draganddrop
+  845 ?        Ss     0:00 /usr/bin/ssh-agent /usr/bin/lxsession -s Lubuntu -e L
+  850 ?        S      0:00 openbox --config-file /home/ubuntu/.config/openbox/lu
+  854 ?        Sl     0:01 lxpanel --profile Lubuntu
+  857 ?        Sl     0:24 pcmanfm --desktop --profile lubuntu
+  858 ?        Sl     0:00 lxpolkit
+  866 ?        Ss     0:00 /usr/bin/ssh-agent -s
+  910 ?        Sl     0:00 /usr/lib/menu-cache/menu-cached /run/user/1000/menu-c
+ 1114 ?        Sl     0:02 lxterminal
+ 1115 pts/0    Ss     0:00 bash
+15903 ?        Sl     0:00 /usr/lib/dconf/dconf-service
+16192 pts/0    R+     0:00 ps -x
+ubuntu@bss-ubu1804:~$ ps -aux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.2  77596  8600 ?        Ss   13:12   0:00 /sbin/init
+root         2  0.0  0.0      0     0 ?        S    13:12   0:00 [kthreadd]
+root         4  0.0  0.0      0     0 ?        I<   13:12   0:00 [kworker/0:0H]
+root         6  0.0  0.0      0     0 ?        I<   13:12   0:00 [mm_percpu_wq]
+root         7  0.0  0.0      0     0 ?        S    13:12   0:00 [ksoftirqd/0]
+root         8  0.0  0.0      0     0 ?        I    13:12   0:00 [rcu_sched]
+root         9  0.0  0.0      0     0 ?        I    13:12   0:00 [rcu_bh]
+root        10  0.0  0.0      0     0 ?        S    13:12   0:00 [migration/0]
+root        11  0.0  0.0      0     0 ?        S    13:12   0:00 [watchdog/0]
+root        12  0.0  0.0      0     0 ?        S    13:12   0:00 [cpuhp/0]
+root        13  0.0  0.0      0     0 ?        S    13:12   0:00 [kdevtmpfs]
+root        14  0.0  0.0      0     0 ?        I<   13:12   0:00 [netns]
+root        15  0.0  0.0      0     0 ?        S    13:12   0:00 [rcu_tasks_kthr
+root        16  0.0  0.0      0     0 ?        S    13:12   0:00 [kauditd]
+root        17  0.0  0.0      0     0 ?        S    13:12   0:00 [khungtaskd]
+root        18  0.0  0.0      0     0 ?        S    13:12   0:00 [oom_reaper]
+root        19  0.0  0.0      0     0 ?        I<   13:12   0:00 [writeback]
+root        20  0.0  0.0      0     0 ?        S    13:12   0:00 [kcompactd0]
+root        21  0.0  0.0      0     0 ?        SN   13:12   0:00 [ksmd]
+root        22  0.0  0.0      0     0 ?        SN   13:12   0:00 [khugepaged]
+root        23  0.0  0.0      0     0 ?        I<   13:12   0:00 [crypto]
+root        24  0.0  0.0      0     0 ?        I<   13:12   0:00 [kintegrityd]
+root        25  0.0  0.0      0     0 ?        I<   13:12   0:00 [kblockd]
+root        26  0.0  0.0      0     0 ?        I<   13:12   0:00 [ata_sff]
+root        27  0.0  0.0      0     0 ?        I<   13:12   0:00 [md]
+root        28  0.0  0.0      0     0 ?        I<   13:12   0:00 [edac-poller]
+root        29  0.0  0.0      0     0 ?        I<   13:12   0:00 [devfreq_wq]
+root        30  0.0  0.0      0     0 ?        I<   13:12   0:00 [watchdogd]
+root        32  0.0  0.0      0     0 ?        I    13:12   0:02 [kworker/0:1]
+root        34  0.0  0.0      0     0 ?        S    13:12   0:00 [kswapd0]
+root        35  0.0  0.0      0     0 ?        I<   13:12   0:00 [kworker/u3:0]
+root        36  0.0  0.0      0     0 ?        S    13:12   0:00 [ecryptfs-kthre
+root        78  0.0  0.0      0     0 ?        I<   13:12   0:00 [kthrotld]
+root        79  0.0  0.0      0     0 ?        I<   13:12   0:00 [acpi_thermal_p
+root        80  0.0  0.0      0     0 ?        S    13:12   0:00 [scsi_eh_0]
+root        81  0.0  0.0      0     0 ?        I<   13:12   0:00 [scsi_tmf_0]
+root        82  0.0  0.0      0     0 ?        S    13:12   0:00 [scsi_eh_1]
+root        83  0.0  0.0      0     0 ?        I<   13:12   0:00 [scsi_tmf_1]
+root        89  0.0  0.0      0     0 ?        I<   13:12   0:00 [ipv6_addrconf]
+root        98  0.0  0.0      0     0 ?        I<   13:12   0:00 [kstrp]
+root       115  0.0  0.0      0     0 ?        I<   13:12   0:00 [charger_manage
+root       155  0.0  0.0      0     0 ?        I    13:12   0:00 [kworker/0:2]
+root       168  0.0  0.0      0     0 ?        S    13:12   0:00 [scsi_eh_2]
+root       169  0.0  0.0      0     0 ?        I<   13:12   0:00 [scsi_tmf_2]
+root       172  0.0  0.0      0     0 ?        I<   13:12   0:00 [kworker/0:1H]
+root       192  0.0  0.0      0     0 ?        S    13:12   0:00 [jbd2/sda1-8]
+root       193  0.0  0.0      0     0 ?        I<   13:12   0:00 [ext4-rsv-conve
+root       225  0.0  0.3  94788 13120 ?        S<s  13:12   0:00 /lib/systemd/sy
+root       247  0.0  0.1  46176  4664 ?        Ss   13:12   0:00 /lib/systemd/sy
+systemd+   269  0.0  0.1  80044  5292 ?        Ss   13:12   0:00 /lib/systemd/sy
+root       288  0.0  0.0      0     0 ?        I<   13:12   0:00 [iprt-VBoxWQueu
+root       331  0.0  0.0      0     0 ?        I<   13:12   0:00 [ttm_swap]
+root       333  0.0  0.0      0     0 ?        S    13:12   0:00 [irq/18-vmwgfx]
+systemd+   400  0.0  0.1  70760  5020 ?        Ss   13:12   0:00 /lib/systemd/sy
+syslog     456  0.0  0.1 263036  4312 ?        Ssl  13:12   0:00 /usr/sbin/rsysl
+root       457  0.0  0.1  70608  5904 ?        Ss   13:12   0:00 /lib/systemd/sy
+root       458  0.0  0.0  31320  3188 ?        Ss   13:12   0:00 /usr/sbin/cron 
+root       461  0.0  0.1 287536  6884 ?        Ssl  13:12   0:00 /usr/lib/accoun
+root       463  0.0  0.4 170436 17324 ?        Ssl  13:12   0:00 /usr/bin/python
+message+   469  0.0  0.1  50180  4432 ?        Ss   13:12   0:00 /usr/bin/dbus-d
+root       488  0.0  0.1 289060  7196 ?        Ssl  13:12   0:00 /usr/lib/policy
+root       496  0.0  0.0  16180  1904 tty1     Ss+  13:12   0:00 /sbin/agetty -o
+root       511  0.0  0.3 265344 12448 ?        Ss   13:12   0:00 /usr/sbin/nmbd 
+root       518  0.0  0.5 356676 20540 ?        Ss   13:12   0:00 /usr/sbin/smbd 
+root       546  0.0  0.1 344936  5944 ?        S    13:12   0:00 /usr/sbin/smbd 
+root       547  0.0  0.1 344928  4760 ?        S    13:12   0:00 /usr/sbin/smbd 
+root       548  0.0  0.1 356676  6764 ?        S    13:12   0:00 /usr/sbin/smbd 
+root       691  0.0  0.0 131240   380 ?        S    13:13   0:00 VBoxClient --vm
+root       692  0.0  0.0 131240   380 ?        S    13:13   0:00 VBoxClient --vm
+root       701  0.0  0.1 364332  6788 ?        Ssl  13:13   0:00 /usr/sbin/light
+root       709  0.0  0.0 248368  2504 ?        Sl   13:13   0:00 /usr/sbin/VBoxS
+root       727  0.2  1.3 325524 53752 tty7     Ssl+ 13:13   0:07 /usr/lib/xorg/X
+root       740  0.0  0.1 246396  6772 ?        Sl   13:13   0:00 lightdm --sessi
+ubuntu     744  0.0  0.1  76756  7904 ?        Ss   13:13   0:00 /lib/systemd/sy
+ubuntu     745  0.0  0.0 111580  2204 ?        S    13:13   0:00 (sd-pam)
+ubuntu     757  0.0  0.3 355060 12808 ?        Ssl  13:13   0:00 /usr/bin/lxsess
+ubuntu     772  0.0  0.1  49924  4324 ?        Ss   13:13   0:00 /usr/bin/dbus-d
+ubuntu     808  0.0  0.0  51988   320 ?        S    13:13   0:00 /usr/bin/VBoxCl
+ubuntu     809  0.0  0.1 120376  4220 ?        Sl   13:13   0:00 /usr/bin/VBoxCl
+ubuntu     821  0.0  0.0  51988   328 ?        S    13:13   0:00 /usr/bin/VBoxCl
+ubuntu     822  0.0  0.0 118172  2192 ?        Sl   13:13   0:00 /usr/bin/VBoxCl
+ubuntu     823  0.0  0.0  51988   320 ?        S    13:13   0:00 /usr/bin/VBoxCl
+ubuntu     825  0.0  0.0  52124  2888 ?        S    13:13   0:00 /usr/bin/VBoxCl
+ubuntu     827  0.0  0.0  51988   320 ?        S    13:13   0:00 /usr/bin/VBoxCl
+ubuntu     835  0.1  0.0 184224  2144 ?        Sl   13:13   0:03 /usr/bin/VBoxCl
+ubuntu     845  0.0  0.0  11304   320 ?        Ss   13:13   0:00 /usr/bin/ssh-ag
+ubuntu     850  0.0  0.4 238924 20120 ?        S    13:13   0:00 openbox --confi
+ubuntu     854  0.0  0.7 730700 28612 ?        Sl   13:13   0:01 lxpanel --profi
+ubuntu     857  0.8  1.0 538796 40420 ?        Sl   13:13   0:24 pcmanfm --deskt
+ubuntu     858  0.0  0.2 297248 11984 ?        Sl   13:13   0:00 lxpolkit
+ubuntu     866  0.0  0.0  11304   320 ?        Ss   13:13   0:00 /usr/bin/ssh-ag
+ubuntu     910  0.0  0.1 113884  4568 ?        Sl   13:13   0:00 /usr/lib/menu-c
+ubuntu    1114  0.0  1.4 593668 59680 ?        Sl   13:13   0:02 lxterminal
+ubuntu    1115  0.0  0.1  23052  5692 pts/0    Ss   13:13   0:00 bash
+root      1150  0.0  0.0      0     0 ?        I    13:26   0:00 [kworker/u2:1]
+root      1913  0.0  0.0      0     0 ?        I    13:33   0:00 [kworker/u2:2]
+ubuntu   15903  0.0  0.1 187804  5180 ?        Sl   13:39   0:00 /usr/lib/dconf/
+ubuntu   16193  0.0  0.0  39664  3600 pts/0    R+   14:03   0:00 ps -aux
+ubuntu@bss-ubu1804:~$ man ps
+
+informacje ktore zrozumialam po wpisaniu man:
+ps 	- wyswietla wszystkie procesy z tym samym user id co aktualny uzytkownik
+ps -a 	- wyswietla wszystkie procesy oprócz liderów sesji i procesów nie związanych z terminalem
+ps -x	- wyswietla wszystkie moje procesy, w tym przypadku uzytkownika ubuntu
+ps -aux	- wyswitla wszytskie procesy uzytkownika "x" oraz wszystkie procesy, ktore zostalyby wyswietlone z parametrem -a; 
+	  jesli uzytkownik "x" nie istnieje komenda zadziala jak ps aux i wyswietli ostrzezenia
+
+czym sa znaki zapytania? - W sekcji TTY (controlling terminal) wyświetla się znak zapytania (?) gdy terminal
+			   kontrolujący dany proces został w międzyczasie zamknięty
+
+wszystkie procesy basha ps -aux | grep bash
+wszytskie procesy roota ps -aux | grep root
+
+
+zadanie 2.
+ubuntu@bss-ubu1804:~$ ps -aux | grep geany
+ubuntu   16538  1.5  1.0 489628 42904 ?        Sl   14:39   0:00 geany
+ubuntu   16551  0.0  0.0  14428  1012 pts/0    S+   14:39   0:00 grep --color=auto geany
+(PID geany to 16538)
+ubuntu@bss-ubu1804:~$ kill 16538 - zamknelam geany
+ubuntu@bss-ubu1804:~$ killall shell
+shell: no process found
+
+- moge usuwac tylko procesy naleace do aktualnego uzytkownika (ubuntu)
+
+
+
+zadanie 3.
+ubuntu@bss-ubu1804:~$ pwd
+/home/ubuntu
+ubuntu@bss-ubu1804:~$ ls
+Desktop    Downloads  Pictures  repo       ukos
+Documents  Music      Public    Templates  Videos
+ubuntu@bss-ubu1804:~$ mkdir temp
+ubuntu@bss-ubu1804:~$ cd temp
+ubuntu@bss-ubu1804:~/temp$ cat > wynik1.txt
+przyklad przyklad przyklad^C  
+ubuntu@bss-ubu1804:~/temp$ cat wynik1.txt 
+ubuntu@bss-ubu1804:~/temp$ ls -l
+total 0
+-rw-rw-r-- 1 ubuntu ubuntu 0 Nov  6 13:15 wynik1.txt
+ubuntu@bss-ubu1804:~/temp$ cat > wynik2.txt
+to jest drugi przyklad ubuntu@bss-ubu1804:~/temp$ cat wynik2.txt 
+to jest drugi przyklad ubuntu@bss-ubu1804:~/temp$ 
+
+- w przypadku ctr c - wylacza sie wszystko bez zapisu, a w przypadku uzycia crt d
+zapisuje sie, ale trzeba nacinac dwa razy 
+
+
+
+zadanie 4.
+- najpierw zainstalowalam gimp za pomoca sudo apt install gimp
+- po wcisnieciu ctr z gimp sie zatrzymal i nie moge nic w nim wyklikac, proces zostal wstrzymany
+
+ubuntu@bss-ubu1804:/home$ gimp
+
+(gimp:15703): GLib-GObject-WARNING **: 13:34:05.185: g_object_set_is_valid_property: object class 'GeglConfig' has no property named 'cache-size'
+^Z
+[1]+  Stopped                 gimp
+ubuntu@bss-ubu1804:/home$ bg
+[1]+ gimp &
+ubuntu@bss-ubu1804:/home$ fg
+gimp
+^C/usr/lib/gimp/2.0/plug-ins/script-fu terminated: Interrupt
+gimp: terminated: Interrupt
+ubuntu@bss-ubu1804:/home$ 
+ubuntu@bss-ubu1804:/home$ gimp &
+[1] 15893
+ubuntu@bss-ubu1804:/home$ 
+(gimp:15893): GLib-GObject-WARNING **: 13:38:58.167: g_object_set_is_valid_property: object class 'GeglConfig' has no property named 'cache-size'
+
+ubuntu@bss-ubu1804:/home$ gedit &
+[2] 15898
+ubuntu@bss-ubu1804:/home$ 
+(gedit:15898): dbind-WARNING **: 13:39:52.617: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+ubuntu@bss-ubu1804:/home$ geany &
+[3] 15907
+ubuntu@bss-ubu1804:/home$ 
+(geany:15907): dbind-WARNING **: 13:40:11.560: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+ubuntu@bss-ubu1804:/home$ jobs
+[1]   Running                 gimp &
+[2]-  Running                 gedit &
+[3]+  Running                 geany &
+ubuntu@bss-ubu1804:/home$ fg %2
+gedit 
+(program jest znowu na pierwszym planie i moge go uzywac)
+
+
+
