@@ -3,3 +3,7 @@
 Na dzisiejszych zajeciach nauczylem sie do czego sluza katalogi w glownym systemie plikow na linuxie.
 Moim zdaniem lepszym sposobem nauki komend terminala, byłoby głównie stosowanie praktyki, np. wykonując zadania związane z funkcjonalnością danej komendy, niekoniecznie skupiając się na teorii, o której bez praktyki i tak łatwo zapomnieć.
 
+2021-23-10
+Na dzisiejszych zajeciach nauczylem się jak przyznawac prawa dostępu do katalogow oraz plikow za pomoca komendy chmod. Dowiedzialem sie "kto" moze dostac prawa dostepu, czyli user, group, other i jak te prawa nadawac za pomoca korzystania z zapisu oktalnego. Ostatnia rzecza jest to czym do czego sa te prawa; do zapisu, odczytu i wykonania.
+Do samej lekcji nie mam zadnych uwag, ale w kontekscie do tematu zajec, uwazam ze fajnie byloby w przyszlosci zorganizowac jakis konkurs CTF w temacie wlasnie praw dostepu, kiedy nasza wiedza na ten temat wystarczajaco sie poszerzy. 
+
