@@ -1,0 +1,232 @@
+Porcja ćwiczeń
+1.
+
+s26245@szuflandia:~$ mkdir kat1 kat2 kat3       * utworzyłem katalogi
+s26245@szuflandia:~$ touch txt txt2 txt3        * utworzyłem pliki textowe
+s26245@szuflandia:~$ ls
+kat1  kat2  kat3  txt  txt2  txt3
+s26245@szuflandia:~$ chmod 705 kat1             * nadałem różne uprawnienia katalogom i plikom
+s26245@szuflandia:~$ chmod 777 kat2
+s26245@szuflandia:~$ chmod 111 kat3
+s26245@szuflandia:~$ chmod 755 txt
+s26245@szuflandia:~$ chmod 756 txt2
+s26245@szuflandia:~$ chmod 101 txt3
+s26245@szuflandia:~$ ls
+kat1  kat2  kat3  txt  txt2  txt3
+s26245@szuflandia:~$ ls -l                       *sprawdziłem uprawnienia do swoich plików
+razem 12
+drwx---r-x 2 s26245 pjwstk 4096 lis  4 21:00 kat1 
+drwxrwxrwx 2 s26245 pjwstk 4096 lis  4 21:00 kat2
+d--x--x--x 2 s26245 pjwstk 4096 lis  4 21:00 kat3
+-rwxr-xr-x 1 s26245 pjwstk    0 lis  4 21:00 txt
+-rwxr-xrw- 1 s26245 pjwstk    0 lis  4 21:00 txt2
+---x-----x 1 s26245 pjwstk    0 lis  4 21:00 txt3
+s26245@szuflandia:~$ ls
+s26245@szuflandia:~$ ls
+kat1  kat2  kat3  txt  txt2  txt3
+s26245@szuflandia:~$ cd ../
+s26245@szuflandia:/home/PJWSTK$ cd 
+Display all 3229 possibilities? (y or n)
+s26245@szuflandia:/home/PJWSTK$ cd s24549      *przeszedłem do katalogu Mateusza
+s26245@szuflandia:/home/PJWSTK/s24549$ ls
+folder  folder2  folder3  plik1.txt  plik2.txt
+s26245@szuflandia:/home/PJWSTK/s24549$ ls -l    *sprawdziłem jakie mam uprawnienia 
+razem 12
+drwxr-xr-x 3 s24549 pjwstk 4096 lis  4 21:04 folder
+drwxr-xr-x 2 s24549 pjwstk 4096 lis  4 21:02 folder2
+drwxr-xr-x 2 s24549 pjwstk 4096 lis  4 21:02 folder3
+-rw-r--r-- 1 s24549 pjwstk    0 lis  4 21:03 plik1.txt
+-rw-r--r-- 1 s24549 pjwstk    0 lis  4 21:03 plik2.txt
+s26245@szuflandia:/home/PJWSTK/s24549$ cd folder
+s26245@szuflandia:/home/PJWSTK/s24549/folder$ touch kukułcze jajo
+touch: nie można dotknąć 'kukułcze': Brak dostępu
+touch: nie można dotknąć 'jajo': Brak dostępu
+s26245@szuflandia:/home/PJWSTK/s24549/folder$ cd ..
+s26245@szuflandia:/home/PJWSTK/s24549$ ls -l
+razem 16
+drwxr-xr-x 3 s24549 pjwstk 4096 lis  4 21:04 folder
+drwxr-xr-x 2 s24549 pjwstk 4096 lis  4 21:02 folder2
+drwxr-xr-x 2 s24549 pjwstk 4096 lis  4 21:02 folder3
+-rwxrwxrwx 1 s24549 pjwstk    0 lis  4 21:03 plik1.txt
+-rw-r--r-- 1 s24549 pjwstk    4 lis  4 21:12 plik2.txt
+s26245@szuflandia:/home/PJWSTK/s24549$ cd folder2
+s26245@szuflandia:/home/PJWSTK/s24549/folder2$ touch kukułcze jajo
+touch: nie można dotknąć 'kukułcze': Brak dostępu
+touch: nie można dotknąć 'jajo': Brak dostępu
+s26245@szuflandia:/home/PJWSTK/s24549/folder2$ cd ..
+s26245@szuflandia:/home/PJWSTK/s24549$ touch kukułcze jajo
+touch: nie można dotknąć 'kukułcze': Brak dostępu
+touch: nie można s26245@szuflandia:/home/PJWSTK/s24549$ mkdir kukułcze jajo    *Próbowałem utworzyć plik kukułcze jajko, ale nie mam do tego uprawnień
+mkdir: nie można utworzyć katalogu „kukułcze”: Brak dostępu
+mkdir: nie można utworzyć katalogu „jajo”: Brak dostępu
+s26245@szuflandia:/home/PJWSTK/s24549$ 
+s26245@szuflandia:/home/PJWSTK/s24549$ ls                     *Mateusz wpisał komendę chmod g+w .
+folder  folder2  folder3  plik1.txt  plik2.txt
+s26245@szuflandia:/home/PJWSTK/s24549$ mkdir kuku               *utworzyłem folder "kuku" w jego katalogu
+s26245@szuflandia:/home/PJWSTK/s24549$ ls
+folder  folder2  folder3  kuku  plik1.txt  plik2.txt
+s26245@szuflandia:/home/PJWSTK/s24549$ touch "kukułcze jajko"   *utworzyłem plik tekstowy "kukułcze jajko" w jego katalogu
+s26245@szuflandia:/home/PJWSTK/s24549$ chmod 700 "kukułcze jajko"  *Zmieniłem uprawnienia pliku kukułcze jajko
+s26245@szuflandia:/home/PJWSTK/s24549$ ls -la
+s26245@szuflandia:/home/PJWSTK/s24549$ ls -la
+razem 120
+drwxrwxr-x    6 s24549 pjwstk  4096 lis  4 22:10 .
+drwxr-xr-x 3231 root   root   69632 paź 27 01:30 ..
+-rw-------    1 s24549 pjwstk   221 paź 23 12:46 .bash_history
+-rw-r--r--    1 s24549 pjwstk   220 lip 27 01:30 .bash_logout
+-rw-r--r--    1 s24549 pjwstk  3392 lip 27 01:30 .bashrc
+drwxr-xr-x    3 s24549 pjwstk  4096 lis  4 22:10 folder
+drwxr-xr-x    2 s24549 pjwstk  4096 lis  4 21:02 folder2
+drwxr-xr-x    2 s24549 pjwstk  4096 lis  4 21:02 folder3
+-rw-r--r--    1 s24549 pjwstk     5 lis  4 22:05 hej
+drwxr-xr-x    2 s24549 pjwstk  4096 paź 23 12:38 .nano
+-rwxrwxrwx    1 s24549 pjwstk    17 lis  4 21:17 plik1.txt
+-rw-r--r--    1 s24549 pjwstk   675 lip 27 01:30 .profile
+-rw-------    1 s24549 pjwstk   821 paź 23 12:46 .viminfo
+s26245@szuflandia:/home/PJWSTK/s24549$ nano plik1.txt
+s26245@szuflandia:/home/PJWSTK/s24549$ rm plik1.txt            *usunąłem plik1.txt z katalogu Mateusza
+s26245@szuflandia:/home/PJWSTK/s24549$ ls
+folder  folder2  folder3  hej
+
+2.
+s26245@szuflandia:~$ chmod 000 kat1                 *Usunąlem wszystkie uprawnienia do katalogu kat1
+s26245@szuflandia:~$ ls
+kat1  kat2  kat3  txt  txt2  txt3
+s26245@szuflandia:~$ ls -l
+razem 12
+d--------- 2 s26245 pjwstk 4096 lis  4 21:00 kat1
+drwxrwxrwx 2 s26245 pjwstk 4096 lis  4 21:00 kat2
+d--x--x--x 2 s26245 pjwstk 4096 lis  4 21:00 kat3
+-rwxr-xr-x 1 s26245 pjwstk    0 lis  4 21:00 txt
+-rwxr-xrw- 1 s26245 pjwstk    0 lis  4 21:00 txt2
+---x-----x 1 s26245 pjwstk    0 lis  4 21:00 txt3
+s26245@szuflandia:~$ cd kat1                          *nie mam dostępu aby przejść do kat1
+-shell: cd: kat1: Brak dostępu
+s26245@szuflandia:~$ rm kat1                          *nie moge usunąć katalogu kat1
+rm: nie można usunąć 'kat1': Jest katalogiem
+s26245@szuflandia:~$ chmod 705 kat1                   *mogę przywrócić uprawnienia do katalogu kat1
+s26245@szuflandia:~$ ls -l
+razem 12
+drwx---r-x 2 s26245 pjwstk 4096 lis  4 21:00 kat1
+drwxrwxrwx 2 s26245 pjwstk 4096 lis  4 21:00 kat2
+d--x--x--x 2 s26245 pjwstk 4096 lis  4 21:00 kat3
+-rwxr-xr-x 1 s26245 pjwstk    0 lis  4 21:00 txt
+-rwxr-xrw- 1 s26245 pjwstk    0 lis  4 21:00 txt2
+---x-----x 1 s26245 pjwstk    0 lis  4 21:00 txt3
+s26245@szuflandia:~$ cd kat1
+s26245@szuflandia:~/kat1$ mkdir kat
+s26245@szuflandia:~/kat1$ chmod 777 kat
+s26245@szuflandia:~/kat1$ ls -l
+razem 4
+drwxrwxrwx 2 s26245 pjwstk 4096 lis  4 21:45 kat
+s26245@szuflandia:~/kat1$ cd ..
+s26245@szuflandia:~$ chmod 000 kat1
+s26245@szuflandia:~$ cd ./kat1/kat
+-shell: cd: ./kat1/kat: Brak dostępu                  *nie moge bezpośrednio przejśc do katalogu, przez katalog do którego nie 
+s26245@szuflandia:~$                                  mam uprawnień
+
+*Kolejną część podpunktu dokańczam poza szuflandią, gdyż mam problem z  zalogowaniem sie do niej
+ubuntu@bss-ubu1804:~$ 
+ubuntu@bss-ubu1804:~$ mkdir kat1                   
+ubuntu@bss-ubu1804:~$ cd kat1                         *Tworzę katalogi
+ubuntu@bss-ubu1804:~/kat1$ 
+ubuntu@bss-ubu1804:~/kat1$ mkdir kat2
+ubuntu@bss-ubu1804:~/kat1$ chmod u-rwx .              *Odbieram sobie uprawnienia do katalogu bieżącego 
+ubuntu@bss-ubu1804:~/kat1$ ls -la                     *Nie mogę sprawdzić uprawnień do zawartości katalogu
+ls: cannot open directory '.': Permission denied
+ubuntu@bss-ubu1804:~/kat1$ cd kat2                    *Nie mogę przejść do katalogu, który znajduje się w katalogu, do  ktorego nie mam uprawnień
+bash: cd: kat2: Permission denied
+ubuntu@bss-ubu1804:~/kat1$ cd ..                      *Mogę wyjść z katalogu bez uprawnień, do katalogu nadrzędnego         
+ubuntu@bss-ubu1804:~$ chmod 777 kat1                  *Zmieniłem uprawnienia do katalogu kat1
+ubuntu@bss-ubu1804:~$ ls la
+ubuntu@bss-ubu1804:~/kat1$ cd ../
+bash: cd: ../: Permission denied
+ubuntu@bss-ubu1804:~/kat1$ cd ./home/ubuntu           * nie mogę przejść do katalogu ścieżką względną ani bezwzględną
+bash: cd: ./home/ubuntu: Permission denied
+ubuntu@bss-ubu1804:~/kat1$ 
+ubuntu@bss-ubu1804:~/kat1$ ls -la ..
+ls: cannot open directory '..': Permission denied     * nie mogę sprawdzić uprawnień do katalogu nadrzednego
+ubuntu@bss-ubu1804:~/kat1$ chmod u+rwx ..             
+
+     *Przywrócilem sobie uprawnienia do katalogu nadrzędnego
+
+3.
+s26245@szuflandia:/home/PJWSTK/s24549$ ls -la
+razem 120
+drwxrwxr-x    6 s24549 pjwstk  4096 lis  4 22:14 .
+drwxr-xr-x 3231 root   root   69632 paź 27 01:30 ..
+-rw-------    1 s24549 pjwstk   221 paź 23 12:46 .bash_history
+-rw-r--r--    1 s24549 pjwstk   220 lip 27 01:30 .bash_logout
+-rw-r--r--    1 s24549 pjwstk  3392 lip 27 01:30 .bashrc
+drwxr-xr-x    3 s24549 pjwstk  4096 lis  4 22:10 folder
+drwxr-xr-x    2 s24549 pjwstk  4096 lis  4 21:02 folder2
+drwxr-xr-x    2 s24549 pjwstk  4096 lis  4 21:02 folder3
+-rw-r--r--    1 s24549 pjwstk     5 lis  4 22:05 hej
+drwxr-xr-x    2 s24549 pjwstk  4096 paź 23 12:38 .nano
+-rw-r--r--    1 s24549 pjwstk     4 lis  4 22:13 plik1.txt
+-rw-r--r--    1 s24549 pjwstk   675 lip 27 01:30 .profile
+-rw-------    1 s24549 pjwstk   821 paź 23 12:46 .viminfo
+s26245@szuflandia:/home/PJWSTK/s24549$ cat plik1.txt          * sprawdzilem zawartośc pliku plik1.txt
+hej
+s26245@szuflandia:/home/PJWSTK/s24549$ ls -la
+razem 120
+drwxrwxr-x    6 s24549 pjwstk  4096 lis  4 22:14 .
+drwxr-xr-x 3231 root   root   69632 paź 27 01:30 ..
+-rw-------    1 s24549 pjwstk   221 paź 23 12:46 .bash_history
+-rw-r--r--    1 s24549 pjwstk   220 lip 27 01:30 .bash_logout
+-rw-r--r--    1 s24549 pjwstk  3392 lip 27 01:30 .bashrc
+drwxr-xr-x    3 s24549 pjwstk  4096 lis  4 22:10 folder
+drwxr-xr-x    2 s24549 pjwstk  4096 lis  4 21:02 folder2
+drwxr-xr-x    2 s24549 pjwstk  4096 lis  4 21:02 folder3
+-rw-r--r--    1 s24549 pjwstk     5 lis  4 22:05 hej
+drwxr-xr-x    2 s24549 pjwstk  4096 paź 23 12:38 .nano
+-rwxrw----    1 s24549 pjwstk     4 lis  4 22:13 plik1.txt
+-rw-r--r--    1 s24549 pjwstk   675 lip 27 01:30 .profile
+-rw-------    1 s24549 pjwstk   821 paź 23 12:46 .viminfo
+s26245@szuflandia:/home/PJWSTK/s24549$ nano plik1.txt
+s26245@szuflandia:/home/PJWSTK/s24549$ echo halohalo -> plik1.txt
+s26245@szuflandia:/home/PJWSTK/s24549$ cat plik1.txt
+halohalo -
+s26245@szuflandia:/home/PJWSTK/s24549$ nano plik1.txt
+s26245@szuflandia:/home/PJWSTK/s24549$ ls
+folder  folder2  folder3  hej  plik1.txt
+s26245@szuflandia:/home/PJWSTK/s24549$ nano plik1.txt
+s26245@szuflandia:/home/PJWSTK/s24549$ cat plik1.txt
+lala
+s26245@szuflandia:/home/PJWSTK/s24549$ echo halo halo > plik1.txt
+s26245@szuflandia:/home/PJWSTK/s24549$ cat plik1.txt
+halo halo                                                           *Wpisywaliśmy na przemian tekst do plik1.txt komendą echo
+s26245@szuflandia:/home/PJWSTK/s24549$ nano plik1.txt               * Echo z operatorem > nadpisuje poprzednia zawartość 
+s26245@szuflandia:/home/PJWSTK/s24549$ echo halo halo >> plik1.txt  *Echo z operatorem >> dopisuje zawartosc bez kasowania
+ s26245@szuflandia:/home/PJWSTK/s24549$ cat plik1.txt                  poprzedniej zawartości
+halo halo
+halo halo
+s26245@szuflandia:/home/PJWSTK/s24549$ nano plik1.txt
+s26245@szuflandia:/home/PJWSTK/s24549$ 
+
+*Komenda tail -f spowodowała, że zmiany nanoszone w piku tekstowym pojawiały się od razu, i nie trzeba było uzywać komendy cat, aby odczytać zawartość. 
+
+4.Nie zrobiłem czwartego podpunktu, bo nie mam dostępu do szuflandii.
+
+Zadanie Umask.
+
+ubuntu@bss-ubu1804:~$ umask 022
+ubuntu@bss-ubu1804:~$ touch test1
+-rw-r--r-- 1 ubuntu ubuntu    0 Nov 10 13:40 test1
+ubuntu@bss-ubu1804:~$ umask 702
+ubuntu@bss-ubu1804:~$ touch test2
+----rw-r-- 1 ubuntu ubuntu    0 Nov 10 13:41 test2
+ubuntu@bss-ubu1804:~$ umask 777
+ubuntu@bss-ubu1804:~$ touch test3
+---------- 1 ubuntu ubuntu    0 Nov 10 13:42 test3
+ubuntu@bss-ubu1804:~$ umask 000
+ubuntu@bss-ubu1804:~$ touch test4
+-rw-rw-rw- 1 ubuntu ubuntu    0 Nov 10 13:42 test4
+
+*Wykonywane jest "odejmowanie"(negowanie) na bitach domyślnych praw dostępu, do wartości, które określam poleceniem umask
+ kolejno dla 0<użytkownika 00< grupa 000<inne 
+
+
+
+
+
