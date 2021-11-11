@@ -12,3 +12,6 @@ rm: usunąć zabezpieczony przed zapisem zwykły plik 'jajo.txt'? tak
 - próboweano równiez edytowac zawartośc katalogu podrzednego z odebranymi uprawnieniami, również brak dostępu po obu stronach 
 
 Dalej jednak duże problemy sprawia mi poruszanie się po githubie i korzystanie z komend gitowych...
+
+11.11.2021r.
+ Dzisiaj od rana probuję ponownioe skonfigurować logowanie do githuba za pomocą klucza ssh, poniewaz nie czuje sie w tym temacier najmocniejszy 
