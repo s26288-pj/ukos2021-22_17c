@@ -14,4 +14,4 @@ rm: usunąć zabezpieczony przed zapisem zwykły plik 'jajo.txt'? tak
 Dalej jednak duże problemy sprawia mi poruszanie się po githubie i korzystanie z komend gitowych...
 
 11.11.2021r.
- Dzisiaj od rana probuję ponownioe skonfigurować logowanie do githuba za pomocą klucza ssh, poniewaz nie czuje sie w tym temacier najmocniejszy 
+	 Dzisiaj od rana probuję ponownioe skonfigurować logowanie do githuba za pomocą klucza ssh, poniewaz nie czuje sie w tym temacier najmocniejszy 
