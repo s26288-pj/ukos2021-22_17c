@@ -22,5 +22,6 @@ Na tych zajęciach dowiedziałam się jak:
 - poznałam przydatną komendę wget;
 - poznałam komendę kill i killall;
 - poznałam różnicę między CTR+C I CTR+D;
-- nauczyłam się jak przenosić procesy do działania a tle i je na powrót uaktywniać;
+- nauczyłam się jak przenosić procesy do działania w tle i je na powrót uaktywniać;
+- poznałam komendę tar i dwa sposoby pakowania plików (bzip2 i gzip); 
 
