@@ -13,3 +13,14 @@ Na tych zajęciach nauczyłam się:
 - jak zmieniać uprawnienia dla nowych katalogów i plików przy użyciu komendy umask;
 -  co oznacza i skąd się wziął zapis liczowy przy komendzie chmod np 777
 
+6.11
+
+Na tych zajęciach dowiedziałam się jak:
+
+- usunąć katalog z githuba;
+- opanowałam działania na procesach, grupowanie, filtrowanie listy procesów według określonych kryteriów;
+- poznałam przydatną komendę wget;
+- poznałam komendę kill i killall;
+- poznałam różnicę między CTR+C I CTR+D;
+- nauczyłam się jak przenosić procesy do działania a tle i je na powrót uaktywniać;
+
