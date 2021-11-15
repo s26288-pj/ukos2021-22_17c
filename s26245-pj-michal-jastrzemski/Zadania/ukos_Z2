@@ -206,7 +206,22 @@ s26245@szuflandia:/home/PJWSTK/s24549$
 
 *Komenda tail -f spowodowała, że zmiany nanoszone w piku tekstowym pojawiały się od razu, i nie trzeba było uzywać komendy cat, aby odczytać zawartość. 
 
-4.Nie zrobiłem czwartego podpunktu, bo nie mam dostępu do szuflandii.
+4
+.1.utworzyłem podkatalog public_html i przeszedłem do niego.
+
+s26245@szuflandia:~$ mkdir public_html
+s26245@szuflandia:~$ cd public_html/
+
+2.Utworzyłem plik strona.html i wpisałem do niego zawartość.
+
+s26245@szuflandia:~/public_html$ touch strona.html
+s26245@szuflandia:~/public_html$ nano strona.html
+
+3.Minimalne uprawnienia jakie są potrzebne aby strona była widoczna w przeglądarce,
+ to prawo do wykonaywania programu zawartego w katalogu dla katalogu domowego, oraz katalogu public_html.
+ w przypadku pliku strona.html, wystarczy prawo do odczytu pliku.
+
+-------r-- 1 s26245 pjwstk   66 lis 14 20:00 strona.html
 
 Zadanie Umask.
 
