@@ -1,0 +1,3 @@
+Na dzisiejszych zajęciach nauczyłem się używać git'a za pomocą terminala w Linuxie.
+Daje to duże możliwości jeżeli chodzi o programowanie grupowe i przechowywanie
+danych w chmurze.

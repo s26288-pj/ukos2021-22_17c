@@ -1,0 +1,34 @@
+2. ls
+3. pwd
+4. cd ../home/ubuntu/Desktop jeżeli dobrze zrozumiałem to powinno być ../Desktop ale nie działa
+5. pwd
+6. ls
+7. otrzymamy to samo
+8.  ls /home/ubuntu lub ls ~
+9.  cd ../home/ubuntu
+10. pwd
+11.  cd ././././././ - nic sie nie wydarzylo, nadal jestem w katalogu "Pictures", wpisałem też to cd ../../../../../../ i przeniosło mnie do głównego folderu
+12.  cd /home/ubuntu
+13. po wpisaniu polecenia cd /root otrzymałem komunikat Permission denied, aby tam wejść musiałbym skorzystać dodatkowo z sudo su
+14. przenosi mnie do terminala który wygląda jak ten podczas rozruchu linuxa
+
+Zadania bez numerów
+
+mkdir ukos
+mkdir ukos/klamka
+mkdir ukos/katalog/katalog2
+mkdir ukos/katalog/katalog3
+touch ukos/klamka/zajecia2.txt
+touch ukos/klamka/zajecia2.log
+touch ukos/klamka/inny.txt
+touch ukos/klamka/nowy.txt
+mkdir -p ukos/to/jest/dluga/nazwa
+cd ukos/to/jest/dluga/nazwa
+touch dane.txt
+cd ../../../../
+rm klamka/*.txt
+rmdir katalog/katalog2
+rm -r klamka
+
+
+

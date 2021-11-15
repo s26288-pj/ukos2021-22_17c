@@ -1,0 +1,29 @@
+1. Uruchom terminal
+2. Wyświetlam zawartość katalogu za pomocą komendy "ls"
+	ubuntu@bss-ubu1804:~/ukos2021-22_17c/s26288-pj-kacper-tokarzewski/Zadania$ ls
+	zadanie_1.txt
+3. Aktualnie znajduję się w folderze /home/ubuntu/ukos2021-22_17c/s26288-pj-kacper-tokarzewski/Zadania, a w interfejsie graficznym widzę ścieżkę /home/ubuntu
+4. Przechodzę do Pulpitu za pomocą ścieżki względnej "cd ../../../Desktop
+5. Za pomocą komendy "pwd" sprawdzam gdzie się znajduję, dostaję wynik /home/ubuntu/Desktop
+6. Wyświetlam zawartość katalogu za pomocą komendy "ls"
+	ubuntu@bss-ubu1804:~/Desktop$ ls
+	adding-packages-permanently-info.txt  passwords-info.txt
+7. Tak, przechodząc do tego katalogu w interfejsie graficznym otrzymamy ten sam wynik
+8. Wykorzystuję do tego komendę "ls /home"
+	ubuntu@bss-ubu1804:~/Desktop$ ls /home
+	ubuntu  vagrant
+9. Przechodzę do folderu Obrazy za pomocą komendy "cd ../Pictures"
+10. Sprawdzam gdzie jestem za pomocą komendy pwd
+	ubuntu@bss-ubu1804:~/Pictures$ pwd
+	/home/ubuntu/Pictures
+11. Korzystam z komendy "cd ././././././", co kończy się tym że zostaję w tym samym folderze
+12. Przechodzę do katalogu domowego za pomocą komendy "cd /home"
+13. Po wpisaniu komendy "cd /root" otrzymuję taki wynik: 
+	ubuntu@bss-ubu1804:/home$ cd /root
+	bash: cd: /root: Permission denied
+    Co może być spowodowane tym, że do tego folderu ma dostęp tylko administrator systemu
+14. Po naciśnięciu kombinacji klawiszy CTL+ALT+F1 przechodzę do szaty tekstowej systemu (terminal)
+
+
+	
+

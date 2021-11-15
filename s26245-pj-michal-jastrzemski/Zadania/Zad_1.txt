@@ -1,0 +1,76 @@
+ 1.     
+       1.Uruchamiam terminal
+       2.ubuntu@bss-ubu1804:~$ ls
+        Desktop    Downloads  Pictures  repo       ukos
+        Documents  Music      Public    Templates  Videos
+
+        3.ubuntu@bss-ubu1804:~$ pwd
+        /home/ubuntu
+
+	4.ubuntu@bss-ubu1804:~$ cd Desktop
+        ubuntu@bss-ubu1804:~/Desktop$ 
+
+	5.ubuntu@bss-ubu1804:~/Desktop$ pwd
+         /home/ubuntu/Desktop
+         ubuntu@bss-ubu1804:~/Desktop$
+ 
+        6.ubuntu@bss-ubu1804:~/Desktop$ ls
+          adding-packages-permanently-info.txt  lxterminal.desktop  passwords-        info.txt
+ 
+	7.Tak
+
+	8.ubuntu@bss-ubu1804:~/Desktop$ ls -p ~
+        Desktop/    Downloads/  Pictures/  repo/       ukos/
+        Documents/  Music/      Public/    Templates/  Videos/ 
+
+        9. ubuntu@bss-ubu1804:~/Desktop$ cd /home/ubuntu/Pictures
+        ubuntu@bss-ubu1804:~/Pictures$ 
+
+	10. ubuntu@bss-ubu1804:~/Pictures$ pwd
+        /home/ubuntu/Pictures
+
+	11.ubuntu@bss-ubu1804:~/Pictures$ cd ././././././
+        ubuntu@bss-ubu1804:~/Pictures$
+        - Zostałem w tym samym katalogu 
+
+	12. ubuntu@bss-ubu1804:~/Pictures$ cd /home/ubuntu
+        ubuntu@bss-ubu1804:~$
+
+        13. ubuntu@bss-ubu1804:~$ cd /root
+         bash: cd: /root: Permission denied
+         
+	14. Zostałem wylogowany
+2.
+
+  ubuntu@bss-ubu1804:~$ 
+ubuntu@bss-ubu1804:~$ mkdir ukos
+ubuntu@bss-ubu1804:~$ cd ukos
+ubuntu@bss-ubu1804:~/ukos$ mkdir katalog klamka
+ubuntu@bss-ubu1804:~/ukos$ cd katalog
+ubuntu@bss-ubu1804:~/ukos/katalog$ mkdir katalog2
+ubuntu@bss-ubu1804:~/ukos/katalog$ cd katalog2
+ubuntu@bss-ubu1804:~/ukos/katalog/katalog2$ mkdir katalog3
+ubuntu@bss-ubu1804:~/ukos/katalog/katalog2$ cd ../klamka
+bash: cd: ../klamka: No such file or directory
+ubuntu@bss-ubu1804:~/ukos/katalog/katalog2$ cd /home/ubuntu/ukos/klamka
+ubuntu@bss-ubu1804:~/ukos/klamka$ touch zajecia2.txt zajecia2.log inny.txt nowy.txt
+ubuntu@bss-ubu1804:~/ukos/klamka$ mkdir ukos/to/jest/dluga/nazwa
+mkdir: cannot create directory ‘ukos/to/jest/dluga/nazwa’: No such file or directory
+ubuntu@bss-ubu1804:~/ukos/klamka$ mkdir /ukos/to/jest/dluga/nazwa
+mkdir: cannot create directory ‘ukos/to/jest/dluga/nazwa’: No such file or directory
+ubuntu@bss-ubu1804:~/ukos/klamka$ mkdir -p ukos/to/jest/dluga/nazwa
+ubuntu@bss-ubu1804:~/ukos/klamka$ ls
+inny.txt  nowy.txt  ukos  zajecia2.log  zajecia2.txt
+ubuntu@bss-ubu1804:~/ukos/klamka$ cd ukos/to/jest/dluga/nazwa
+ubuntu@bss-ubu1804:~/ukos/klamka/ukos/to/jest/dluga/nazwa$ touch dane.txt
+ubuntu@bss-ubu1804:~/ukos/klamka/ukos/to/jest/dluga/nazwa$ cd /home/ubuntu/ukos/klamka
+ubuntu@bss-ubu1804:~/ukos/klamka$ rm *.txt
+ubuntu@bss-ubu1804:~/ukos/klamka$ cd ../katalog
+ubuntu@bss-ubu1804:~/ukos/katalog$ rmdir katalog2
+rmdir: failed to remove 'katalog2': Directory not empty
+ubuntu@bss-ubu1804:~/ukos/katalog$ rm -rf katalog2
+ubuntu@bss-ubu1804:~/ukos/katalog$ rm -rf /home/ubuntu/ukos/klamka
+ubuntu@bss-ubu1804:~/ukos/katalog$ cd ..
+ubuntu@bss-ubu1804:~/ukos$ ls
+katalog
+ubuntu@bss-ubu1804:~/ukos$  
