@@ -1,0 +1,24 @@
+Pamietnik
+
+2021-10-09
+
+Na dzisiejszych zajeciach nauczylam sie:
+- czym jest wirtualna maszyna i jak uruchomic jej obraz;
+- czym sa poszczegolne polecenia systemu Linux i gdzie ich szukac operujac w terminalu;
+- w jaki spozob zalozyc konto na Github;
+- w jaki sposob zalozyc repozytorium i zforkowac sie pod repozytorium innego uzytkownika na Github;
+- jak stworzyc foldery, pliki i zpushowac je do Github.
+
+2021-10-23
+
+Dzisiejsze zajecia nauczyly mnie:
+- jak polaczyc sie z repozytorium github poprzez klucz ssh;
+- w jaki sposob przejsc na sesje graficzna na ubuntu (uzywajac klawisza F7); 
+- jak uzywac polecenia chmod, które zmienia uprawnienia uzytkownikow do plikow, katalogow;
+- co oznacza (r)ead, (w)rite i e(x)ecute;
+- przypomnialam sobie z wykladu jak mozna przeliczyc zapis rwx na liczby, aby moc dawac uprawnienia w szybszy sposob;
+- ze nie wolno ustawic chmod na 777, poniewaz w ten sposob daje wszystkim uprawnienia do danego pliku. Kazdy moze go usunac, albo zaimplementowac wlasne zmiany, które moga byc niebezpieczne;
+- jak zrobic tzw. kukulcze gniazo innemu uzytkownikowi, czyli stworzyc plik lub folder do ktorego wlasciciel danej czesci serwera nie moze wejsc, zobaczyc zawartosci, ani nawet usunac;
+- jak utknac w folderze i nie moc ruszyc sie do innego poprzez odebranie sobie uprawnien do katalogu;
+- czym jest polecenie umask i jak mozna ulatwic sobie tworzenie plikow z odpowiednimi uprawnieniami jednym poleceniem.
+Dobralam sie w pare z Adrianna do wykonania zadania domowego. Zajecia byly bardzo przydatne i pouczajace, jestem pewna że poznane rzeczy przydadza mi sie w przyszlosci.

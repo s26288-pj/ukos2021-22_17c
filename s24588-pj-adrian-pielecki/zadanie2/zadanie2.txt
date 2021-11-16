@@ -1,0 +1,32 @@
+1.
+
+Utworzyłem drzewo katalogów
+
+Połączyłem się do kolegi Cezarego
+cd /home/PJWSTK/s24283
+
+Stworzyłem u niego plik jajo.txt i zmieniłem uprawnienia, przez co nie może tego edytować ani usunąć
+
+Ważne bo przy usuwaniu jednak mógł po potwierdzeniu:
+rm: usunąć zabezpieczony przed zapisem zwykły plik 'jajo.txt'? tak
+
+2.
+
+Po usunięciu wszelkich praw z katalogu ani ja ani kolega nie mogliśmy ingerować w jego zawartość, Cezary mógł natomiast nadać sobię prawa, z racji tego że był jego właścicielem, to samo tyczy się katalogu nadrzędnego. Nie można było przejść do innych katalogów w pomimo posiadania praw na te niżej, i tak samo nie można było nic z nimi zrobić.
+
+3.
+
+Używając operatora > nadpisywaliśmy wiadomość w pliku, ale używając >> dopisywaliśmy. Polecenie tail -f sprawiało że wyświetlane nam były zmiany odrazu, bez konieczności uruchamiania za każdym razem cat 
+
+4.
+
+Po utworzeniu takiego pliku w katalogu public_html należało nadać katalogowi uprawnienia execute dla grupy other a plikowi read (też grupa other)
+
+5.
+
+Dzięki umask możemy ustawić z jakimi prawami domyślnie będą tworzone pliki, katalogi.
+przykładowo wpisując:
+umask 000 - wszyscy będą mieli prawa = chmod 777 (nazwa pliku)
+umask 033 - właściciel będzie mieć pełne prawa ale cała reszta tylko odczyt = chmod 744 (nazwa pliku)
+
+Drugi przykład można przedstawić też tak 777 - 033 = 744
