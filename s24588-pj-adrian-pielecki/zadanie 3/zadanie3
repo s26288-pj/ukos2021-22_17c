@@ -1,0 +1,264 @@
+Po wpisaniu polecenia ls -a | grep D > ListaPlikówZLiterkąD.txt
+
+Został stworzony plik ListaPlikówZLiterkąD.txt do ktrórego zostały wpisane wszystkie pliki wywołane za pomocą ls -a z znakiem 'D' w sobie, a dzięki | można było napisać drugie polecenie w jedenej linijce. Grep D - wyszukało wszystko z literą 'D', natomiast znak/operator > sprawia że wpisujemy coś do pliku, jeżeli nie istnieje to go stworzy.
+
+1. 
+ps
+
+  PID TTY          TIME CMD
+ 2305 pts/0    00:00:00 bash
+ 2746 pts/0    00:00:00 ps
+
+ps -a
+
+  PID TTY          TIME CMD
+ 2752 pts/0    00:00:00 ps
+
+ps x
+
+  PID TTY      STAT   TIME COMMAND
+ 1190 ?        Ss     0:00 /lib/systemd/systemd --user
+ 1191 ?        S      0:00 (sd-pam)
+ 1202 ?        Ssl    0:00 mate-session
+ 1395 ?        Ss     0:00 /usr/bin/dbus-daemon --session --address=systemd: --n
+ 1528 ?        S      0:00 /usr/bin/VBoxClient --clipboard
+ 1529 ?        Sl     0:00 /usr/bin/VBoxClient --clipboard
+ 1538 ?        S      0:00 /usr/bin/VBoxClient --seamless
+ 1539 ?        Sl     0:00 /usr/bin/VBoxClient --seamless
+ 1543 ?        S      0:00 /usr/bin/VBoxClient --draganddrop
+ 1545 ?        Sl     0:00 /usr/bin/VBoxClient --draganddrop
+ 1548 ?        S      0:00 /usr/bin/VBoxClient --vmsvga
+ 1549 ?        Sl     0:00 /usr/bin/VBoxClient --vmsvga
+ 1563 ?        Ss     0:00 /usr/bin/ssh-agent /usr/bin/im-launch mate-session
+ 1642 ?        Ssl    0:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+ 1645 ?        Ssl    0:00 /usr/lib/gvfs/gvfsd
+ 1650 ?        Sl     0:00 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o bi
+ 1653 ?        S      0:00 /usr/bin/dbus-daemon --config-file=/usr/share/default
+ 1656 ?        Sl     0:00 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-s
+ 1669 ?        Sl     0:00 /usr/lib/dconf/dconf-service
+ 1673 ?        Sl     0:00 gnome-keyring-daemon --start
+ 1677 ?        Sl     0:00 /usr/bin/mate-settings-daemon
+ 1681 ?        Sl     0:00 marco
+ 1689 ?        S<l    0:00 /usr/bin/pulseaudio --start --log-target=syslog
+ 1693 ?        Sl     0:00 mate-panel
+ 1713 ?        Ssl    0:00 /usr/lib/gvfs/gvfs-udisks2-volume-monitor
+ 1714 ?        Sl     0:02 caja
+ 1718 ?        Ssl    0:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+ 1721 ?        Sl     0:00 mintmenu
+ 1723 ?        Sl     0:00 /usr/lib/mate-panel/wnck-applet
+ 1726 ?        Sl     0:00 /usr/lib/mate-panel/clock-applet
+ 1728 ?        Sl     0:00 /usr/lib/mate-panel/notification-area-applet
+ 1741 ?        Ssl    0:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
+ 1756 ?        Sl     0:00 mate-volume-control-applet
+ 1757 ?        Ssl    0:00 /usr/lib/gvfs/gvfs-mtp-volume-monitor
+ 1758 ?        Sl     0:00 mate-screensaver
+ 1796 ?        Sl     0:00 blueberry-obex-agent
+ 1801 ?        Sl     0:00 /usr/lib/x86_64-linux-gnu/polkit-mate-authentication-
+ 1802 ?        Ssl    0:00 /usr/lib/gvfs/gvfs-goa-volume-monitor
+ 1809 ?        Sl     0:00 nm-applet
+ 1823 ?        Sl     0:00 /usr/bin/python3 /usr/share/system-config-printer/app
+ 1825 ?        Sl     0:00 mate-power-manager
+ 1846 ?        Ss     0:00 /usr/lib/bluetooth/obexd
+ 1861 ?        Sl     0:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.7 /org/gtk/gvf
+ 1868 ?        Z      0:01 [get_apt_cache.p] <defunct>
+ 1889 ?        Ssl    0:00 /usr/lib/gvfs/gvfsd-metadata
+ 2141 ?        Sl     0:00 mintUpdate
+ 2297 ?        Rl     0:00 mate-terminal
+ 2305 pts/0    Ss     0:00 bash
+ 2701 ?        Sl     0:02 /usr/bin/gedit --gapplication-service
+ 2797 pts/0    R+     0:00 ps x
+
+ps aux
+
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.2 225360  9252 ?        Ss   14:49   0:00 /sbin/init spla
+root         2  0.0  0.0      0     0 ?        S    14:49   0:00 [kthreadd]
+root         4  0.0  0.0      0     0 ?        I<   14:49   0:00 [kworker/0:0H]
+root         5  0.0  0.0      0     0 ?        I    14:49   0:00 [kworker/u8:0]
+root         6  0.0  0.0      0     0 ?        I<   14:49   0:00 [mm_percpu_wq]
+root         7  0.0  0.0      0     0 ?        S    14:49   0:00 [ksoftirqd/0]
+root         8  0.0  0.0      0     0 ?        I    14:49   0:00 [rcu_sched]
+root         9  0.0  0.0      0     0 ?        I    14:49   0:00 [rcu_bh]
+root        10  0.0  0.0      0     0 ?        S    14:49   0:00 [migration/0]
+root        11  0.0  0.0      0     0 ?        S    14:49   0:00 [watchdog/0]
+root        12  0.0  0.0      0     0 ?        S    14:49   0:00 [cpuhp/0]
+root        13  0.0  0.0      0     0 ?        S    14:49   0:00 [cpuhp/1]
+root        14  0.0  0.0      0     0 ?        S    14:49   0:00 [watchdog/1]
+root        15  0.0  0.0      0     0 ?        S    14:49   0:00 [migration/1]
+root        16  0.0  0.0      0     0 ?        S    14:49   0:00 [ksoftirqd/1]
+root        18  0.0  0.0      0     0 ?        I<   14:49   0:00 [kworker/1:0H]
+root        19  0.0  0.0      0     0 ?        S    14:49   0:00 [cpuhp/2]
+root        20  0.0  0.0      0     0 ?        S    14:49   0:00 [watchdog/2]
+root        21  0.0  0.0      0     0 ?        S    14:49   0:00 [migration/2]
+root        22  0.0  0.0      0     0 ?        S    14:49   0:00 [ksoftirqd/2]
+root        24  0.0  0.0      0     0 ?        I<   14:49   0:00 [kworker/2:0H]
+root        25  0.0  0.0      0     0 ?        S    14:49   0:00 [cpuhp/3]
+root        26  0.0  0.0      0     0 ?        S    14:49   0:00 [watchdog/3]
+root        27  0.0  0.0      0     0 ?        S    14:49   0:00 [migration/3]
+root        28  0.0  0.0      0     0 ?        S    14:49   0:00 [ksoftirqd/3]
+root        30  0.0  0.0      0     0 ?        I<   14:49   0:00 [kworker/3:0H]
+root        31  0.0  0.0      0     0 ?        S    14:49   0:00 [kdevtmpfs]
+root        32  0.0  0.0      0     0 ?        I<   14:49   0:00 [netns]
+root        33  0.0  0.0      0     0 ?        S    14:49   0:00 [rcu_tasks_kthr
+root        34  0.0  0.0      0     0 ?        S    14:49   0:00 [kauditd]
+root        36  0.0  0.0      0     0 ?        I    14:49   0:00 [kworker/1:1]
+root        37  0.0  0.0      0     0 ?        I    14:49   0:00 [kworker/2:1]
+root        38  0.0  0.0      0     0 ?        S    14:49   0:00 [khungtaskd]
+root        39  0.0  0.0      0     0 ?        S    14:49   0:00 [oom_reaper]
+root        40  0.0  0.0      0     0 ?        I<   14:49   0:00 [writeback]
+root        41  0.0  0.0      0     0 ?        S    14:49   0:00 [kcompactd0]
+root        42  0.0  0.0      0     0 ?        SN   14:49   0:00 [ksmd]
+root        43  0.0  0.0      0     0 ?        SN   14:49   0:00 [khugepaged]
+root        44  0.0  0.0      0     0 ?        I<   14:49   0:00 [crypto]
+root        45  0.0  0.0      0     0 ?        I<   14:49   0:00 [kintegrityd]
+root        46  0.0  0.0      0     0 ?        I<   14:49   0:00 [kblockd]
+root        47  0.0  0.0      0     0 ?        I<   14:49   0:00 [ata_sff]
+root        48  0.0  0.0      0     0 ?        I<   14:49   0:00 [md]
+root        49  0.0  0.0      0     0 ?        I<   14:49   0:00 [edac-poller]
+root        50  0.0  0.0      0     0 ?        I<   14:49   0:00 [devfreq_wq]
+root        51  0.0  0.0      0     0 ?        I<   14:49   0:00 [watchdogd]
+root        54  0.0  0.0      0     0 ?        S    14:49   0:00 [kswapd0]
+root        55  0.0  0.0      0     0 ?        I<   14:49   0:00 [kworker/u9:0]
+root        56  0.0  0.0      0     0 ?        S    14:49   0:00 [ecryptfs-kthre
+root        98  0.0  0.0      0     0 ?        I<   14:49   0:00 [kthrotld]
+root        99  0.0  0.0      0     0 ?        I<   14:49   0:00 [acpi_thermal_p
+root       100  0.0  0.0      0     0 ?        S    14:49   0:00 [scsi_eh_0]
+root       101  0.0  0.0      0     0 ?        I<   14:49   0:00 [scsi_tmf_0]
+root       102  0.0  0.0      0     0 ?        S    14:49   0:00 [scsi_eh_1]
+root       103  0.0  0.0      0     0 ?        I<   14:49   0:00 [scsi_tmf_1]
+root       104  0.0  0.0      0     0 ?        I    14:49   0:00 [kworker/u8:2]
+root       105  0.0  0.0      0     0 ?        I    14:49   0:00 [kworker/u8:3]
+root       109  0.0  0.0      0     0 ?        I<   14:49   0:00 [ipv6_addrconf]
+root       118  0.0  0.0      0     0 ?        I<   14:49   0:00 [kstrp]
+root       119  0.0  0.0      0     0 ?        I    14:49   0:00 [kworker/3:1]
+root       136  0.0  0.0      0     0 ?        I<   14:49   0:00 [charger_manage
+root       179  0.0  0.0      0     0 ?        S    14:49   0:00 [scsi_eh_2]
+root       185  0.0  0.0      0     0 ?        I<   14:49   0:00 [scsi_tmf_2]
+root       188  0.0  0.0      0     0 ?        I    14:49   0:00 [kworker/2:2]
+root       189  0.0  0.0      0     0 ?        I<   14:49   0:00 [kworker/3:1H]
+root       190  0.0  0.0      0     0 ?        I    14:49   0:00 [kworker/1:2]
+root       192  0.0  0.0      0     0 ?        I<   14:49   0:00 [kworker/0:1H]
+root       193  0.0  0.0      0     0 ?        I<   14:49   0:00 [kworker/1:1H]
+root       195  0.0  0.0      0     0 ?        I<   14:49   0:00 [ttm_swap]
+root       196  0.0  0.0      0     0 ?        S    14:49   0:00 [irq/18-vmwgfx]
+root       297  0.0  0.0      0     0 ?        S    14:49   0:00 [jbd2/sda1-8]
+root       298  0.0  0.0      0     0 ?        I<   14:49   0:00 [ext4-rsv-conve
+root       341  0.0  0.3  94928 14812 ?        S<s  14:49   0:00 /lib/systemd/sy
+root       361  0.0  0.1  46924  5456 ?        Ss   14:49   0:00 /lib/systemd/sy
+root       387  0.0  0.0      0     0 ?        I<   14:49   0:00 [kworker/2:1H]
+root       388  0.0  0.0  97708  1708 ?        Ss   14:49   0:00 /sbin/lvmetad -
+root       389  0.0  0.0      0     0 ?        I    14:49   0:00 [kworker/3:2]
+root       395  0.0  0.0      0     0 ?        I<   14:49   0:00 [iprt-VBoxWQueu
+systemd+   408  0.0  0.1  70624  5212 ?        Ss   14:49   0:00 /lib/systemd/sy
+root       451  0.0  0.0      0     0 ?        I    14:49   0:00 [kworker/0:2]
+root       608  0.0  0.0 110408  2036 ?        Ssl  14:49   0:00 /usr/sbin/irqba
+root       612  0.0  0.2 302664  8748 ?        Ssl  14:49   0:00 /usr/lib/accoun
+syslog     613  0.0  0.1 263036  4292 ?        Ssl  14:49   0:00 /usr/sbin/rsysl
+root       614  0.0  0.3 517564 12440 ?        Ssl  14:49   0:00 /usr/lib/udisks
+root       620  0.0  0.0  32540  3224 ?        Ss   14:49   0:00 /usr/sbin/cron 
+root       628  0.0  0.0   4552   832 ?        Ss   14:49   0:00 /usr/sbin/acpid
+root       644  0.0  0.1  70600  6000 ?        Ss   14:49   0:00 /lib/systemd/sy
+root       645  0.0  0.2 434328  9588 ?        Ssl  14:49   0:00 /usr/sbin/Modem
+message+   646  0.0  0.1  51300  5532 ?        Ss   14:49   0:00 /usr/bin/dbus-d
+root       680  0.0  0.1  45224  5328 ?        Ss   14:49   0:00 /sbin/wpa_suppl
+root       682  0.0  0.4 574460 18704 ?        Ssl  14:49   0:00 /usr/sbin/Netwo
+avahi      689  0.0  0.0  47268  3144 ?        Ss   14:49   0:00 avahi-daemon: r
+root       690  0.0  0.4 171760 17696 ?        Ssl  14:49   0:00 /usr/bin/python
+root       703  0.0  0.2 311396 11072 ?        Ssl  14:49   0:00 /usr/lib/policy
+kernoops   704  0.0  0.0  56936  2636 ?        Ss   14:49   0:00 /usr/sbin/kerne
+kernoops   706  0.0  0.0  56936   420 ?        Ss   14:49   0:00 /usr/sbin/kerne
+avahi      741  0.0  0.0  47076   340 ?        S    14:49   0:00 avahi-daemon: c
+root       811  0.0  0.0 314136  2472 ?        Sl   14:49   0:00 /usr/sbin/VBoxS
+root       841  0.0  0.1  72296  5672 ?        Ss   14:49   0:00 /usr/sbin/sshd 
+ntp        853  0.0  0.1 109836  4328 ?        Ssl  14:49   0:00 /usr/sbin/ntpd 
+root       860  0.0  0.1  25992  6364 ?        S    14:49   0:00 /sbin/dhclient 
+root      1150  0.0  0.2 308852  8824 ?        Ssl  14:49   0:00 /usr/sbin/light
+root      1166  0.8  2.2 696740 89412 tty7     Ssl+ 14:49   0:07 /usr/lib/xorg/X
+root      1169  0.0  0.0  17400  1960 tty1     Ss+  14:49   0:00 /sbin/agetty -o
+root      1186  0.0  0.1 266800  7348 ?        Sl   14:49   0:00 lightdm --sessi
+student   1190  0.0  0.2  76860  8092 ?        Ss   14:49   0:00 /lib/systemd/sy
+student   1191  0.0  0.0 132288  2704 ?        S    14:49   0:00 (sd-pam)
+student   1202  0.0  1.2 833976 49480 ?        Ssl  14:49   0:00 mate-session
+student   1395  0.0  0.1  50420  4752 ?        Ss   14:49   0:00 /usr/bin/dbus-d
+student   1528  0.0  0.0  49680   352 ?        S    14:49   0:00 /usr/bin/VBoxCl
+student   1529  0.0  0.0 183856  2184 ?        Sl   14:49   0:00 /usr/bin/VBoxCl
+student   1538  0.0  0.0  49680   356 ?        S    14:49   0:00 /usr/bin/VBoxCl
+student   1539  0.0  0.0 181916  2972 ?        Sl   14:49   0:00 /usr/bin/VBoxCl
+student   1543  0.0  0.0  49680   348 ?        S    14:49   0:00 /usr/bin/VBoxCl
+student   1545  0.0  0.0 182432  2956 ?        Sl   14:49   0:00 /usr/bin/VBoxCl
+student   1548  0.0  0.0  49680   352 ?        S    14:49   0:00 /usr/bin/VBoxCl
+student   1549  0.0  0.0 186228  3708 ?        Sl   14:49   0:00 /usr/bin/VBoxCl
+student   1563  0.0  0.0  11304   320 ?        Ss   14:49   0:00 /usr/bin/ssh-ag
+student   1642  0.0  0.2 368080  9008 ?        Ssl  14:49   0:00 /usr/lib/at-spi
+student   1645  0.0  0.1 286064  7256 ?        Ssl  14:49   0:00 /usr/lib/gvfs/g
+student   1650  0.0  0.1 432020  8036 ?        Sl   14:49   0:00 /usr/lib/gvfs/g
+student   1653  0.0  0.1  49928  4248 ?        S    14:49   0:00 /usr/bin/dbus-d
+student   1656  0.0  0.1 220772  6872 ?        Sl   14:49   0:00 /usr/lib/at-spi
+student   1669  0.0  0.1 188020  5184 ?        Sl   14:49   0:00 /usr/lib/dconf/
+student   1673  0.0  0.1 282476  7216 ?        Sl   14:49   0:00 gnome-keyring-d
+student   1677  0.0  0.8 1588096 33784 ?       Sl   14:49   0:00 /usr/bin/mate-s
+student   1681  0.0  0.8 493744 32472 ?        Sl   14:49   0:00 marco
+student   1689  0.0  0.2 902156 11716 ?        S<l  14:49   0:00 /usr/bin/pulsea
+rtkit     1690  0.0  0.0 183504  3072 ?        SNsl 14:49   0:00 /usr/lib/rtkit/
+student   1693  0.0  0.8 631492 33476 ?        Sl   14:49   0:00 mate-panel
+student   1713  0.0  0.2 388020 11100 ?        Ssl  14:49   0:00 /usr/lib/gvfs/g
+student   1714  0.3  1.6 1270360 68480 ?       Sl   14:49   0:02 caja
+student   1718  0.0  0.1 282772  5580 ?        Ssl  14:49   0:00 /usr/lib/gvfs/g
+student   1721  0.0  1.4 728944 58092 ?        Sl   14:49   0:00 mintmenu
+student   1723  0.0  0.7 504904 30196 ?        Sl   14:49   0:00 /usr/lib/mate-p
+student   1726  0.0  0.7 545408 31012 ?        Sl   14:49   0:00 /usr/lib/mate-p
+student   1728  0.0  0.6 484280 27828 ?        Sl   14:49   0:00 /usr/lib/mate-p
+student   1741  0.0  0.1 372924  7680 ?        Ssl  14:49   0:00 /usr/lib/gvfs/g
+student   1756  0.0  0.7 697468 32208 ?        Sl   14:49   0:00 mate-volume-con
+student   1757  0.0  0.1 269984  6204 ?        Ssl  14:49   0:00 /usr/lib/gvfs/g
+student   1758  0.0  0.5 425780 23232 ?        Sl   14:49   0:00 mate-screensave
+student   1796  0.0  0.8 443900 34444 ?        Sl   14:49   0:00 blueberry-obex-
+student   1801  0.0  0.3 324268 15168 ?        Sl   14:49   0:00 /usr/lib/x86_64
+student   1802  0.0  0.1 268208  6092 ?        Ssl  14:49   0:00 /usr/lib/gvfs/g
+student   1809  0.0  0.8 652448 36188 ?        Sl   14:49   0:00 nm-applet
+student   1823  0.0  0.8 251280 32552 ?        Sl   14:49   0:00 /usr/bin/python
+student   1825  0.0  0.6 513024 26360 ?        Sl   14:49   0:00 mate-power-mana
+root      1842  0.0  0.2 316432  8752 ?        Ssl  14:49   0:00 /usr/lib/upower
+student   1846  0.0  0.1  82724  6868 ?        Ss   14:49   0:00 /usr/lib/blueto
+student   1861  0.0  0.2 377992  9720 ?        Sl   14:49   0:00 /usr/lib/gvfs/g
+student   1868  0.1  0.0      0     0 ?        Z    14:49   0:01 [get_apt_cache.
+student   1889  0.0  0.1 198652  6060 ?        Ssl  14:49   0:00 /usr/lib/gvfs/g
+student   2141  0.0  1.5 749720 60720 ?        Sl   14:50   0:00 mintUpdate
+student   2297  0.1  0.9 645632 38024 ?        Sl   14:51   0:01 mate-terminal
+student   2305  0.0  0.1  23936  5356 pts/0    Ss   14:51   0:00 bash
+root      2604  0.0  0.2 101800  8376 ?        Ss   14:54   0:00 /usr/sbin/cupsd
+root      2605  0.0  0.2 303652 11016 ?        Ssl  14:54   0:00 /usr/sbin/cups-
+student   2701  0.5  1.1 651376 46044 ?        Sl   14:55   0:02 /usr/bin/gedit 
+root      2707  0.0  0.0      0     0 ?        I    14:55   0:00 [kworker/0:0]
+root      2743  0.0  0.0      0     0 ?        R    15:00   0:00 [kworker/u8:1]
+root      2744  0.0  0.0      0     0 ?        I    15:00   0:00 [kworker/2:0]
+root      2800  0.0  0.0      0     0 ?        I    15:04   0:00 [kworker/0:1]
+student   2802  0.0  0.0  38584  3580 pts/0    R+   15:04   0:00 ps aux
+
+tty - wskazuje aktualnie używany terminal a znak ? oznacza brak skojarzonego terminalu
+
+1)ps 2305
+2)ps -u root
+
+2.
+
+1)gedit
+2)2701
+3)kill 2701
+4)killall shell - shell: no process found
+5)kill 3359 (firefox) działa, kill 1714 (caja) działa
+
+3.
+
+1) cat > wynik1.txt stworzy plik wynik1.txt
+2) wpisałem witaj
+3) Ctrl+C
+4) możemy coś zapisać a następnie wyjść Ctrl+C
+5) zrobiło to samo, jedyną różnicą jest to że nie ma ^D tak jak przy ctrl c = ^C
+
+4.
+
+bg - pozwala mi na uruchomienie programu w zawieszeniu 
+fg - przenosi na foreground czyli pierwszy plan
+jobs pokazuje wstrzymane procesy
+a operator & pozwala uruchomić program w tle
