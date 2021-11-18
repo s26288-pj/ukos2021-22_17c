@@ -4,3 +4,5 @@ Na dzisiejszych zajeciach z UKOS nauczylem sie:
 - Podstaw dzialania serwisu github
 - generowania klucza ssh poprzez terminal tekstowy 
 - klonowania repozytorium poprzez terminal tekstowy
+- naprawienia problemu z rozna histria commitow pomiedzy 2 repozytoriami 
+- skladni poprawnego pisania commitow
