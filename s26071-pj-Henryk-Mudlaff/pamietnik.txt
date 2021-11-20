@@ -1,0 +1,8 @@
+2021-10-09
+Na dzisiejszych zajeciach z UKOS nauczylem sie:
+- Do czego sluza katalogi w glownym systemie na linuxie
+- Podstaw dzialania serwisu github
+- generowania klucza ssh poprzez terminal tekstowy 
+- klonowania repozytorium poprzez terminal tekstowy
+- naprawienia problemu z rozna histria commitow pomiedzy 2 repozytoriami 
+- skladni poprawnego pisania commitow
