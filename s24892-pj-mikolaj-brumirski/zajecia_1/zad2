@@ -1,4 +1,4 @@
-mkdirr ukos
+mkdir ukos
 cd ukos
 mkdir katalog
 mkdir klamka
