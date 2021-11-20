@@ -1,0 +1,41 @@
+Kolokwium
+Zadanie 1
+Katalog kota -> ale
+
+- ścieżka względna
+cd ../../../kot/ma/ale
+
+- ściezka bezwzgledna
+/tmp/ukos/kot/ma/ale
+
+Zadanie 2
+mkdir -p /tmp/ukos/kot/ma/ale/jan/kowalski
+
+Zadanie 3
+mv ../../../kot/ma/ale ../../i
+
+Zadanie 4
+Poleceniem kill, wczesniej sprawdzajac PID w ps aux i filtrujac grep [nazwa].
+
+Zadanie 5
+ls | grep ^al
+
+Zadanie 6
+chmod 751 ala
+chmod u+xwr,g+xr,o+x,g-w,o-wr ala
+
+Zadanie 7
+ls > nazwa.txt
+
+Zadanie 8
+1. Zostal zmieniony user i group folderow (poleceniem chown) i ja jako other nie mam uprawnien write do edycji katalogow.
+2. Odebralam uprawnienia (poleceniem chmod) write dla user, group i other do edycji katalogow.
+3. Jestem w niewlasciwym miejscu, w ktorym nie mam uprawnien write i probuje cos edytowac.
+
+Zadanie 9
+Na uzupełnianie komend pozwala klawisz TAB.
+
+Zadanie 10
+Program mozna uruchomic:
+- [nazwa] & pozwoli to na wlaczenie programu w tle
+- zatrzymac program ctrl+Z a nastepnie komenda bg, aby uruchomic go w tle

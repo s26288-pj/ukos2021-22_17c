@@ -18,7 +18,22 @@ Dzisiejsze zajecia nauczyly mnie:
 - co oznacza (r)ead, (w)rite i e(x)ecute;
 - przypomnialam sobie z wykladu jak mozna przeliczyc zapis rwx na liczby, aby moc dawac uprawnienia w szybszy sposob;
 - ze nie wolno ustawic chmod na 777, poniewaz w ten sposob daje wszystkim uprawnienia do danego pliku. Kazdy moze go usunac, albo zaimplementowac wlasne zmiany, które moga byc niebezpieczne;
-- jak zrobic tzw. kukulcze gniazo innemu uzytkownikowi, czyli stworzyc plik lub folder do ktorego wlasciciel danej czesci serwera nie moze wejsc, zobaczyc zawartosci, ani nawet usunac;
+- jak zrobic tzw. kukulcze jajo innemu uzytkownikowi, czyli stworzyc plik lub folder do ktorego wlasciciel danej czesci serwera nie moze wejsc, zobaczyc zawartosci, ani nawet usunac;
 - jak utknac w folderze i nie moc ruszyc sie do innego poprzez odebranie sobie uprawnien do katalogu;
 - czym jest polecenie umask i jak mozna ulatwic sobie tworzenie plikow z odpowiednimi uprawnieniami jednym poleceniem.
 Dobralam sie w pare z Adrianna do wykonania zadania domowego. Zajecia byly bardzo przydatne i pouczajace, jestem pewna że poznane rzeczy przydadza mi sie w przyszlosci.
+
+2021-11-06
+
+Na cwiczeniach dowiedzialam sie:
+- w jaki sposob moge zmienic grupe pliku oraz glowna grupe uzytkownika;
+- czym sa strumienie wejscia i wyjscia oraz poznalam ich przyklady;
+- czym jest polecenie ps (wyszukiwanie procesow);
+- jak filtrowac wyswietlone listy w terminalu za pomoca polecenia grep;
+- w jaki sposob za pomoca polecenia awk wydrukowac konkretne wiersze z pliku tekstowego;
+- ze za pomoca polecenia wget moge pobrac pliki ze stron internetowych;
+- w jaki sposob zatrzymać bierzacy proces (ctrl+C), zatrzymac proces wraz z apisaniem go (ctrl+D);
+- czym jest polecenie killall (wysyla sygnal do wszystkich dzialajacych procesow);
+- jak operować na procesach dzialajacych w tle, jak je zatrzymac (ctrl+Z), jak uruchomic w tle (bg %) i na wierzchu (fg %), jak wylistowac (jobs),- w jaki sposob spakowywac i rozpakowywac archiwa (tar)
+- prowadzacy pokazal rowniez program MobaXterm, ktory miedzy innymi pozawala miec graficzne linuxowe okno operujac na windowsie.
+Zajecia pokazaly mi duzo przydatnych wskazowek, ktore usprawnia moja prace na terminalu.
