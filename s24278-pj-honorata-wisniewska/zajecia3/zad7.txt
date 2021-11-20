@@ -16,4 +16,5 @@ witajubuntu@bss-ubu1804:~$ ls
 Desktop  Documents  Downloads  ListaPlikowZLiterkaD.txt  Music  Pictures  Public  repo  Templates  testy  ukos  Videos  wynik1.txt  wynik2.txt
 ubuntu@bss-ubu1804:~$ cat wynik2.txt 
 witajubuntu@bss-ubu1804:~$ 
-Ctrl+D zatrzymuje bierzacy proces zapisujac go, plik tekstowy istnieje, napisana zawartosc rowniez.
+Ctrl+D wysyla komunikat EOF (end-of-file) do terminala. Oznacza koniec wprowadzania danych
+ i zamyka terminal zapisujac zawartosc pliku.
