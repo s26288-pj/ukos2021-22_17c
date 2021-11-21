@@ -1,0 +1,47 @@
+1. Korzystajac z komend cd oraz mkdir stworz nastepujace drzewo katalogow w swoim katalogu domowym.
+ubuntu@bss-ubu1804:~$ mkdir ukos
+ubuntu@bss-ubu1804:~$ cd ukos
+ubuntu@bss-ubu1804:~/ukos$ mkdir katalog
+ubuntu@bss-ubu1804:~/ukos$ cd katalog
+ubuntu@bss-ubu1804:~/ukos/katalog$ mkdir katalog2
+ubuntu@bss-ubu1804:~/ukos/katalog$ mkdir katalog3
+ubuntu@bss-ubu1804:~/ukos/katalog$ ls
+katalog2  katalog3
+ubuntu@bss-ubu1804:~/ukos/katalog$ cd ../
+ubuntu@bss-ubu1804:~/ukos$ mkdir klamka
+ubuntu@bss-ubu1804:~/ukos$ ls
+katalog  klamka
+
+2. W katalogu ukos/klamka stworz pliki zajecia2.txt zajecia2.log inny.txt nowy.txt.
+ubuntu@bss-ubu1804:~/ukos/klamka$ touch zajecia2.txt zajecia2.log inny.txt nowy.txt
+ubuntu@bss-ubu1804:~/ukos/klamka$ ls
+inny.txt  nowy.txt  zajecia2.log  zajecia2.txt
+
+3. Za pomoca jednego polecenia mkdir stworz w katalogu ukos nastepujacy katalog: ukos/to/jest/dluga/nazwa
+Nie jestem w stanie stworzyc pojedynczego katalogu o nazwie ukos/to/jest/dluga/nazwa, poniewaz zawiera / - oznacza to root directory, jest zarezerwowane jako separator pomiedzy plikami i folderami.
+Jestem w stanie stworzyc kilka katalogow o takiej sciezce w jednym poleceniu.
+ubuntu@bss-ubu1804:~/ukos$ mkdir -p ukos/to/jest/dluga/nazwa
+mkdir -p - polecenie dodaje nie istniejace katalogi
+
+4. nastepnie umiesc w katalogu ukos/to/jest/dluga/nazwa plik dane.txt
+ubuntu@bss-ubu1804:~/ukos/ukos/to/jest/dluga/nazwa$ touch dane.txt
+ubuntu@bss-ubu1804:~/ukos/ukos/to/jest/dluga/nazwa$ ls
+dane.txt
+
+
+5.Usun z katalogu ukos/klamka wszystkie pliki z rozszerzeniem txt.
+ubuntu@bss-ubu1804:~/ukos/klamka$ ls
+inny.txt  nowy.txt  zajecia2.log  zajecia2.txt
+ubuntu@bss-ubu1804:~/ukos/klamka$ rm *txt
+ubuntu@bss-ubu1804:~/ukos/klamka$ ls
+
+
+6. Usun katalog ukos/katalog/katalog2
+ubuntu@bss-ubu1804:~/ukos/katalog$ rmdir katalog2
+ubuntu@bss-ubu1804:~/ukos/katalog$ ls
+katalog3
+
+7. Usun caly katalog klamka za pomoca jednego polecenia
+ubuntu@bss-ubu1804:~/ukos$ rm -r klamka
+ubuntu@bss-ubu1804:~/ukos$ ls
+katalog  ukos

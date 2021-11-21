@@ -1,3 +1,4 @@
-Polecenie umask służy do ograniczania praw użytkownika np. jeśli użytkownik dostał wszystkie dostępy (chmod 777) to odebranie ich przebiega komendą umask 777. 
-Komenda umask może również służyć do sprawdzenia uprawnień danego pliku lub folderu.
 Tą komendą zmienia się standardowe dostępy przy tworzeniu pliku lub katalogu (jeśli maska jest wyłączona standardowo dostaje się wszystkie dostępy).
+Wpisując komende umask otrzymujemy obecne ustawienie umask np. 0022 
+Umask nie może zmieniać permisji utworzonych już plików. 
+Po więcej informacji na temat umask można wpisać man umask 
