@@ -185,3 +185,106 @@ Zad.4.
 - po sprawdzeniu, najmniejsze wymagane dostepy zeby strona sie wyswietlala to:
 	-------r-- 1 s24549 pjwstk 66 lis 23 15:12 strona.html
 - zatem wysatrczy, ze other ma prawo do odczytu
+
+
+2021-11-24
+UKOS_Z3
+
+Zad. bez nr.
+- w katalogu domowym
+	ubuntu@bss-ubu1804:~$ ls -a
+	.              .bash_logout  .config  Documents   .gnupg         .mozilla  .profile  rrr   
+        Templates    .vboxclient-clipboard.pid    .vboxclient-seamless.pid  .Xauthority       .xsession-errors.old
+	..             .bashrc       Desktop  Downloads   list_of_files  Music     Public    .ssh    
+	test         .vboxclient-display.pid      Videos                    .xscreensaver
+	.bash_history  .cache        .dmrc    .gitconfig  .local         Pictures  repo      
+	.sudo_as_admin_successful  .thumbnails  .vboxclient-draganddrop.pid  .viminfo                  
+	.xsession-errors
+- po wspianiu 'ls -a | grep D' - wyswietla sie tylko pozycje z 'D' w nazwie
+	ubuntu@bss-ubu1804:~$ ls -a | grep D
+	Desktop
+	Documents
+	Downloads
+- po wykonaniu ponizyszch operacji otrzymuje plik 'ListaPlikowZLiterkaD.txt' do ktorego przekierowalem wynik szukania plikow/folderow z
+'D' w nazwie + nazwe utworzonego pliku:
+	ubuntu@bss-ubu1804:~$ ls -a | grep D > ListaPlikowZLiterkaD.txt
+	ubuntu@bss-ubu1804:~$ cat ListaPlikowZLiterkaD.txt 
+	Desktop
+	Documents
+	Downloads
+	ListaPlikowZLiterkaD.txt
+- '>' przekierowuje standardowe wyjście do pliku (nadpisuje)
+
+
+Zad.1.
+- po wpisaniu w terminal 'ps', wyswietlily sie nastepujace procesy:
+	ubuntu@bss-ubu1804:~$ ps
+	  PID TTY          TIME CMD
+	  984 pts/0    00:00:00 bash
+	 1212 pts/0    00:00:00 ps
+- 'ps -a' - pokazuje wszystkie procesy zwiazane z termianlem
+- 'ps x' - wyswietla wszystkie procesy, ktorych jestem wlascicielem? 
+- 'ps aux' - pokazuje wszystkie procesy
+- nie wiem co oznacza '?' w drugiej kolumnie
+- wyswietlam wszystkie procesy bash 'ps | grep bash'
+- wyswietlam wszystkie procesy uzytkownika root 'ps -u root'
+
+
+Zad.2.
+- wlaczylem gedit 'gedit &'
+- znalazlem jego PID i wpisalem 'kill pid id_procesu_gedit' i gedit sie wylaczyl, podobnie firefox
+- nie moge zrobic 'killall shell'
+	ubuntu@bss-ubu1804:~$ killall shell
+	shell: no process found
+- nie udalo mi sie 'zabic' procesu bash
+	ubuntu@bss-ubu1804:~$ ps
+	  PID TTY          TIME CMD
+	 1545 pts/0    00:00:00 bash
+	 1736 pts/0    00:00:00 ps
+	ubuntu@bss-ubu1804:~$ kill pid 1545
+	bash: kill: pid: arguments must be process or job IDs
+
+
+Zad.3.
+- wpisalem 'cat', wlaczyl sie cat, blokujac konsole
+- wcisnalem CTRL+C - proces zostal zatrzymany, znow moge uzywac konsoli
+- po wprowadzeniu:
+	ubuntu@bss-ubu1804:~/Desktop$ cat > wynik1.txt
+	witaj^C
+	ubuntu@bss-ubu1804:~/Desktop$ cat wynik1.txt  
+	ubuntu@bss-ubu1804:~/Desktop$
+- nic nie zostalo zapisane w pliku 'wynik1.txt'. Zostal on tylko utworzony
+- przy wcisnieciu CTRL+D, wiadomosc zapisala sie w pliku
+	ubuntu@bss-ubu1804:~/Desktop$ cat > wynik2.txt
+	witajubuntu@bss-ubu1804:~/Desktop$ cat wynik2.txt 
+	witajubuntu@bss-ubu1804:~/Desktop$ 
+
+
+Zad.4.
+- wysztko zgodnie z instrukcja, po wpisaniu 'bg' firefox usuchomil sie w tle nie blokujac konsoli:
+	ubuntu@bss-ubu1804:~/Desktop$ firefox 
+	^Z
+	[1]+  Stopped                 firefox
+	ubuntu@bss-ubu1804:~/Desktop$ ps
+	  PID TTY          TIME CMD
+	 1545 pts/0    00:00:00 bash
+	 1906 pts/0    00:00:04 firefox
+	 1945 pts/0    00:00:00 Web Content
+	 2007 pts/0    00:00:00 WebExtensions
+	 2043 pts/0    00:00:00 Web Content
+	 2066 pts/0    00:00:00 Web Content
+	 2088 pts/0    00:00:00 ps
+	ubuntu@bss-ubu1804:~/Desktop$ bg
+	[1]+ firefox &
+	ubuntu@bss-ubu1804:~/Desktop$ kill -9 1906
+- uruchomilem ponownie firefox i wykonalem to co powyzej, po wpisaniu 'fg' firefox przeszedl na pierwszy plan
+blokujac konsole. Zmknalem go 'CTRL+C'
+- uruchomilem:
+	ubuntu@bss-ubu1804:~/Desktop$ firefox &
+	ubuntu@bss-ubu1804:~/Desktop$ gedit &
+- oba programy wykonuja sie w tle nie blokujac konsoli
+- po wpisaniu 'jobs' oba procesy sie wyswietlily
+	ubuntu@bss-ubu1804:~/Desktop$ jobs
+	[1]-  Running                 firefox &
+	[2]+  Running                 gedit &
+- wpisalem 'fg 2' gedit przeszedl na pierwszy plan blokujac mi konsole
