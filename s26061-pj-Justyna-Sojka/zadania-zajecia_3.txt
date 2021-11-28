@@ -1,0 +1,91 @@
+zadanie.
+ls -a
+wyświetla listę  plików i katalogów, w tym plików ukrytych bieżącego katalogu
+
+ls -a | grep D
+wyświetla tylko katalogi zaczynające się na literę D (Desktop, Documents, Downloads)
+
+
+ls -a | grep D > ListPlikowZLiterkaD.txt - utworzy w bieżąćym katalogu plik ListPlikowZLiterkaD.txt w którym wypisze wyniki komnedy grep D czyli wylistuje pliki z literką D
+
+ps - wyświetla listę procesów
+
+ps -a - pokazuje o jeden proces mniej niz ps
+ps x  procesy moje
+ps aux - lista procesów wszystkich użytkoników, z  podziałem na użytkownika, zuzycie cpu i inne dane
+
+I
+zadanie 1.- wyświetl wszystkie procesy bash
+ps -C  bash
+ps | grep bash
+
+zadanie 2. - wyświetl wszystkie procesy użytkownika root
+ps  -u root
+
+II
+zadanie
+uruchamiam edytor tekstowy
+sprawdam PID komendą ps PID to 1064
+wpisuję kill 1064
+nic się nie dzieje
+wpisuję kill -SIGKILL 1064
+BAM, 1 killed! sprawdzam komendą ps, proces zamknięty! 
+
+zadanie
+killall shell - no process found
+killall zabija po nazwie
+kill po PID
+
+killall -SIGKILL mc      -zabiło mc!
+
+III
+
+1. Wpisuję komendę cat
+CTR C - wychodzi z progrmau
+
+2. tworzę plik wynik1.txt komendą cat > wynik1.txt
+wpisuję witaj
+wciskam CTR C
+wychodzi z programu. plik jest pusty, tekst nie został zapisany
+
+3.
+tworzę plik wynik2.txt
+cat > wynik2.txt
+
+wpsiuję tekst witaj
+wciaskam ctr d, dwa razy
+
+sprawdzam co sie znajduje w pliku
+cat wynik2.txt
+
+tekst został zapisany
+
+
+IV
+
+nie mam komendy gimp
+działałam na vim
+
+ctr z zatrzymuje program, zamyka vima, przenosi mnie do terminala
+komenda ps, vim jest w prcesach
+komenda fg - przywraca vima, mogę pisać
+
+
+komendy:
+gedit &
+geany &
+error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+vim &, mc & tutaj programy uruchamiają się w tle i dalej mogę pisać na terminalu
+
+
+poleceniem jobs wywołuję listę procesów w tle
+sprawdzam jaki nr ma proces, który chcę przywrócić
+wpisuję komendą fg 3 i przywraca mi program na pierwszey plan
+
+
+
+
+
+
+

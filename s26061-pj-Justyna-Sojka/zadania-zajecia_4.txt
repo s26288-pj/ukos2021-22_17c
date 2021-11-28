@@ -1,0 +1,44 @@
+zad. 1.
+ścieżka względna:
+cd ../../../kot/ma/ale
+ścieżka bezwzględna:
+najpierw sprawdzam komendą pwd jak wygląda ścieżka do mego katalogu 
+cd  /home/ubuntu/tmp/ukos/kot/ma/ale
+
+zad.2
+mkdir -p /home/ubuntu/tmp/ukos/kot/ma/ale/jan/kowalski
+
+zad.3
+mv /home/ubuntu/tmp/ukos/kot/ma/ale/ /home/ubuntu/tmp/ala/i
+
+zad.4
+jeśli program nie odpowiada
+komenda ps, stąb bierzemy  nr PID programu
+znając PID, komenda
+kill -9 PID
+albo komenda killall nazwa_procesu
+
+zad.5
+ls grep | ^al
+
+zad. 6
+
+chmod 751 /home/ubuntu/tmp/ukos/ala
+chmod u +rwx,g +rx,o +x /home/ubuntu/tmp/ukos/ala/
+
+zad.7
+
+ls -p | grep -v / > list.txt
+
+zad.8
+ktoś musiał mi odebrac uprawnienia - grupy write
+ktoś może zmienił moją grupę, przeniósł mnie do others..
+
+zad.9
+w uzupełnianiu komed pomaga klawisz tab
+
+zad.10
+trzeba przenieść program do tła 
+np wpisując nazwę_programu i & to od razu uruchamia program w tle
+można też po uruchomieniu prg. użyć komendy Ctr Z
+

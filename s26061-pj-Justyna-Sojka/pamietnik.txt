@@ -1,0 +1,35 @@
+22.10.2021
+
+Na dzisiejszych zajeciach nauczylam sie:
+- do czeglo sluza katalogi w glownym systemie plikow na linuxie
+- poznalam i zalozylam konto na git hubie
+
+23.10
+
+Na tych zajęciach nauczyłam się: 
+- jak wejść do katalogów innych studentów na szuflandii;
+- jak nadawać i odbierać uprawnienia do działań na plikach i katalogach trzem grupom użytkowników (user, group i other);
+- jak podrzucić komuś tzw.  "kukułcze jajo";
+- jak zmieniać uprawnienia dla nowych katalogów i plików przy użyciu komendy umask;
+-  co oznacza i skąd się wziął zapis liczowy przy komendzie chmod np 777
+
+6.11
+
+Na tych zajęciach dowiedziałam się jak:
+
+- usunąć katalog z githuba;
+- opanowałam działania na procesach, grupowanie, filtrowanie listy procesów według określonych kryteriów;
+- poznałam przydatną komendę wget;
+- poznałam komendę kill i killall;
+- poznałam różnicę między CTR+C I CTR+D;
+- nauczyłam się jak przenosić procesy do działania w tle i je na powrót uaktywniać;
+- poznałam komendę tar i dwa sposoby pakowania plików (bzip2 i gzip); 
+
+
+20.11
+Na tych zajęciach powtórzyłam sobie: \
+- komendy, działania na katalogach, tworzenie, przenoszenie,
+- ścieżki względne i bezwzględne;
+- nadawanie i odbieranie uprawnień, formy zapisu;
+- przećwiczyłam to co już przerabialiśmy na poprzednich zajęciach
+
