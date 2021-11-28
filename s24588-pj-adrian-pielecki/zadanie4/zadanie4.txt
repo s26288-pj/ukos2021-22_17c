@@ -1,0 +1,38 @@
+1.
+a)cd ../ale
+b)cd ~/kot/ma/ale
+
+2.
+mkdir -p ~/kot/ma/ale/jan/kowalski
+
+3.
+mv ~/niewypaly/zad/kot/ma/ale ~/niewypaly/zad/ala/i/
+
+4.
+kill (numer pid)
+lub ctrl+d w konsoli
+
+5.
+ls -d al*
+
+6.
+a)chmod 751 ala
+b)chmod u=rwx,g=rx,o=x ala
+
+7.
+ls > plik_z_lista.txt
+
+8.
+a)Brak praw do tworzenia plików,
+b)Popełniłem błąd w poleceniu może to być literówka typu zamiast touch napiszę tuoch
+
+9.
+tab
+
+10.
+a)program &
+b)
+1)program
+2)ctrl+z
+3)bg program 
+
