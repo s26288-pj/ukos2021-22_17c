@@ -37,3 +37,7 @@ Na cwiczeniach dowiedzialam sie:
 - jak operować na procesach dzialajacych w tle, jak je zatrzymac (ctrl+Z), jak uruchomic w tle (bg %) i na wierzchu (fg %), jak wylistowac (jobs),- w jaki sposob spakowywac i rozpakowywac archiwa (tar)
 - prowadzacy pokazal rowniez program MobaXterm, ktory miedzy innymi pozawala miec graficzne linuxowe okno operujac na windowsie.
 Zajecia pokazaly mi duzo przydatnych wskazowek, ktore usprawnia moja prace na terminalu.
+
+2021-11-20
+
+Zajecia sluzyly przygotowaniu do kolokwium, ktore ma sie odbyc za 2 tyg. Powtorzylismy polecenia mkdir, mv, kill, ls, grep, chmod oraz podstawy obslugi terminala.
