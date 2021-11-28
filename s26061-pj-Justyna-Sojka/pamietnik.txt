@@ -25,3 +25,11 @@ Na tych zajęciach dowiedziałam się jak:
 - nauczyłam się jak przenosić procesy do działania w tle i je na powrót uaktywniać;
 - poznałam komendę tar i dwa sposoby pakowania plików (bzip2 i gzip); 
 
+
+20.11
+Na tych zajęciach powtórzyłam sobie: \
+- komendy, działania na katalogach, tworzenie, przenoszenie,
+- ścieżki względne i bezwzględne;
+- nadawanie i odbieranie uprawnień, formy zapisu;
+- przećwiczyłam to co już przerabialiśmy na poprzednich zajęciach
+

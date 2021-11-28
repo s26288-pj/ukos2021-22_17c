@@ -31,5 +31,6 @@ Zad.4
 utworzyłam w szuflandii katalog home, w nim katalog public_html, w tym katalogu stworzyłam plik strona.html z 
 podaną zawartścią,  niestety strona się nie wyświetla, komunikat forbidden nawet przy nadanych wszystkich 
 uprawnieniach w katalogach i samym pliku :/
+ale teoretycznie żeby wejść powinno mieć się uprawnienia do execute, czyli other musi mieć włączony x
 
 
