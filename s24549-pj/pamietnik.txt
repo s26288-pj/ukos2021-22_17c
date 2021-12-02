@@ -64,7 +64,7 @@ ECDSA key fingerprint is (...)"
 - połączyłem się przez Putty na Windowsie, i po jakimś czasie udało mi się uzyskać połączenie przez terminal na VM.
 - "ls" - mój katalog jest pusty
 - "cd .." "ls" - nie spodziewałem się tylu folderów, ale dzięki temu zrozumiałem jak mogę przejść do folderu kolegi/kolezanki z grupy
-- sprawdziłem katalog kolezanki, po czym utworzylem niewielka siatke katalogow w moim folderze
+- sprawdziłem katalog kolezanki, po czym utworzylem niewielkie drzewo katalogow w moim folderze
 .
 ├── folder
 │   ├── kat1
@@ -158,7 +158,7 @@ Zad.2.
 
 Zad.3.
 - w moim pliku plik1.txt dałem "chmod 760 plik1.txt"
-- przy wpisywaniu "echo jakis_tekst > plik1.txt" zostaje tylko osstatnia wiadomosc, przy zmianie ">" na ">>" tworzy sie nowa wiadomosc
+- przy wpisywaniu "echo jakis_tekst > plik1.txt" zostaje tylko ostatnia wiadomosc, przy zmianie ">" na ">>" tworzy sie nowa wiadomosc
 	zostawiajac to co bylo wczesniej
 - po zalogowaniu na szuflandie z innego okna terminala i wpisaniu "tail -f plik1.txt" - wyswietla sie cala tresc pliku
 - gdy ta komenda jest aktywna to mogę w obu oknach pisać w tym pliku ale nie wyświetla się to w drugim oknie i nic się nie dzieje
@@ -225,7 +225,7 @@ Zad.1.
 - 'ps -a' - pokazuje wszystkie procesy zwiazane z termianlem
 - 'ps x' - wyswietla wszystkie procesy, ktorych jestem wlascicielem? 
 - 'ps aux' - pokazuje wszystkie procesy
-- nie wiem co oznacza '?' w drugiej kolumnie
+- '?' w drugiej kolumnie oznacza, ze proces nie jest przypisany do interfejsu terminala
 - wyswietlam wszystkie procesy bash 'ps | grep bash'
 - wyswietlam wszystkie procesy uzytkownika root 'ps -u root'
 
@@ -243,6 +243,9 @@ Zad.2.
 	 1736 pts/0    00:00:00 ps
 	ubuntu@bss-ubu1804:~$ kill pid 1545
 	bash: kill: pid: arguments must be process or job IDs
+- oznacza to, ze PID ktory, wpisalem nie jest prawidlowym identyfikatorem procesu
+- wpisalem 'kill 1545' ale bash nadal dziala
+- wpisalem 'kill -9 1545' - terminal sie wylaczyl, czyli udalo sie zamknac proces bash
 
 
 Zad.3.
@@ -261,7 +264,7 @@ Zad.3.
 
 
 Zad.4.
-- wysztko zgodnie z instrukcja, po wpisaniu 'bg' firefox usuchomil sie w tle nie blokujac konsoli:
+- wszystko zgodnie z instrukcja, po wpisaniu 'bg' firefox uruchomil sie w tle nie blokujac konsoli:
 	ubuntu@bss-ubu1804:~/Desktop$ firefox 
 	^Z
 	[1]+  Stopped                 firefox
