@@ -12,7 +12,8 @@ ubuntu@bss-ubu1804:~$ ps aux | grep gedit
 ubuntu    1291  0.2  0.9 564440 37248 ?        Sl   18:53   0:00 gedit
 
 ubuntu@bss-ubu1804:~$ kill -SIGKILL 1291 
-Program wylacza sie od razu. Okazuje sie ze polecenie kill automatycznie dziala w ten sam sposob jak kill -SIGKILL.
+Program wylacza sie od razu. Pomimo tego, ze efekty polecen kill i kill -SIGKILL na pierwszy rzut oka sa podobne. Polecenie kill domyslnie wysyla sygnal SIGTERM, ktory bezpiecznie zamyka proces.
+Natomiast polecenie kill -SIGKILL unicestwia proces i powoduje całkowitą utratę danych.
 
 4. ubuntu@bss-ubu1804:~$ killall bash
 Polecenie dziala, ale tylko w wypadku gdy mam wlaczony drugi terminal. Zamyka sie on od razu po wykonaniu polecenia. Natomiast glowny terminal nie wylacza sie.
