@@ -1,0 +1,3 @@
+Podstawowy umask to rw- rw- r-- / postawowy wartość umask 002
+Pliki przy umask 777 nie mają żadnych praw.
+Pliki przy umask 000 mają wszytkie prawa.
