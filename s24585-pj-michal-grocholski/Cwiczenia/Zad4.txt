@@ -1,0 +1,26 @@
+Zad1
+1. Scieżka względna: cd ../../../kot/ma/ale
+2. Ścieżka bezwzględna: /tmp/ukos/kot/ma/ale
+Zad2
+mkdir -p /tmp/ukos/kot/ma/ale/jan/kowalski
+Zad3
+mv /tmp/ukos/kot/ma/ale /tmp/ukos/ala/i/
+Zad4
+Komendą: kill [pid] (wysyła sygnał)
+Zad5
+ls -p | grep -e ^ al | grep -v /
+Zad6
+chmod 751 /tmp/ukos/ala
+chmod o=x,u=rwx, g=rx /tmp/ukos/ala
+chmod o+x,o-rw,u+rwx,g+rx,g-w g=rx /tmp/ukos/ala
+Zad7
+ls -p | grep -v / > list_of_files
+Zad8
+Dwa przykłady:
+-nie masz nadanych praw
+-brak miejsca na dysku profilu do utworznia pliku zawierającego hasło.
+Zad9
+Tab
+Zad10
+1.Uruchamiania programu z endem na końcu.
+2.Danie programu do backgroundu.
