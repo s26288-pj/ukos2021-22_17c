@@ -1,0 +1,22 @@
+1.
+	a. Za pomocą komendy: cd ../../../kot/ma/ale
+	b. Za pomocą komendy: cd /tmp/ukos/kot/ma/ale
+
+2.	Za pomocą komendy: mkdir -p ../../../kot/ma/ale/jan/kowalski
+
+3. 	Za pomocą komendy: mv ../../../kot/ma/ale ala/i
+
+4. 	Za pomocą komendy: kill
+
+5.	Za pomocą komendy: ls | grep al
+
+6.	input: chmod 751 ala
+	input: chmod u=rwx,g=rx,o=x ala
+
+7.	Za pomocą komendy: ls -p | grep -v / > lista_plikow 
+
+8. 	Odebrane zostały mi prawa 'w' do mojego katalogu domowego.
+
+9. 	Klawiszem "tab".
+
+10. 	Używając ctr+z, bądź komendy bg.
