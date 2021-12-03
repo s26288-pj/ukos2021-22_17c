@@ -1,0 +1,293 @@
+2021-10-18
+Moj drogi pamietniczku dzis nauczylem sie jak:
+- stworzyc katalog z terminala 'mkdir'
+- jak stworzyc plik .txt 'vim nazwapliku.txt'
+- jak edytowac stworzony plik .txt 'i'
+- jak zapisac stworzony plik .txt 'esc-:wq'
+
+2021-10-24
+Drogi pamietniczku, dzis robilem zadanie ukos_z1:
+- uruchomilem terminal
+- wyswietlilem zawartosc aktualnego katalogu "ls"
+- przeszedlem do repo "cd repo/"
+- wrocilem do katalogu nadrzednego "cd .."
+- porownujac "ls" z interfacem graficznym, wiecej widze w folderze poniewaz pokazuje mi foldery i pliki
+- wiecej w terminalu moge zobaczyc wpisujac "ls -la"
+- przy "ls -a" tez widze wiecej plikow ale nie w formie listy od gory do dolu
+- wszedłem do folderu Desktop "cd Desktop/"
+- sprawdzam gdzie jestem "ls" "tree"
+- w sposobie graficznym widze te same pliki
+- z tej lokalizacji wpisuje "ls /home/"
+- zapomnialem sprawdzic gdzie jestem, sprawdzam "pwd" -> /home/ubuntu/Desktop
+- sprawdzam katalogi zeby przejsc do Obrazy "ls /home/ubuntu/
+- przechodze "cd /home/ubuntu/Pictures"
+- przechodzac, po wspisanu "cd /home/ubuntu/P" przypadkiem nacisnalem 2 razy Tab i pokazaly mi 
+	sie 2 podpowiedzi katalogow na P "Pictures/ Public/", przy czym w konsoli zostala powielona niedokonczona komenda
+- calkiem ciekawe
+- sprawdzam gdzie jestem "pwd" "/home/ubuntu/Pictures"
+- uwaga, przechodze "cd ././././././"
+- nic sie nie stalo, zostalem w katalogu Pictures/
+- nie uzywam polskich znakow bo nie wiem czy w vim to nie wywola jakiegos problemu
+- wpisalem "cd /root" i otrzymalem "bash: cd: /root: Permission denied" ale nie wiem dlaczego, czy potrzebuje do tego uprawnien
+	administratora?
+- wcisnalem CTRL+ALT+F1 - dalem sie na to nabrac za pierwszym razem, teraz gdy Prowadzacy mi wytlumaczyl co to robi
+	wrocilem do interfejsu graficznego wciskajac ALT+F7
+
+FOLDERY
+- wyszukałem jak stworzyć jednym poleceniem wiele katalogów
+- przeszedlem na Desktop/
+- wpisałem "mkdir -p ukos/{klamka/ katalog/{katalog2/ katalog3/}}"
+- to było zle wpisane polecenie, usunalem katalogi recznie i wpisalem "mkdir -p ukos/{klamka,katalog/{katalog2,katalog3}}"
+- tym razem sie udalo
+- probowalem podobnie stworzyc pliki ale sie nie udalo:
+	touch ukos/klamka/zajecia2.txt zajecia2.log inny.txt nowy.txt
+	touch ukos/klamka/{zajecia2.txt zajecia2.log inny.txt nowy.txt}
+	touch ukos/klamka/zajecia2.txt,zajecia2.log,inny.txt,nowy.txt
+- usunalem pliki i stworzylem je pojedynczo "touch ukos/klamka/nazwapliku.rozszerzenie"
+- cd ukos/
+- "mkdir -p to/jest/dluga/nazwa" - stworzyl siatke folderow
+- "touch to/jest/dluga/nazwa/dane.txt"
+- "rm klamka/*.txt"
+- "rmdir katalog/katalog2"
+- "tree" - zgadza sie
+- "rmdir klamka/ --ignore-fail-on-non-empty" - nie dziala, sprawdzilem "tree"
+- "rm -rf klamka/" - to zadzialalo
+
+
+2021-11-23
+UKOS_Z2
+
+Zad.1.
+- zalogowałem się na szuflandię w terminalu VM "ssh s24549@szuflandia.pjwstk.edu.pl"
+- na początku nie miałem dostępu "The authenticity of host 'szuflandia.pjwstk.edu.pl (153.19.158.3)' can't be established.
+ECDSA key fingerprint is (...)"
+- połączyłem się przez Putty na Windowsie, i po jakimś czasie udało mi się uzyskać połączenie przez terminal na VM.
+- "ls" - mój katalog jest pusty
+- "cd .." "ls" - nie spodziewałem się tylu folderów, ale dzięki temu zrozumiałem jak mogę przejść do folderu kolegi/kolezanki z grupy
+- sprawdziłem katalog kolezanki, po czym utworzylem niewielkie drzewo katalogow w moim folderze
+.
+├── folder
+│   ├── kat1
+│   └── plik3.txt
+├── folder2
+├── folder3
+├── plik1.txt
+└── plik2.txt
+- zauwazylem ze niektore pliki/katalogi kolezanki maja inne kolory lub podswietlenia
+- po nadaniu zakazanego dostepu do mojego pliku "chmod 777 plik1.txt" - czcionka zmienila sie z niebieskiej na zielona
+- sprawdzilem dzialanie "echo" i "cat"
+	s24549@szuflandia:~$ echo hej > plik2.txt 
+	s24549@szuflandia:~$ cat plik2.txt 
+	hej
+- sprobowalem stworzyc u kolegi moj folder - brak dostepu
+	s24549@szuflandia:/home/PJWSTK/s26245$ ls
+	kat1  kat2  kat3  txt  txt2  txt3
+	s24549@szuflandia:/home/PJWSTK/s26245$ mkdir moj_folder
+	mkdir: nie można utworzyć katalogu „moj_folder”: Brak dostępu
+- nie mogę rowniez usunac ani jego katalogu ani pliku, nawet pomimo, iz do jego jednego katalogu wszyscy maja pelny dostep
+- po wpisaniu w koim katalogu "chmod g+w ." kolega moze tworzyc u mnie katalogi
+- kolega stworzyl u mnie plik i zabral uprawnienia "-rwx------ 1 s26245 pjwstk    0 lis  4 21:58 kukułcze jajko"
+- pomimo tego usunalem plik
+
+
+Zad.2.
+- stworzylem strukture
+.
+├── folder
+│   ├── kat1
+│   │   └── kat2
+│   └── plik3.txt
+├── folder2
+├── folder3
+└── plik1.txt
+- wszedlem do kat1 i usunalem dostepy dla kat2 'chmod u-rwx,g-rx,o-rx ./kat2'
+- nie mam dostępu do katalogu 'kat2' nie mogę do niego wejść:
+	s24549@szuflandia:~/folder/kat1$ ls -l
+	razem 4
+	d--------- 2 s24549 pjwstk 4096 lis 23 13:58 kat2
+	s24549@szuflandia:~/folder/kat1$ cd ./kat2/
+	-shell: cd: ./kat2/: Brak dostępu
+- pomimo braku dostępu i jakichkolwiek uprawnien, zdolalem usunac 'kat2' 'rmdir ./kat2'
+- utworzylem ponownie 'kat2' w tej samej lokalizacji i usunalem wszytkie prawa dostepu
+- udalo mi sie ponownie przyznac sobie prawa dostepu 'chmod u=rwx ./kat1/kat2'
+- nie moge wejsc ani do 'kat1' (nie mam dostepu), ani do 'kat2' (mam dostep)
+	s24549@szuflandia:~/folder$ cd kat1/
+	-shell: cd: kat1/: Brak dostępu
+	s24549@szuflandia:~/folder$ cd kat1/kat2
+	-shell: cd: kat1/kat2: Brak dostępu
+- przywrocilem sobie dostep do 'kat1', przeszedlem do 'kat2' i usunalem dostep do 'kat1'
+	s24549@szuflandia:~/folder$ cd kat1/
+	s24549@szuflandia:~/folder/kat1$ cd kat2/
+	s24549@szuflandia:~/folder/kat1/kat2$ chmod u-rwx ../../kat1
+	s24549@szuflandia:~/folder/kat1/kat2$ ls -l ../../kat1
+	ls: nie ma dostępu do '../../kat1': Brak dostępu
+
+	s24549@szuflandia:~/folder/kat1/kat2$ cd ..
+	-shell: cd: ..: Brak dostępu
+	s24549@szuflandia:~/folder/kat1/kat2$ cd ../../
+	-shell: cd: ../../: Brak dostępu
+	s24549@szuflandia:~/folder/kat1/kat2$ cd ../../../
+	-shell: cd: ../../../: Brak dostępu
+- utknalem w folderze 'kat2', nie moge nawet zmienic uprawnien
+	s24549@szuflandia:~/folder/kat1/kat2$ chmod u+rwx ../../kat1
+	chmod: nie ma dostępu do '../../kat1': Brak dostępu
+- wylogowalem sie i ponownie zalogowalem na szuflanie a nastepnie przyznalem sobie dostepy do 'kat1' w ktorym wczesniej utknalem
+	s24549@szuflandia:~$ tree
+.
+├── folder
+│   ├── kat1 [error opening dir]
+│   └── plik3.txt
+├── folder2
+├── folder3
+└── plik1.txt
+
+	4 directories, 2 files
+	s24549@szuflandia:~$ chmod u+rwx ./folder/kat1
+	s24549@szuflandia:~$ tree
+.
+├── folder
+│   ├── kat1
+│   │   └── kat2
+│   └── plik3.txt
+├── folder2
+├── folder3
+└── plik1.txt
+
+	5 directories, 2 files
+
+
+Zad.3.
+- w moim pliku plik1.txt dałem "chmod 760 plik1.txt"
+- przy wpisywaniu "echo jakis_tekst > plik1.txt" zostaje tylko ostatnia wiadomosc, przy zmianie ">" na ">>" tworzy sie nowa wiadomosc
+	zostawiajac to co bylo wczesniej
+- po zalogowaniu na szuflandie z innego okna terminala i wpisaniu "tail -f plik1.txt" - wyswietla sie cala tresc pliku
+- gdy ta komenda jest aktywna to mogę w obu oknach pisać w tym pliku ale nie wyświetla się to w drugim oknie i nic się nie dzieje
+
+
+Zad.4.
+	s24549@szuflandia:~$ mkdir public_html
+	s24549@szuflandia:~$ touch ./public_html/strona.html
+	s24549@szuflandia:~$ nano ./public_html/strona.html 
+	s24549@szuflandia:~$ cat ./public_html/strona.html 
+	<HTML>
+	<BODY>
+	<H1>To jest moja strona domowa</H1>
+	</BODY>
+	</HTML>
+- na poczatku byly dostepy:
+	-rw-r--r-- 1 s24549 pjwstk 66 lis 23 15:12 strona.html
+- wtedy strona sie nie wyswietlala (http://szuflandia.pjwstk.edu.pl/~s24549/strona.html)
+- dodalem:
+	s24549@szuflandia:~/public_html$ chmod u+x strona.html
+- po dodaniu execute do usera, strona zaczela sie wyswietlac
+- usnalem 'chmod g-r strona.html' - strona nadal sie wyswietla
+- usnalem 'chmod o-r strona.html' - strona przestala sie wyswietlac
+- po sprawdzeniu, najmniejsze wymagane dostepy zeby strona sie wyswietlala to:
+	-------r-- 1 s24549 pjwstk 66 lis 23 15:12 strona.html
+- zatem wysatrczy, ze other ma prawo do odczytu
+
+
+2021-11-24
+UKOS_Z3
+
+Zad. bez nr.
+- w katalogu domowym
+	ubuntu@bss-ubu1804:~$ ls -a
+	.              .bash_logout  .config  Documents   .gnupg         .mozilla  .profile  rrr   
+        Templates    .vboxclient-clipboard.pid    .vboxclient-seamless.pid  .Xauthority       .xsession-errors.old
+	..             .bashrc       Desktop  Downloads   list_of_files  Music     Public    .ssh    
+	test         .vboxclient-display.pid      Videos                    .xscreensaver
+	.bash_history  .cache        .dmrc    .gitconfig  .local         Pictures  repo      
+	.sudo_as_admin_successful  .thumbnails  .vboxclient-draganddrop.pid  .viminfo                  
+	.xsession-errors
+- po wspianiu 'ls -a | grep D' - wyswietla sie tylko pozycje z 'D' w nazwie
+	ubuntu@bss-ubu1804:~$ ls -a | grep D
+	Desktop
+	Documents
+	Downloads
+- po wykonaniu ponizyszch operacji otrzymuje plik 'ListaPlikowZLiterkaD.txt' do ktorego przekierowalem wynik szukania plikow/folderow z
+'D' w nazwie + nazwe utworzonego pliku:
+	ubuntu@bss-ubu1804:~$ ls -a | grep D > ListaPlikowZLiterkaD.txt
+	ubuntu@bss-ubu1804:~$ cat ListaPlikowZLiterkaD.txt 
+	Desktop
+	Documents
+	Downloads
+	ListaPlikowZLiterkaD.txt
+- '>' przekierowuje standardowe wyjście do pliku (nadpisuje)
+
+
+Zad.1.
+- po wpisaniu w terminal 'ps', wyswietlily sie nastepujace procesy:
+	ubuntu@bss-ubu1804:~$ ps
+	  PID TTY          TIME CMD
+	  984 pts/0    00:00:00 bash
+	 1212 pts/0    00:00:00 ps
+- 'ps -a' - pokazuje wszystkie procesy zwiazane z termianlem
+- 'ps x' - wyswietla wszystkie procesy, ktorych jestem wlascicielem? 
+- 'ps aux' - pokazuje wszystkie procesy
+- '?' w drugiej kolumnie oznacza, ze proces nie jest przypisany do interfejsu terminala
+- wyswietlam wszystkie procesy bash 'ps | grep bash'
+- wyswietlam wszystkie procesy uzytkownika root 'ps -u root'
+
+
+Zad.2.
+- wlaczylem gedit 'gedit &'
+- znalazlem jego PID i wpisalem 'kill pid id_procesu_gedit' i gedit sie wylaczyl, podobnie firefox
+- nie moge zrobic 'killall shell'
+	ubuntu@bss-ubu1804:~$ killall shell
+	shell: no process found
+- nie udalo mi sie 'zabic' procesu bash
+	ubuntu@bss-ubu1804:~$ ps
+	  PID TTY          TIME CMD
+	 1545 pts/0    00:00:00 bash
+	 1736 pts/0    00:00:00 ps
+	ubuntu@bss-ubu1804:~$ kill pid 1545
+	bash: kill: pid: arguments must be process or job IDs
+- oznacza to, ze PID ktory, wpisalem nie jest prawidlowym identyfikatorem procesu
+- wpisalem 'kill 1545' ale bash nadal dziala
+- wpisalem 'kill -9 1545' - terminal sie wylaczyl, czyli udalo sie zamknac proces bash
+
+
+Zad.3.
+- wpisalem 'cat', wlaczyl sie cat, blokujac konsole
+- wcisnalem CTRL+C - proces zostal zatrzymany, znow moge uzywac konsoli
+- po wprowadzeniu:
+	ubuntu@bss-ubu1804:~/Desktop$ cat > wynik1.txt
+	witaj^C
+	ubuntu@bss-ubu1804:~/Desktop$ cat wynik1.txt  
+	ubuntu@bss-ubu1804:~/Desktop$
+- nic nie zostalo zapisane w pliku 'wynik1.txt'. Zostal on tylko utworzony
+- przy wcisnieciu CTRL+D, wiadomosc zapisala sie w pliku
+	ubuntu@bss-ubu1804:~/Desktop$ cat > wynik2.txt
+	witajubuntu@bss-ubu1804:~/Desktop$ cat wynik2.txt 
+	witajubuntu@bss-ubu1804:~/Desktop$ 
+
+
+Zad.4.
+- wszystko zgodnie z instrukcja, po wpisaniu 'bg' firefox uruchomil sie w tle nie blokujac konsoli:
+	ubuntu@bss-ubu1804:~/Desktop$ firefox 
+	^Z
+	[1]+  Stopped                 firefox
+	ubuntu@bss-ubu1804:~/Desktop$ ps
+	  PID TTY          TIME CMD
+	 1545 pts/0    00:00:00 bash
+	 1906 pts/0    00:00:04 firefox
+	 1945 pts/0    00:00:00 Web Content
+	 2007 pts/0    00:00:00 WebExtensions
+	 2043 pts/0    00:00:00 Web Content
+	 2066 pts/0    00:00:00 Web Content
+	 2088 pts/0    00:00:00 ps
+	ubuntu@bss-ubu1804:~/Desktop$ bg
+	[1]+ firefox &
+	ubuntu@bss-ubu1804:~/Desktop$ kill -9 1906
+- uruchomilem ponownie firefox i wykonalem to co powyzej, po wpisaniu 'fg' firefox przeszedl na pierwszy plan
+blokujac konsole. Zmknalem go 'CTRL+C'
+- uruchomilem:
+	ubuntu@bss-ubu1804:~/Desktop$ firefox &
+	ubuntu@bss-ubu1804:~/Desktop$ gedit &
+- oba programy wykonuja sie w tle nie blokujac konsoli
+- po wpisaniu 'jobs' oba procesy sie wyswietlily
+	ubuntu@bss-ubu1804:~/Desktop$ jobs
+	[1]-  Running                 firefox &
+	[2]+  Running                 gedit &
+- wpisalem 'fg 2' gedit przeszedl na pierwszy plan blokujac mi konsole

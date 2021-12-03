@@ -1,0 +1,33 @@
+Zadanie 4
+buntu@bss-ubu1804:~$ gedit
+
+^Z
+[1]+  Stopped                 gedit
+Program zawiesil sie w tle, nie mozna w nim operowac.
+
+ubuntu@bss-ubu1804:~$ bg
+[1]+ gedit &
+Program dziala.
+
+
+ubuntu@bss-ubu1804:~$ fg
+gedit
+^C
+Program wyszedl na pierwszy plan i dzialal. Zakonczylam go ctrl+C bez problemu.
+
+ubuntu@bss-ubu1804:~$ gedit &
+[1] 895
+ubuntu@bss-ubu1804:~$ firefox &
+[2] 1089
+ubuntu@bss-ubu1804:~$ jobs
+[1]-  Running                 gedit &
+[2]+  Running                 firefox &
+ubuntu@bss-ubu1804:~$ fg 1
+gedit
+ubuntu@bss-ubu1804:~$ jobs
+[1]-  Running                 gedit &
+[2]+  Running                 firefox &
+ubuntu@bss-ubu1804:~$ fg 1
+gedit
+
+Dodajac & na wierszu poleceń przy uruchamianiu programu, wlaczamy go w tle. Można uruchomic wiele programow w tle jednoczesnie i poruszac sie po nich sprawdzac kod procesu w jobs.

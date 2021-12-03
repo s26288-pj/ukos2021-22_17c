@@ -1,0 +1,32 @@
+Ad 1)
+mkdir ukos
+cd ukos
+mkdir katalog
+mkdir klamka
+cd katalog
+mkdir katalog2
+mkdir katalog3
+
+Ad 2)
+cd klamka
+touch zajecia2.txt
+touch zajecia2.log
+touch inny.txt
+touch nowy.txt
+cd ..
+mkdir -p ukos/to/jest/dluga/nazwa
+
+Ad 3)
+cd ukos/to/jest/dluga/nazwa
+touch dane.txt
+
+Ad 4)
+cd klamka
+rm *.txt
+
+Ad 5)
+cd katalog
+rmdir katalog2
+
+Ad 6)
+rm -rf klamka

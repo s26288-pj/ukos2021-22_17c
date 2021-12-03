@@ -1,0 +1,64 @@
+1.ls -a
+Wypisało wszystkie pliki i foldery znajdujące się w obecnej lokalizacji 
+2. ls -a | grep D
+Są 3 wyniki. Wypisało pliki w obecnej lokalizacji zaczynające się na litere D 
+3. ls -a | grep D > ListaPlikówZLiterkąD.txt
+Ta komenda tworzy i  zapisuje wyniki z wywołania komendy z  poprzedniego kroku w pliku .txt. 
+| służy jako przekierowanie wyjścia do innego programu, a > przekierowuje wejście do innego pliku. 
+
+
+zad1. 
+
+ps
+ps -a
+ps x 
+ps aux 
+
+Aby wyświetlić procesy bash trzeba użyć komendy      ps aux | grep bash 
+Aby wyświetlić procesy należące do użytkownika root  trzeba użyć komendy    ps aux | grep root
+
+zad2. 
+
+ps -aux 
+kill 1225 (program się zamknął) 
+killall shell (wyświetla się no process found)
+Tak. Komenda kill zadziała dla dowolnego procesu. 
+
+
+zad3.
+
+cat 
+ctrl + c 
+Komenda jest natychmiast przerywana.
+
+cat > wynik1.txt  
+Witaj ctrl+c 
+W pliku wynik1.txt nie zapisało się nic ponieważ skrót ctrl+c nie zapisuje progresu. 
+
+cat > wynik2.txt 
+Witaj ctrl+d 
+Plik wynik2.txt zawiera słowo "Witaj" ponieważ skrót ctrl+d zatrzymuje i zapisuje progres. 
+
+zad4. 
+
+gimp 
+ctrl+z 
+Po otwarciu programu z paska zadań program przestaje odpowiadać. 
+
+bg 
+Program ożył 
+fg 
+Program wrócił 
+ctrl+c żeby zakończyć jego żywot
+
+gimp & 
+gedit & 
+geany &
+W tle otworzyły się 3 programy 
+jobs wyświetliło liste działających programów w tle
+
+fg gedit 
+jobs 
+
+ 
+

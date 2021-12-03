@@ -1,0 +1,31 @@
+ls -a											//Wypisało 31 plików.
+ls -a | grep D									//Wypisało 3 pliki. Te pliki zaczynają się na litere D.
+ls -a | grep D > ListaPlikówZ literkąD.txt		//W katalogu domowym został utworzony plik o nazwie "ListaPlikówZ literkąD.txt" z zawartością wykonania komeny ls -a | grep D. Znak " | " jest to przekierowanie a znak " > " jest to nadpisanie pliku. 
+ps 												//Wyświetla liste procesów.
+ps -a											//Wyświetla wszystkie prcoesy oprócz procesów nie podłączonych do żanego terminala.
+ps x											//Wyświetla lisę procesów aktualnego użytkownika.
+ps aux											//Wyświetla liste procesów wszystkich użytkowników.
+
+Zad2
+
+Mój plik textowy ma index 970. 
+Używam komendy "kill 970".
+Plik został zamknięty bez żadncych błędów. 
+Komeda "killall shell" zwraca "shell: no process found"
+Kill nie działa dla dowolnego procesu gdyż do niektórych nie ma dostępu. Przykład porces o PID 1.
+
+Zad3
+
+Wpisanie komendy cat a następnie Ctrl+C przerwało komendę.
+
+W pliku "wynik1.txt" nie ma nic.
+
+W pliku "wynik2.txt" snajduję się ciąg znakow witaj.
+
+Zad4
+
+Użyłem przeglądarki FierFox zamiast gimpa po wpisaniu ctrl+z przegladarka "Zacina sie" i nie da się z niej korzystać.
+Po wpisaniu komendy bg FireFox wrócił do stanu normalnego.
+Po wpisaniu komendy Fg FireFox przeszedł na głowny plan nastepnie go zamknęłem komendą Ctrl+c
+"Nazwa programu plus &" pozwala nam  na uruchomienie porgramu i dalsze pisanie w konsoli.
+Jobs wyświetla procesy w tle z ich indexem.

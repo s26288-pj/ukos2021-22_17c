@@ -1,0 +1,5 @@
+10.09.2021
+Na dzisiejszych ćwiczeniach nauczyłem się do czego złużą katalogi w głównym systemie plików na Ubulntu linux oraz w jaki sposób połączyć githuba oraz wgrywać pliki na repozytorium.
+
+10.22.2021
+Robiąc zadania które miliśmy do wykonania między zajęciami nauczyłem się w jaki sposób używać podstawowych komend Linuxa tj. tworzenie oraz usuwanie plików/katalogów oraz w jaki sposób używać parametróœ tych komend aby były one szybsze i wygodniejsze w użyciu.

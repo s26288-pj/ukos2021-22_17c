@@ -1,0 +1,32 @@
+Zadanie 2
+
+1. Uruchomiono Text Editor.
+
+2. ubuntu@bss-ubu1804:~$ ps aux | grep gedit
+ubuntu    1237  0.2  0.9 564436 37192 ?        Sl   18:46   0:00 gedit
+
+3. kill 1237 
+Polecenie dziala. Program wylacza sie od razu.
+
+ubuntu@bss-ubu1804:~$ ps aux | grep gedit
+ubuntu    1291  0.2  0.9 564440 37248 ?        Sl   18:53   0:00 gedit
+
+ubuntu@bss-ubu1804:~$ kill -SIGKILL 1291 
+Program wylacza sie od razu. Pomimo tego, ze efekty polecen kill i kill -SIGKILL na pierwszy rzut oka sa podobne. Polecenie kill domyslnie wysyla sygnal SIGTERM, ktory bezpiecznie zamyka proces.
+Natomiast polecenie kill -SIGKILL unicestwia proces i powoduje całkowitą utratę danych.
+
+4. ubuntu@bss-ubu1804:~$ killall bash
+Polecenie dziala, ale tylko w wypadku gdy mam wlaczony drugi terminal. Zamyka sie on od razu po wykonaniu polecenia. Natomiast glowny terminal nie wylacza sie.
+
+5. a) root         4  0.0  0.0      0     0 ?        I<   16:13   0:00 [kworker/0:0H]
+ubuntu@bss-ubu1804:~$ kill 4
+bash: kill: (4) - Operation not permitted
+
+b)message+   466  0.0  0.1  50176  4420 ?        Ss   16:13   0:00 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-a
+ubuntu@bss-ubu1804:~$ kill 466
+bash: kill: (466) - Operation not permitted
+
+c)ubuntu     851  0.0  0.4 237792 19260 ?        S    16:14   0:00 openbox --config-file /home/ubuntu/.config/openbox/lubuntu-rc.xml
+Kill zadzialal i zabil mi procesy wyswietlajace znaki graficzne pozwalajace np. wyjsc z programu (krzyzyk w prawym gornym rogu okna). Na szczescie restart maszyny to naprawil (uf).
+
+Jak widac po powyzszych przykladach kill dziala tylko w wypadku gdy mam uprawnienia do manipulowania procesami.

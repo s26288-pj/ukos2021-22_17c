@@ -1,0 +1,69 @@
+1.
+ubuntu@bss-ubu1804:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  repo  Templates  ukos  Videos
+ubuntu@bss-ubu1804:~$ pwd
+/home/ubuntu
+ubuntu@bss-ubu1804:~$ cd Desktop/
+ubuntu@bss-ubu1804:~/Desktop$ pwd
+/home/ubuntu/Desktop
+ubuntu@bss-ubu1804:~/Desktop$ ls
+adding-packages-permanently-info.txt  passwords-info.txt (to samo wyświetla się po wyklikaniu graficznym)
+ubuntu@bss-ubu1804:~/Desktop$ ls /home
+ubuntu  vagrant
+ubuntu@bss-ubu1804:~/Desktop$ cd /home/ubuntu/Pictures
+ubuntu@bss-ubu1804:~/Pictures$ pwd
+/home/ubuntu/Pictures
+ubuntu@bss-ubu1804:~/Pictures$ cd ././././././ (zostałam w tym samym folderze)
+ubuntu@bss-ubu1804:~/Pictures$ cd /root
+bash: cd: /root: Permission denied (potrzebuje uprawnień)
+ubuntu@bss-ubu1804:~/Pictures$ cd /home
+ubuntu@bss-ubu1804:/home$ 
+(po naciśnięciu klawiszy ctrl alt f1, wylogowało mnie)
+
+2.
+ubuntu@bss-ubu1804:~$ pwd
+/home/ubuntu
+ubuntu@bss-ubu1804:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  repo  Templates  Videos
+ubuntu@bss-ubu1804:~$ mkdir ukos
+ubuntu@bss-ubu1804:~$ cd ukos
+ubuntu@bss-ubu1804:~/ukos$ mkdir katalog
+ubuntu@bss-ubu1804:~/ukos$ cd katalog
+ubuntu@bss-ubu1804:~/ukos/katalog$ mkdir katalog2
+ubuntu@bss-ubu1804:~/ukos/katalog$ mkdir katalog3
+ubuntu@bss-ubu1804:~/ukos/katalog$ cd ukos
+bash: cd: ukos: No such file or directory
+ubuntu@bss-ubu1804:~/ukos/katalog$ cd ..
+ubuntu@bss-ubu1804:~/ukos$ mkdir klamka
+ubuntu@bss-ubu1804:~/ukos$ cd klamka
+ubuntu@bss-ubu1804:~/ukos/klamka$ touch zajecia2.txt
+ubuntu@bss-ubu1804:~/ukos/klamka$ touch zajecia2.log
+ubuntu@bss-ubu1804:~/ukos/klamka$ touch inny.txt
+ubuntu@bss-ubu1804:~/ukos/klamka$ touch nowy.txt
+ubuntu@bss-ubu1804:~/ukos/klamka$ cd ..
+ubuntu@bss-ubu1804:~/ukos$ mkdir to/jest/dluga/nazwa
+mkdir: cannot create directory ‘to/jest/dluga/nazwa’: No such file or directory
+ubuntu@bss-ubu1804:~/ukos$ mkdir "to/jest/dluga/nazwa"
+mkdir: cannot create directory ‘to/jest/dluga/nazwa’: No such file or directory
+ubuntu@bss-ubu1804:~/ukos$ mkdir -p to/jest/dluga/nazwa
+ubuntu@bss-ubu1804:~/ukos$ touch to/jest/dluga/nazwa/dane.txt
+ubuntu@bss-ubu1804:~/ukos$ pwd
+/home/ubuntu/ukos
+ubuntu@bss-ubu1804:~/ukos$ cd klamka
+ubuntu@bss-ubu1804:~/ukos/klamka$ rm .txt
+rm: cannot remove '.txt': No such file or directory
+ubuntu@bss-ubu1804:~/ukos/klamka$ rm *.txt
+ubuntu@bss-ubu1804:~/ukos/klamka$ ls
+zajecia2.log
+ubuntu@bss-ubu1804:~/ukos/klamka$ cd ..
+ubuntu@bss-ubu1804:~/ukos$ cd katalog 
+ubuntu@bss-ubu1804:~/ukos/katalog$ rmdir katalog2
+ubuntu@bss-ubu1804:~/ukos/katalog$ cd ..
+ubuntu@bss-ubu1804:~/ukos$ rmdir klamka
+rmdir: failed to remove 'klamka': Directory not empty
+ubuntu@bss-ubu1804:~/ukos$ man rmdir
+ubuntu@bss-ubu1804:~/ukos$ rmdir -p klamka
+rmdir: failed to remove 'klamka': Directory not empty
+ubuntu@bss-ubu1804:~/ukos$ man rm 
+ubuntu@bss-ubu1804:~/ukos$ rm -r klamka
+ubuntu@bss-ubu1804:~/ukos$ 

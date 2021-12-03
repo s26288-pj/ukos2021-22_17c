@@ -1,0 +1,83 @@
+Zadanie 0
+ls -a
+ubuntu@bss-ubu1804:~$ ls -a
+.              .cache     .gitconfig  Pictures  .sudo_as_admin_successful  .vboxclient-clipboard.pid    .viminfo
+..             .config    .gnupg      .profile  Templates                  .vboxclient-display.pid      .Xauthority
+.bash_history  Desktop    .local      Public    testy                      .vboxclient-draganddrop.pid  .xscreensaver
+.bash_logout   Documents  .mozilla    repo      .thumbnails                .vboxclient-seamless.pid     .xsession-errors
+.bashrc        Downloads  Music       .ssh      ukos                       Videos                       .xsession-errors.old
+
+ls -a | grep D
+
+ubuntu@bss-ubu1804:~$ ls -a | grep D
+Desktop
+Documents
+Downloads
+
+Ukazalo sie duzo mniej wynikow. Polecenie grep filtruje z danej listy elementy wedlug podanego wzorca, w tym wypadku zostaly wydrukowane elementy zaczynajace sie na litere D.
+
+ls -a | grep D > ListaPlikowZLiterkaD.txt
+
+ubuntu@bss-ubu1804:~$ ls
+Desktop  Documents  Downloads  ListaPlikowZLiterkaD.txt  Music  Pictures  Public  repo  Templates  testy  ukos  Videos
+
+ubuntu@bss-ubu1804:~$ cat ListaPlikowZLiterkaD.txt 
+Desktop
+Documents
+Downloads
+ListaPlikowZLiterkaD.txt
+
+Powstał plik txt o nazwie podanej w wierszu polecen. Jego tresc zawiera taka sama liste jaka drukowala sie wczesniej przy wykonaniu polecenia grep D dodajac nazwe utworzonego pliku ListaPlikowZLiterkaD.txt.
+Element > stworzyl nieistniejacy plik oraz nadpisal go trescia rezultatu wykonanego programu grep D. Element | przekierowuje standardowe wyjscie z programu A do programu B jako standardowe wejscie.
+Jest on łącznikiem polecenia listujacego oraz filtrujacego.
+
+Zadanie 1
+ps
+ubuntu@bss-ubu1804:~$ ps
+  PID TTY          TIME CMD
+  950 pts/0    00:00:00 bash
+ 1120 pts/0    00:00:00 ps
+
+ps -a
+ubuntu@bss-ubu1804:~$ ps -a
+  PID TTY          TIME CMD
+ 1121 pts/0    00:00:00 ps
+
+ps x
+ubuntu@bss-ubu1804:~$ ps x
+  PID TTY      STAT   TIME COMMAND
+  747 ?        Ss     0:00 /lib/systemd/systemd --user
+  748 ?        S      0:00 (sd-pam)
+  759 ?        Ssl    0:00 /usr/bin/lxsession -s Lubuntu -e LXDE
+  774 ?        Ss     0:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+  809 ?        S      0:00 /usr/bin/VBoxClient --clipboard
+  ...
+
+ps aux
+ubuntu@bss-ubu1804:~$ ps aux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.2  77460  8620 ?        Ss   16:13   0:01 /sbin/init
+root         2  0.0  0.0      0     0 ?        S    16:13   0:00 [kthreadd]
+root         4  0.0  0.0      0     0 ?        I<   16:13   0:00 [kworker/0:0H]
+root         6  0.0  0.0      0     0 ?        I<   16:13   0:00 [mm_percpu_wq]
+root         7  0.0  0.0      0     0 ?        S    16:13   0:00 [ksoftirqd/0]
+...
+
+Polecenie "ps" wyswietla snapshot aktywnych procesów.
+- "-a" wyswietla snapshot procesów pomijajac "session leaders" główne procesy np. bash.
+- "aux" wyswietla wszystkie procesy systemu: "a" mówi aby wyświetlić procesy wszystkich użytkownikow (all users), nie pokazuja sie procesy nie zwiazane z terminalem;
+"u" (user-oriented format) pokazuje szczegolowe informacje o procesach; "x" pokazuje procesy, które dzieja sie poza terminalem, glownie dzialajace w tle
+
+Kolumna 2 (TTY) - pokazuje nazwę terminala, którego dotyczy proces. Znak zapytania może oznaczać, ze dany proces nie uzywa terminala i pracuje w tle.
+
+1. Wyswietl wszystkie procesy bash.
+
+ubuntu@bss-ubu1804:~$ ps a | grep bash
+  950 pts/0    Ss     0:00 bash
+ 1172 pts/0    S+     0:00 grep --color=auto bash
+
+2. Wyświetl wszystkie procesy należące do użytkownika root.
+ubuntu@bss-ubu1804:~$ ps aux | grep ^root
+Użyłam regex ^, aby filtrowanie działało tylko na pierwsze słowo, które należy do tabeli user. Bez "^" grep filtrował mi wszystkie linie, w ktorych bylo slowo "root" i platala sie tam linijka:
+ubuntu    1227  0.0  0.0  14428  1108 pts/0    S+   18:39   0:00 grep --color=auto root
+Proces należy do użytkownika ubuntu, wiec byloby to niepoprawne.

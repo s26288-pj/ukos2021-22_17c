@@ -1,0 +1,125 @@
+ZADANIE: 
+
+ubuntu@bss-ubu1804:~$ ls -a
+.              .local                     ukos
+..             Music                      .vboxclient-clipboard.pid
+.bash_history  Pictures                   .vboxclient-display.pid
+.bash_logout   plik                       .vboxclient-draganddrop.pid
+.bashrc        plik2                      .vboxclient-seamless.pid      *Zostały wyświetlone wszystkie pliki, które znajdują 
+.cache         .plik.swp                  Videos                         się w katalogu
+.config        .profile                   .viminfo
+Desktop        Public                     .Xauthority
+Documents      repo                       .xscreensaver
+Downloads      .ssh                       .xsession-errors
+.gitconfig     .sudo_as_admin_successful  .xsession-errors.old
+.gnupg         Templates
+kat1           .thumbnails
+ubuntu@bss-ubu1804:~$ ls -a | grep D        *Zostały wyświetlone wszystkie katalogi/pliki, których nazwa zaczyna się na D
+Desktop                                     ponieważ porgramowi grep wzorzec do wyszukiwania wierszu w pliku został podany
+Documents                                   jako "D".
+Downloads
+ubuntu@bss-ubu1804:~$ 
+ubuntu@bss-ubu1804:~$ ls -a | grep D > ListaPlikówZLiterkąD.txt     *Został utworzony plik tekstowy,w którym zostały wpisane
+ubuntu@bss-ubu1804:~$ ls                                             wszystkie pliki rozpoczynające się na literkę D, oraz
+Desktop    kat1                      Pictures  Public     ukos       nazwa podanego pliku tekstowego.
+Documents  ListaPlikówZLiterkąD.txt  plik      repo       Videos
+Downloads  Music                     plik2     Templates
+ubuntu@bss-ubu1804:~$ cat ListaPlikówZLiterkąD.txt                *">" Posłużyło do przekierowania standardowego wyjścia do
+Desktop                                                            pliku podanego po ">", ponieważ plik nie istniał, został
+Documents                                                          utworzony
+Downloads                                            *"|" Przekierowało standardowe wyjście z "ls -a" jako standardowe        
+ListaPlikówZLiterkąD.txt                              wejście do programu grep            
+ubuntu@bss-ubu1804:~$
+
+1*
+
+ubuntu@bss-ubu1804:~$ 
+ubuntu@bss-ubu1804:~$ ps        
+1.Wyświetliło wszystkie uruchomione przeze mnie procesy, ich nazwy, ID, oraz czas.
+ubuntu@bss-ubu1804:~$ ps -a
+2.Wyświetliło wszystkie procesy jak powyżej, lecz bez procesu bash.
+
+ubuntu@bss-ubu1804:~$ ps x
+3.Wyświetliło listę procesów, poszerzoną o procesy niezwiązane z terminalem, oraz kolumnę STAT.
+
+ubuntu@bss-ubu1804:~$ ps aux
+4.Wyświetliło procesy wszystkich użytkowników w formacie BSD.
+Znak "?" w kolumnie 2 oznacza nieznaną wartość
+
+*ubuntu@bss-ubu1804:~$ ps a           - wyświetlenie wszystkich procesów związanych z bashem
+
+*ubuntu@bss-ubu1804:~$ ps -u root     -  wyświetlenie wszystkich procesów użytkownika root
+
+2*
+
+1.
+Uruchomiłem edytor tekstowy vim za pomocą menu.
+2.
+ubuntu@bss-ubu1804:~$ ps a  - za pomocą komendy "ps a" dowiedziałem się, że PID edytora vim to 1090.
+3.
+ubuntu@bss-ubu1804:~$ kill 1090      - program zamknął się po wpisaniu komendy kill
+4.
+ubuntu@bss-ubu1804:~$ killall shell
+shell: no process found  ??
+5.
+ubuntu@bss-ubu1804:~$ kill 503
+bash: kill: (503) - Operation not permitted
+ubuntu@bss-ubu1804:~$ kill 621
+bash: kill: (621) - Operation not permitted - Zabicie części procesów, jest niedozwolone. 
+
+3*(ctrl+C, ctrl+D)
+
+1.
+ubuntu@bss-ubu1804:~$ cat  - uruchomiłem komendę 'cat' bez parametrów
+2.
+^C                         - ctrl+C zabiło proces
+ubuntu@bss-ubu1804:~$ 
+
+1.
+ubuntu@bss-ubu1804:~$ cat > wynik1.txt
+2./3.
+witaj^C
+4.
+ubuntu@bss-ubu1804:~$ cat wynik1.txt  *W tym wypadku nic nie znalazło się w pliku wynik1.txt, proces został zabity bez zapisania 
+ubuntu@bss-ubu1804:~$                  wartości
+
+1.ubuntu@bss-ubu1804:~$ cat > wynik2.txt
+witajubuntu@bss-ubu1804:~$ cat wynik2.txt   *Po dwukrotnym wciśnieciu 'ctrl+D', pomimo nie wciśnięcia enter po wpisaniu "witaj", zawartość została zapisana przed zabiciem procesu
+witajubuntu@bss-ubu1804:~$ 
+
+4*
+
+1.
+ubuntu@bss-ubu1804:~$ firefox  - wpisałem komende firefox, by uruchomić przeglądarkę firefox
+2.
+^Z
+[1]+  Stopped                 firefox
+ubuntu@bss-ubu1804:~$
+3.
+Program został wstrzymany, przeniesiony w tło i przestał na cokolwiek odpowiadać.
+
+1.(bg)
+ubuntu@bss-ubu1804:~$ bg
+[1]+ firefox &            - Firefox zaczął odpowiadać
+
+1.(fg)
+ubuntu@bss-ubu1804:~$ fg   -Proces wrócił na pierwszy plan, i mogłem zakonczyć go komendą 'ctrl+C'.
+firefox
+^C
+
+1.
+ubuntu@bss-ubu1804:~$ firefox &
+2.
+ubuntu@bss-ubu1804:~$ geany &       -Uruchomiłem 3 programy w terminalu, działają w tle, więc dalej mogę korzystać z terminala.
+3.
+ubuntu@bss-ubu1804:~$ gedit &
+
+ubuntu@bss-ubu1804:~$ fg gedit
+ubuntu@bss-ubu1804:~$ jobs
+[1]+  Stopped                 gedit
+[3]   Running                 geany &
+[5]   Stopped                 mc
+[6]   Stopped                 mc
+[7]   Stopped                 vim
+[8]-  Stopped                 vim
+[9]   Running                 firefox &

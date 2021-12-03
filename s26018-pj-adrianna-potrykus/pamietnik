@@ -1,0 +1,14 @@
+9-10-2021
+Drogi pamietniku, 
+Na dzisiejszych zajeciach dowiedzialam sie czym jest wirtualna maszyna i w jaki sposob mozna z niej korzystac.
+Przeszlam przez uruchaminie maszyny i zrozumialam do czego sluza katalogi w glownym systemie plkow na linuxie.
+
+23-10-2021 
+Na dzisiejszych zajeciach dowiedzialam sie jak dziala dawanie uprawnien (innym uzytkownikom, grupie, komenda chmod) oraz skorzystalam z putty w celu zalogowania sie na szuflandie.
+
+06-11-2021
+Na dzisiajszych zajeciach dowiedzialam sie duzo o samych procesach:	- jak uruchamiac procesy w tle (bg)
+									- jak zatrzymywac procesy (ctr c, d, z)
+									- jak przywracac procesy na pierwszy plan (fg)
+									- jak wyswietlac liste procesow (ps)
+									- jak wysylac sygnaly do procesow (kill - glownie sygnal KILL)
