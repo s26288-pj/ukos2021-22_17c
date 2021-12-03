@@ -1,0 +1,17 @@
+1
+ps- wyświetla procesy dla uruchomionego terminala
+ps -a wyświetla wszytskie procesy
+ps x wyświetla wszystkie procesy uruchomione przez uzytkownika
+ps aux wyswietla wszystkie procesy wrac z nazwa uzytkownika
+
+1.1 ps -a | grep bash
+1.2 ps -u root
+
+2
+Poleceniem kill wysyłamy status do procesu i wten spósób mozna zakończyć każdy proces
+
+3
+Przy użyciu ctrl+c kończymy proces bez względu na nic i nic się w pliku nie zapisze, przy użyciu ctrl+d kończymy strumień wejścia
+
+4
+Opisany sposób w zdaniu pozwala na działanie procesu w tle nie 'blokując' terminala, a znak & umożliwia na wywołanie procesu dziłającego w tle
