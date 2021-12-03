@@ -1,0 +1,4 @@
+Za pomocą polecenia umask ustawiamy z jakimi prawami będą tworzone pliki oraz katalogi.
+
+Dla przykłądy gdy zastosujemy zapis "umask 000" każdy użytkownik bedzie miał nieograniczone prawa co do stworzonego pliku bądź katalogu jest to równe zapisowi "chmod 777 (nazwa pliku)",
+natomiast gdy zastosujemy zapis "umask 033" to tylko kreator danego pliku bądź katalogu będzie mieć pełne prawa, natomiast inni użytkownicy będą mieli prawa jedynie do odczytu. Jest to zapis równy "chmod 744 (nazwa pliku)".
