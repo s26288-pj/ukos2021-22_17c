@@ -1,0 +1,8 @@
+Zadania musiałem robić "teoretycznie" w związku z dużymi problemami z internetem. W zadaniu 1 w zależności od uprawnień katalogóœ i plików miałbym różne ograniczenia. 
+Dla przykładu w drzewku katalogów "X/Y/Z" gdzie do X grupa ma prawo do wszystkiego, do Y nie ma prawa a do Z znow ma wszystkie prawa. 
+W takim wypadku nie moge przejść z katalogu X do katalogu Z komendą cd ponieważ nie mam praw wykonywania w katalogu. Jedyną opcją byłoby podanie bezpośredniej ścieżki do katalogy Z. Wtedy nie musimy przechodzić przez katalogi do których nie mamy praw.
+Aby utworzyć tzw. kukułcze jajo katalog w którym bym aktualnie był musiałby mieć uprawnienia zapisu (write). A żeby plik usunąć katalog musiałby mieć uprawnienia do wykonywania (excutable).
+W zadaniu z echo operator > nadpisywał treść tektu. Po zmianie operatora na >> treść komunikatu była dopisywana do pliku. Komenda tail -f wyświetla linijki pliku lecz nie kończy procesu tylko pokazuje zmiany robione w pliku do zakończenia procesu.
+Aby strona w katalogu public_html była możliwa do wyświetlenia trzeba dodać uprawnienia excutable to katalogu dla grupy other oraz uprawnienia pliku read również dla grupy other.
+Polecenia umask ustawia jakie uprawnienia będą ustawiane domyślnie po utworzeniu pliku/katalogu. W przypadku polecenia umask odejmuje prawa więc umask 000 daje taki sam rezultat jak chmod 777 tylko na wszystkich plikach stworzonych po utworzeniu maski.
+Te zadanie wykonałem wyjątkowo opisowo z powodu braku partnera do jego wykonania.

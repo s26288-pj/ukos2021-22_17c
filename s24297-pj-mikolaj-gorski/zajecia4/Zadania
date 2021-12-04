@@ -1,0 +1,39 @@
+Ad 1)
+
+Ścieżka wz. ----- ../../../kot/ma/ale
+Ścieżka bezwz. ---- /tmp/ukos/kot/ma/ale
+
+Ad 2)
+
+mkdir -p ../../jan/kowalski
+
+Ad 3)
+
+mv /tmp/ukos/kot/ma/ale /tmp/ukos/ala/i/
+
+Ad 4) 
+
+Po sprawdzeniu PID procesu (komenda ps) należy wysłać sygnał kill 0000 gdzie 0000 oznacza pid procesu.
+
+Ad 5)
+
+ls | grep ^al
+
+Ad 6) 
+
+chmod 751 /tmp/ukos/ala ------ właściciel(rwx), grupa(rx), inni(x)
+
+Ad 7)
+
+ls -p | grep -v / > list_of_files.txt
+
+Ad 9)
+
+TAB uzupełnia polecenia/ścieżki
+
+Ad 10)
+
+Znak & na koniec uruchamia program w tle. Drugim sposobem jest uruchomienie programu, zatrzymanie go przez crrl+z a potem użycie komendy bg.
+
+
+
