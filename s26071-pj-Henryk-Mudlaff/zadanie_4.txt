@@ -1,0 +1,35 @@
+Zadanie 1:
+1. cd ../ale
+2. cd ~/kot/ma/ale
+
+Zadanie 2:
+mkdir -p /home/ubuntu/tmp/ukos/kot/ma/ale/jan/kowalski
+
+Zadanie 3:
+mv /home/ubuntu/tmp/ukos/kot/ma/ale/ /home/ubuntu/tmp/ala/i
+
+Zadanie 4:
+1.kill (numer pid)
+2.ctrl+d w konsoli
+
+Zadanie 5:
+1.ls grep | ^al
+
+Zadanie 6:
+1.chmod 751 ala
+2.chmod u=rwx, g=rx, o=x ala
+
+Zadanie 7:
+ls -p | grep -v / > list.txt
+
+Zadanie 8:
+1.Błędny zapis polecenia tworzenia
+2.Brak odpowiednich uprawnień 
+
+Zadanie 9:
+tab
+
+Zadanie 10:
+program & 
+ctrl+z
+

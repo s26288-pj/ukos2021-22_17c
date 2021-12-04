@@ -1,0 +1,306 @@
+          Zadanie: 
+
+ubuntu@bss-ubu1804:~$ pwd
+/home/ubuntu
+ubuntu@bss-ubu1804:~$ ls -a
+.              .config     .local    repo                       .vboxclient-clipboard.pid    .Xauthority
+..             Desktop     .mozilla  .ssh                       .vboxclient-display.pid      .xscreensaver
+.bash_history  Documents   Music     .sudo_as_admin_successful  .vboxclient-draganddrop.pid  .xsession-errors
+.bash_logout   Downloads   Pictures  Templates                  .vboxclient-seamless.pid     .xsession-errors.old
+.bashrc        .gitconfig  .profile  .thumbnails                Videos
+.cache         .gnupg      Public    ukos                       .viminfo
+ubuntu@bss-ubu1804:~$ ls -a | grep D
+Desktop
+Documents
+Downloads
+ubuntu@bss-ubu1804:~$ ls -a | grep D > ListaPlikówZLiterkąD.txt
+ubuntu@bss-ubu1804:~$ ls
+Desktop  Documents  Downloads  ListaPlikówZLiterkąD.txt  Music  Pictures  Public  repo  Templates  ukos  Videos
+
+//Gdy użyjemy gre D otrzymamy wynik w postaci wszystkich nazw plików oraz katalogów, których nazwa zaczyna się na D.
+
+//Za pomocą > przekierowywujemy wyniik polecenia ls -a |grep D do np pliku tekstowego który stworzyłem. 
+
+Zadanie 1.:
+
+ubuntu@bss-ubu1804:~$ ps
+  PID TTY          TIME CMD
+ 1670 pts/1    00:00:01 bash
+ 1680 pts/1    00:00:00 vim
+ 1685 pts/1    00:00:00 vim
+ 1689 pts/1    00:00:00 vim
+ 1721 pts/1    00:00:00 vim
+ 1724 pts/1    00:00:00 vim
+ 1729 pts/1    00:00:00 vim
+ 1751 pts/1    00:00:00 git
+ 1752 pts/1    00:00:00 editor
+ 1754 pts/1    00:00:00 git
+ 1755 pts/1    00:00:00 editor
+ 1756 pts/1    00:00:00 git
+ 1757 pts/1    00:00:00 editor
+ 4754 pts/1    00:00:00 sleep
+19628 pts/1    00:00:00 ps
+ubuntu@bss-ubu1804:~$ ps -a 
+  PID TTY          TIME CMD
+ 1680 pts/1    00:00:00 vim
+ 1685 pts/1    00:00:00 vim
+ 1689 pts/1    00:00:00 vim
+ 1721 pts/1    00:00:00 vim
+ 1724 pts/1    00:00:00 vim
+ 1729 pts/1    00:00:00 vim
+ 1751 pts/1    00:00:00 git
+ 1752 pts/1    00:00:00 editor
+ 1754 pts/1    00:00:00 git
+ 1755 pts/1    00:00:00 editor
+ 1756 pts/1    00:00:00 git
+ 1757 pts/1    00:00:00 editor
+ 4754 pts/1    00:00:00 sleep
+19629 pts/1    00:00:00 ps
+ubuntu@bss-ubu1804:~$ ps -x
+  PID TTY      STAT   TIME COMMAND
+  706 ?        Ss     0:00 /lib/systemd/systemd --user
+  710 ?        S      0:00 (sd-pam)
+  746 ?        Ssl    0:00 /usr/bin/lxsession -s Lubuntu -e LXDE
+  764 ?        Ss     0:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation -
+  798 ?        S      0:00 /usr/bin/VBoxClient --clipboard
+  799 ?        Sl     0:00 /usr/bin/VBoxClient --clipboard
+  809 ?        S      0:00 /usr/bin/VBoxClient --display
+  810 ?        S      0:00 /usr/bin/VBoxClient --display
+  816 ?        S      0:00 /usr/bin/VBoxClient --seamless
+  817 ?        Sl     0:00 /usr/bin/VBoxClient --seamless
+  822 ?        S      0:00 /usr/bin/VBoxClient --draganddrop
+  823 ?        Sl     0:36 /usr/bin/VBoxClient --draganddrop
+  836 ?        Ss     0:00 /usr/bin/ssh-agent /usr/bin/lxsession -s Lubuntu -e LXDE
+  841 ?        S      0:03 openbox --config-file /home/ubuntu/.config/openbox/lubuntu-rc.xml
+  845 ?        Sl     0:13 lxpanel --profile Lubuntu
+  848 ?        Sl     0:05 pcmanfm --desktop --profile lubuntu
+  849 ?        Sl     0:00 lxpolkit
+  857 ?        Ss     0:00 /usr/bin/ssh-agent -s
+  900 ?        Sl     0:00 /usr/lib/menu-cache/menu-cached /run/user/1000/menu-cached-:0
+  933 ?        Sl    12:58 /usr/lib/firefox/firefox
+  995 ?        Sl     0:08 /usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 1 -prefMapSize 17630
+ 1017 ?        Sl     6:35 /usr/lib/firefox/firefox -contentproc -childID 2 -isForBrowser -prefsLen 62 -prefMapSize 1763
+ 1653 ?        Sl     0:34 lxterminal
+ 1670 pts/1    Ss     0:01 bash
+ 1680 pts/1    T      0:00 vim pamietnik.txt
+ 1685 pts/1    T      0:00 vim pamietnik.txt
+ 1689 pts/1    T      0:00 vim pamietnik.txt
+ 1721 pts/1    T      0:00 vim pamietniik.txt
+ 1724 pts/1    T      0:00 vim pamietniik.txt
+ 1729 pts/1    T      0:00 vim pamietnik.txt
+ 1751 pts/1    T      0:00 git commit
+ 1752 pts/1    T      0:00 /usr/bin/editor /home/ubuntu/repo/ukos2021-22_17c/.git/COMMIT_EDITMSG
+ 1754 pts/1    T      0:00 git commit
+ 1755 pts/1    T      0:00 /usr/bin/editor /home/ubuntu/repo/ukos2021-22_17c/.git/COMMIT_EDITMSG
+ 1756 pts/1    T      0:00 git commit
+ 1757 pts/1    T      0:00 /usr/bin/editor /home/ubuntu/repo/ukos2021-22_17c/.git/COMMIT_EDITMSG
+ 4038 ?        Sl     0:00 /usr/lib/dconf/dconf-service
+ 4754 pts/1    T      0:00 sleep 1000
+ 5449 ?        Sl     0:11 /usr/lib/firefox/firefox -contentproc -childID 26 -isForBrowser -prefsLen 11879 -prefMapSize 
+19078 ?        Sl     0:02 /usr/lib/firefox/firefox -contentproc -childID 27 -isForBrowser -prefsLen 11879 -prefMapSize 
+19109 ?        Sl     0:01 /usr/lib/firefox/firefox -contentproc -childID 28 -isForBrowser -prefsLen 11879 -prefMapSize 
+19162 ?        Sl     0:00 /usr/lib/firefox/firefox -contentproc -childID 30 -isForBrowser -prefsLen 11879 -prefMapSize 
+19630 pts/1    R+     0:00 ps -x
+ubuntu@bss-ubu1804:~$ ps -aux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.2  77536  8700 ?        Ss   03:04   0:01 /sbin/init
+root         2  0.0  0.0      0     0 ?        S    03:04   0:00 [kthreadd]
+root         4  0.0  0.0      0     0 ?        I<   03:04   0:00 [kworker/0:0H]
+root         6  0.0  0.0      0     0 ?        I<   03:04   0:00 [mm_percpu_wq]
+root         7  0.0  0.0      0     0 ?        S    03:04   0:00 [ksoftirqd/0]
+root         8  0.0  0.0      0     0 ?        I    03:04   0:03 [rcu_sched]
+root         9  0.0  0.0      0     0 ?        I    03:04   0:00 [rcu_bh]
+root        10  0.0  0.0      0     0 ?        S    03:04   0:00 [migration/0]
+root        11  0.0  0.0      0     0 ?        S    03:04   0:00 [watchdog/0]
+root        12  0.0  0.0      0     0 ?        S    03:04   0:00 [cpuhp/0]
+root        13  0.0  0.0      0     0 ?        S    03:04   0:00 [cpuhp/1]
+root        14  0.0  0.0      0     0 ?        S    03:04   0:00 [watchdog/1]
+root        15  0.0  0.0      0     0 ?        S    03:04   0:00 [migration/1]
+root        16  0.0  0.0      0     0 ?        S    03:04   0:00 [ksoftirqd/1]
+root        18  0.0  0.0      0     0 ?        I<   03:04   0:00 [kworker/1:0H]
+root        19  0.0  0.0      0     0 ?        S    03:04   0:00 [kdevtmpfs]
+root        20  0.0  0.0      0     0 ?        I<   03:04   0:00 [netns]
+root        21  0.0  0.0      0     0 ?        S    03:04   0:00 [rcu_tasks_kthre]
+root        22  0.0  0.0      0     0 ?        S    03:04   0:00 [kauditd]
+root        25  0.0  0.0      0     0 ?        S    03:04   0:00 [khungtaskd]
+root        26  0.0  0.0      0     0 ?        S    03:04   0:00 [oom_reaper]
+root        27  0.0  0.0      0     0 ?        I<   03:04   0:00 [writeback]
+root        28  0.0  0.0      0     0 ?        S    03:04   0:00 [kcompactd0]
+root        29  0.0  0.0      0     0 ?        SN   03:04   0:00 [ksmd]
+root        30  0.0  0.0      0     0 ?        SN   03:04   0:00 [khugepaged]
+root        31  0.0  0.0      0     0 ?        I<   03:04   0:00 [crypto]
+root        32  0.0  0.0      0     0 ?        I<   03:04   0:00 [kintegrityd]
+root        33  0.0  0.0      0     0 ?        I<   03:04   0:00 [kblockd]
+root        34  0.0  0.0      0     0 ?        I<   03:04   0:00 [ata_sff]
+root        35  0.0  0.0      0     0 ?        I<   03:04   0:00 [md]
+root        36  0.0  0.0      0     0 ?        I<   03:04   0:00 [edac-poller]
+root        37  0.0  0.0      0     0 ?        I<   03:04   0:00 [devfreq_wq]
+root        38  0.0  0.0      0     0 ?        I<   03:04   0:00 [watchdogd]
+root        41  0.0  0.0      0     0 ?        S    03:04   0:00 [kswapd0]
+root        42  0.0  0.0      0     0 ?        I<   03:04   0:00 [kworker/u5:0]
+root        43  0.0  0.0      0     0 ?        S    03:04   0:00 [ecryptfs-kthrea]
+root        85  0.0  0.0      0     0 ?        I<   03:04   0:00 [kthrotld]
+root        86  0.0  0.0      0     0 ?        I<   03:04   0:00 [acpi_thermal_pm]
+root        87  0.0  0.0      0     0 ?        S    03:04   0:00 [scsi_eh_0]
+root        88  0.0  0.0      0     0 ?        I<   03:04   0:00 [scsi_tmf_0]
+root        89  0.0  0.0      0     0 ?        S    03:04   0:00 [scsi_eh_1]
+root        90  0.0  0.0      0     0 ?        I<   03:04   0:00 [scsi_tmf_1]
+root        96  0.0  0.0      0     0 ?        I<   03:04   0:00 [ipv6_addrconf]
+root       105  0.0  0.0      0     0 ?        I<   03:04   0:00 [kstrp]
+root       122  0.0  0.0      0     0 ?        I<   03:04   0:00 [charger_manager]
+root       161  0.0  0.0      0     0 ?        S    03:04   0:00 [scsi_eh_2]
+root       162  0.0  0.0      0     0 ?        I<   03:04   0:00 [scsi_tmf_2]
+root       163  0.0  0.0      0     0 ?        I<   03:04   0:00 [kworker/0:1H]
+root       164  0.0  0.0      0     0 ?        I<   03:04   0:00 [kworker/1:1H]
+root       186  0.0  0.0      0     0 ?        S    03:04   0:00 [jbd2/sda1-8]
+root       187  0.0  0.0      0     0 ?        I<   03:04   0:00 [ext4-rsv-conver]
+root       224  0.0  0.3 102996 13180 ?        S<s  03:04   0:00 /lib/systemd/systemd-journald
+root       247  0.0  0.1  46084  4744 ?        Ss   03:04   0:00 /lib/systemd/systemd-udevd
+systemd+   265  0.0  0.1  80044  5176 ?        Ss   03:04   0:00 /lib/systemd/systemd-networkd
+root       284  0.0  0.0      0     0 ?        I<   03:04   0:00 [iprt-VBoxWQueue]
+root       343  0.0  0.0      0     0 ?        I<   03:04   0:00 [ttm_swap]
+root       344  0.0  0.0      0     0 ?        S    03:04   0:00 [irq/18-vmwgfx]
+systemd+   383  0.0  0.1  71024  6332 ?        Ss   03:04   0:00 /lib/systemd/systemd-resolved
+root       434  0.0  0.1 287540  7000 ?        Ssl  03:04   0:00 /usr/lib/accountsservice/accounts-daemon
+root       435  0.0  0.4 170436 17392 ?        Ssl  03:04   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-sta
+root       436  0.0  0.0 110412  1952 ?        Ssl  03:04   0:01 /usr/sbin/irqbalance --foreground
+syslog     437  0.0  0.1 263036  4416 ?        Ssl  03:04   0:00 /usr/sbin/rsyslogd -n
+root       438  0.0  0.1  70608  5884 ?        Ss   03:04   0:00 /lib/systemd/systemd-logind
+root       440  0.0  0.0  31320  3296 ?        Ss   03:04   0:00 /usr/sbin/cron -f
+message+   442  0.0  0.1  50224  4508 ?        Ss   03:04   0:01 /usr/bin/dbus-daemon --system --address=systemd: --nofo
+root       471  0.0  0.1 289096  7104 ?        Ssl  03:04   0:00 /usr/lib/policykit-1/polkitd --no-debug
+root       480  0.0  0.0  16180  1964 tty1     Ss+  03:04   0:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+root       490  0.0  0.3 265344 12608 ?        Ss   03:04   0:00 /usr/sbin/nmbd --foreground --no-process-group
+root       535  0.0  0.5 356676 20516 ?        Ss   03:04   0:00 /usr/sbin/smbd --foreground --no-process-group
+root       590  0.0  0.1 344936  6332 ?        S    03:04   0:00 /usr/sbin/smbd --foreground --no-process-group
+root       591  0.0  0.1 344928  4820 ?        S    03:04   0:00 /usr/sbin/smbd --foreground --no-process-group
+root       598  0.0  0.1 356676  7024 ?        S    03:04   0:00 /usr/sbin/smbd --foreground --no-process-group
+root       608  0.0  0.0 131240   384 ?        S    03:04   0:00 VBoxClient --vmsvga
+root       609  0.0  0.0 131240  2280 ?        S    03:04   0:00 VBoxClient --vmsvga
+root       619  0.0  0.1 364328  6788 ?        Ssl  03:04   0:00 /usr/sbin/lightdm
+root       634  0.0  0.0 313904  2628 ?        Sl   03:04   0:04 /usr/sbin/VBoxService --pidfile /var/run/vboxadd-servic
+root       643  0.6  2.7 537684 112656 tty7    Ssl+ 03:04   5:53 /usr/lib/xorg/Xorg -core :0 -seat seat0 -auth /var/run/
+root       702  0.0  0.1 246396  6896 ?        Sl   03:04   0:00 lightdm --session-child 12 15
+ubuntu     706  0.0  0.1  76756  8012 ?        Ss   03:04   0:00 /lib/systemd/systemd --user
+ubuntu     710  0.0  0.0 111456  2100 ?        S    03:04   0:00 (sd-pam)
+ubuntu     746  0.0  0.3 355064 13276 ?        Ssl  03:04   0:00 /usr/bin/lxsession -s Lubuntu -e LXDE
+ubuntu     764  0.0  0.1  49896  4440 ?        Ss   03:04   0:00 /usr/bin/dbus-daemon --session --address=systemd: --nof
+ubuntu     798  0.0  0.0  51988   324 ?        S    03:04   0:00 /usr/bin/VBoxClient --clipboard
+ubuntu     799  0.0  0.1 120376  4260 ?        Sl   03:04   0:00 /usr/bin/VBoxClient --clipboard
+ubuntu     809  0.0  0.0  51988   328 ?        S    03:04   0:00 /usr/bin/VBoxClient --display
+ubuntu     810  0.0  0.0  52124  2920 ?        S    03:04   0:00 /usr/bin/VBoxClient --display
+ubuntu     816  0.0  0.0  51988   324 ?        S    03:04   0:00 /usr/bin/VBoxClient --seamless
+ubuntu     817  0.0  0.0 118172  2324 ?        Sl   03:04   0:00 /usr/bin/VBoxClient --seamless
+ubuntu     822  0.0  0.0  51988   324 ?        S    03:04   0:00 /usr/bin/VBoxClient --draganddrop
+ubuntu     823  0.0  0.0 118688  2212 ?        Sl   03:04   0:36 /usr/bin/VBoxClient --draganddrop
+ubuntu     836  0.0  0.0  11304   316 ?        Ss   03:04   0:00 /usr/bin/ssh-agent /usr/bin/lxsession -s Lubuntu -e LXD
+ubuntu     841  0.0  0.5 239104 20292 ?        S    03:04   0:03 openbox --config-file /home/ubuntu/.config/openbox/lubu
+ubuntu     845  0.0  0.8 662044 33592 ?        Sl   03:04   0:13 lxpanel --profile Lubuntu
+ubuntu     848  0.0  1.1 554356 47968 ?        Sl   03:04   0:05 pcmanfm --desktop --profile lubuntu
+ubuntu     849  0.0  0.2 297248 12108 ?        Sl   03:04   0:00 lxpolkit
+ubuntu     857  0.0  0.0  11304   320 ?        Ss   03:04   0:00 /usr/bin/ssh-agent -s
+ubuntu     900  0.0  0.1 113884  4612 ?        Sl   03:04   0:00 /usr/lib/menu-cache/menu-cached /run/user/1000/menu-cac
+ubuntu     933  1.5 11.3 3394580 456640 ?      Sl   03:08  12:59 /usr/lib/firefox/firefox
+ubuntu     995  0.0  2.6 2535296 106456 ?      Sl   03:08   0:08 /usr/lib/firefox/firefox -contentproc -childID 1 -isFor
+ubuntu    1017  0.7 10.3 3220156 420044 ?      Sl   03:08   6:35 /usr/lib/firefox/firefox -contentproc -childID 2 -isFor
+ubuntu    1653  0.0  0.8 468240 34244 ?        Sl   04:53   0:34 lxterminal
+ubuntu    1670  0.0  0.1  23908  6536 pts/1    Ss   04:55   0:01 bash
+ubuntu    1680  0.0  0.2  55484  9140 pts/1    T    04:55   0:00 vim pamietnik.txt
+ubuntu    1685  0.0  0.2  55508  9160 pts/1    T    04:59   0:00 vim pamietnik.txt
+ubuntu    1689  0.0  0.2  55484  9152 pts/1    T    05:01   0:00 vim pamietnik.txt
+ubuntu    1721  0.0  0.2  55456  9176 pts/1    T    05:10   0:00 vim pamietniik.txt
+ubuntu    1724  0.0  0.2  55456  9316 pts/1    T    05:12   0:00 vim pamietniik.txt
+ubuntu    1729  0.0  0.2  55488  9208 pts/1    T    05:13   0:00 vim pamietnik.txt
+ubuntu    1751  0.0  0.0  18916  3892 pts/1    T    05:23   0:00 git commit
+ubuntu    1752  0.0  0.1  24796  5400 pts/1    T    05:23   0:00 /usr/bin/editor /home/ubuntu/repo/ukos2021-22_17c/.git/
+ubuntu    1754  0.0  0.0  18916  4020 pts/1    T    05:25   0:00 git commit
+ubuntu    1755  0.0  0.1  24796  5456 pts/1    T    05:25   0:00 /usr/bin/editor /home/ubuntu/repo/ukos2021-22_17c/.git/
+ubuntu    1756  0.0  0.0  18916  3968 pts/1    T    05:25   0:00 git commit
+ubuntu    1757  0.0  0.1  24928  5400 pts/1    T    05:25   0:00 /usr/bin/editor /home/ubuntu/repo/ukos2021-22_17c/.git/
+root      2308  0.0  0.0      0     0 ?        I    07:56   0:01 [kworker/1:1]
+ubuntu    4038  0.0  0.1 187932  5288 ?        Sl   13:23   0:00 /usr/lib/dconf/dconf-service
+ubuntu    4754  0.0  0.0   7468   736 pts/1    T    13:43   0:00 sleep 1000
+ubuntu    5449  0.1  3.5 2602212 142112 ?      Sl   15:18   0:11 /usr/lib/firefox/firefox -contentproc -childID 26 -isFo
+ubuntu   19078  0.0  3.5 2585244 143880 ?      Sl   15:47   0:02 /usr/lib/firefox/firefox -contentproc -childID 27 -isFo
+ubuntu   19109  0.0  2.9 2548920 119240 ?      Sl   15:48   0:01 /usr/lib/firefox/firefox -contentproc -childID 28 -isFo
+ubuntu   19162  0.0  1.8 2511284 72940 ?       Sl   15:48   0:00 /usr/lib/firefox/firefox -contentproc -childID 30 -isFo
+root     19268  0.0  0.0      0     0 ?        I    16:44   0:00 [kworker/0:0]
+root     19274  0.0  0.0      0     0 ?        I    16:44   0:00 [kworker/1:2]
+root     19426  0.0  0.0      0     0 ?        I    16:50   0:00 [kworker/0:1]
+root     19460  0.0  0.0      0     0 ?        I    16:50   0:00 [kworker/u4:1]
+root     19571  0.0  0.0      0     0 ?        I    17:00   0:00 [kworker/u4:0]
+root     19616  0.0  0.0      0     0 ?        I    17:13   0:00 [kworker/u4:2]
+ubuntu   19634  0.0  0.0  39664  3744 pts/1    R+   17:17   0:00 ps -aux
+
+ps 	- wyswietla wszystkie procesy gdzie user id jest takie samo co aktualnego użytkownika
+ps -a 	- wyswietla wszystkie procesy oprócz liderów sesji i procesów nie związanych z terminalem
+ps -x	- wyswietla wszystkie moje procesy
+ps -aux	- wyswitla wszytskie procesy uzytkownika oraz wszystkie procesy, ktore zostalyby wyswietlone z parametrem -a; 
+	  jesli uzytkownik nie istnieje, komenda zadziala identycznie jak ps aux i wyswietli ostrzezenia
+
+czym sa znaki zapytania? - W sekcji TTY (controlling terminal) wyświetla się znak zapytania (?) gdy terminal
+			   kontrolujący dany proces został w międzyczasie zamknięty
+
+Lista procesów basha ps -aux | grep bash
+Lista procesów roota ps -aux | grep root
+
+Zadanie 2.:
+ubuntu@bss-ubu1804:~$ man ps
+ubuntu@bss-ubu1804:~$ ps -aux | grep geany
+ubuntu   19657  0.0  0.0  14428  1044 pts/1    S+   17:20   0:00 grep --color=auto geany
+ubuntu@bss-ubu1804:~$ kill 19657
+bash: kill: (19657) - No such process
+ubuntu@bss-ubu1804:~$ killall shell
+shell: no process found
+
+//Nie można usunąć plików których nie jestem jestem założycielem
+
+Zadaniie 3.:
+
+ubuntu@bss-ubu1804:~$ pwd
+/home/ubuntu
+ubuntu@bss-ubu1804:~$ ls
+Desktop  Documents  Downloads  ListaPlikówZLiterkąD.txt  Music  Pictures  Public  repo  Templates  ukos  Videos
+ubuntu@bss-ubu1804:~$ mkdir temp
+ubuntu@bss-ubu1804:~$ cd temp
+ubuntu@bss-ubu1804:~/temp$ cat >wynik1.txt
+Witaj ^C
+ubuntu@bss-ubu1804:~/temp$ cat wynik1.txt
+ubuntu@bss-ubu1804:~/temp$ cat > wynik2.txt
+witaj ubuntu@bss-ubu1804:~/temp$
+
+//Kombinacja ^C zatrzymuje polecenie bez wykonywania go, natomiast kombinacja ^D wykonuje polecnie oraz nie przenosi
+wiersza poleceń do nowej linijki
+
+Zadanie 4.:
+
+ubuntu@bss-ubu1804:/home$ gimp
+
+(gimp:20896): GLib-GObject-WARNING **: 17:53:17.227: g_object_set_is_valid_property: object class 'GeglConfig' has no property named 'cache-size'
+^Z
+[1]+  Stopped                 gimp
+ubuntu@bss-ubu1804:/home$ bg
+[1]+ gimp &
+ubuntu@bss-ubu1804:/home$ fg
+gimp
+ubuntu@bss-ubu1804:/home$ gimp &
+[1] 20896
+ubuntu@bss-ubu1804:/home$ 
+(gimp:20896): GLib-GObject-WARNING **: 17:53:17.227: g_object_set_is_valid_property: object class 'GeglConfig' has no property named 'cache-size'
+
+ubuntu@bss-ubu1804:/home$ gedit &
+[2] 20862
+ubuntu@bss-ubu1804:/home$ 
+(gedit:20862): dbind-WARNING **: 17:55:39.281: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+
+ubuntu@bss-ubu1804:/home$ geany &
+[3] 20869
+ubuntu@bss-ubu1804:/home$ 
+(geany:20869): dbind-WARNING **: 17:51:35.364: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
+ubuntu@bss-ubu1804:/home$ jobs
+[1]   Running                 gimp &
+[2]-  Running                 gedit &
+[3]+  Running                 geany &
+ubuntu@bss-ubu1804:/home$ fg %2
+gedit 
+
