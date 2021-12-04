@@ -61,13 +61,14 @@
 		input: touch zajecia2.txt zajecia2.log inny.txt nowy.txt
 	
 	b. Za pomocą jednego polecenia mkdir stwórz w katalogu ukos następujący katalog: ukos/to/jest/dluga/nazwa
-		input: mkdir ukos/to/jest/dluga/nazwa
+		input: mkdir -p ukos/to/jest/dluga/nazwa
 		input: cd ukos/to/jest/dluga/nazwa
 		input: touch dane.txt
 	
 	c. Usuń z katalogu ukos/klamka wszystkie pliki txt.
 		input: cd ukos/klamka
 		input: rm *.txt
+		Edit.: Za pomocą jednego polecenia: rm *.txt ukos/klamka
 	
 	d. Usuń katalog ukos/katalog/katalog2
 		input: rm ukos/katalog/katalog2

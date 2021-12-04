@@ -8,7 +8,7 @@
 
 4. 	Za pomocą komendy: kill
 
-5.	Za pomocą komendy: ls | grep al
+5.	Za pomocą komendy: ls -p | grep -v / al
 
 6.	input: chmod 751 ala
 	input: chmod u=rwx,g=rx,o=x ala
@@ -19,4 +19,4 @@
 
 9. 	Klawiszem "tab".
 
-10. 	Używając ctr+z, bądź komendy bg.
+10. 	Używając ctr+z, bądź komendy bg, lub wywołując program ze znakiem '&' na końcu.
