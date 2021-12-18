@@ -1,0 +1,14 @@
+1. ls -a wypisało 6 plików
+   ls -a | grep D wypisało 0 plików, ponieważ nie mam plików zaczynających się na D
+   ls -a | grep D > ListaPlikówZLiterąD.txt powoduje że wynik tego polecenia zapisywany jest do pliku ListaPlikówZLiterąD.txt
+
+   ps -a wyświetla listę procesów
+   ps x wyświetla procesy danego użytkownika (tego który wpisuje to polecenie)
+   ps aux wyświetla wszystkie procesy w systemie
+
+2. Po uruchomieniu gedit sprawdziłem PID które wynosiło 1845
+   Po wpisaniu kill 1845 edytor się wyłączył
+
+3. Skrót CTRL+C zatrzymuje dany proces bez zapisywania danych. CTRL+D kończy wprowadzanie danych
+
+4. CTRL+Z wstrzymuje proces, nie zabija go. Komenda jobs wyświetla procesy w tle wraz z numerem terminalu który go używa.

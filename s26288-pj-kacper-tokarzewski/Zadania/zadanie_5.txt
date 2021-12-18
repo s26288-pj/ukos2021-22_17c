@@ -1,0 +1,19 @@
+1. Ścieżka względna np. ../../kot/ma/ale
+   Ścieżka bezwględna /tmp/ukos/kot/ma/ale
+
+2. mkdir -p ../../jan/kowalski
+
+3. mv /tmp/ukos/kot/ma/ale /tmp/ukos/ala/i
+
+4. Po sprawdzeniu PID procesu, możemy wpisać kill <PID> żeby ten proces zatrzymać
+
+5. ls | grep ^al
+
+6. chmod 751 /tmp/ukos/ala zmienia uprawnienia dla: właściciel(rwx), grupa(rx), reszta(x)
+
+7. ls -p | grep -v / > list_of_files.txt
+
+8. TAB uzupełnia za nas polecenia/ścieżki
+
+9. Znak & na końcu polecenia powoduje, że proces działa w tle, a terminal nadal jest użyteczny.
+   Ten sam efekt spowoduje uruchomienie procesu a następnie wciśnięcie CTRL+Z

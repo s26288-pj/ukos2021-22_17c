@@ -1,0 +1,13 @@
+Zadanie musiałem zrobić teoretycznie ze względu na błąd maszyny jeżeli chodzi o połączenie z internetem.
+
+1. Tworzę katalogi testowe
+
+2. Po zmianie uprawnień na 000 dla folderu nie jestem w stanie do niego wejść, jeśli zmienię uprawnienia do folderu nadrzędnego to nie mogę przez niego przejść co oznacza że jestem zablokowany w danym katalogu.
+
+3. Żeby stworzyć plik lub katalog musiałbym mieć uprawnienia zapisu, a żeby coś usunąć musiałbym mieć uprawnienia wykonania (executable) 
+
+W zadaniu echo > plik nadpisuje to co jest w danym pliku, natomiast echo >> plik dopisuje treść do jego zawartości
+
+4. Aby strona w katalogu public_html była możliwa do wyświetlenia, trzeba nadać grupie other uprawnienia read i executable.
+
+Polecenie umask ustawia jakie uprawnienia będą ustawiane domyślnie po utworzeniu pliku/katalogu

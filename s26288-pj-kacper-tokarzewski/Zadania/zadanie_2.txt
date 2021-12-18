@@ -1,0 +1,38 @@
+1. Korzystając z komend cd oraz mkdir stworz drzewo katalogów: 
+	mkdir ukos
+	cd ukos
+	mkdir katalog
+	cd katalog
+	mkdir katalog2
+	mkdir katalog3
+	ls
+	>> $ katalog2 katalog3
+	cd ..
+	mkdir klamka
+	ls
+	>> $ katalog klamka
+
+2. W katalogu klamka stwórz pliki zajecia2.txt zajecia2.log inny.txt nowy.txt
+	touch zajecia2.txt zajecie2.log inny.txt nowy.txt
+	ls
+	>> $ inny.txt nowy.txt zajecia2.log zajecia2.txt
+
+3. Za pomocą jednego polecenia mkdir stworzyć w katalogu następujący katalog: ukos/to/jest/dluga/nazwa
+	mkdir -p ukos/to/jest/dluga/nazwa
+(opcja -p tworzy nieistniejące katalogi) 
+
+4. Umieszczam w katalogu ukos/to/jest/dluga/nazwa plika dane.txt
+	touch ukos/to/jest/dluga/nazwa/dane.txt
+
+5. Usuwam z katalogu klamka wszystkie pliki z rozszerzeniem txt
+	rm *.txt
+	ls klamka
+	>> $ zajecia2.log
+
+6. Usuwam katalog katalog2
+	rmdir ukos/katalog2
+	ls ukos
+	>> $ katalog3
+
+7. Usuwam cały katalog klamka za pomocą jednego polecenia
+	rm -r klamka

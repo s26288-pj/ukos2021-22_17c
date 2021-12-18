@@ -1,3 +1,13 @@
+09.10.2021 
 Na dzisiejszych zajęciach nauczyłem się używać git'a za pomocą terminala w Linuxie.
 Daje to duże możliwości jeżeli chodzi o programowanie grupowe i przechowywanie
 danych w chmurze.
+
+22.10.2021
+Na dzisiejszych zajęciach nauczyłem się u uprawnieniach w systemie Linux oraz jego podstawowych komend. Nauczyłem się także lepszego poruszania się po katalogach bez korzystania z interfejsu graficznego.
+
+06.11.2021
+Na dzisiejszych zajęciach nauczyłem się w jaki sposób znaleźć PID procesu, jak proces zatrzymać, uruchomić w tle, jak działa polecenie grep i co można dzięki niemu zrobić oraz jak zapisywać wynik polecenia w pliku.
+
+20.11.2021 
+Na dzisiejszych zajęciach mieliśmy powtórzenie do kolokwium.
