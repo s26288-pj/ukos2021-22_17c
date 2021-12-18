@@ -1,0 +1,4 @@
+Tą komendą zmienia się standardowe dostępy przy tworzeniu pliku lub katalogu (jeśli maska jest wyłączona standardowo dostaje się wszystkie dostępy).
+Wpisując komende umask otrzymujemy obecne ustawienie umask np. 0022 
+Umask nie może zmieniać permisji utworzonych już plików. 
+Po więcej informacji na temat umask można wpisać man umask 

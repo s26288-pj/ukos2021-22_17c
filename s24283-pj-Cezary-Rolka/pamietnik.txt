@@ -1,0 +1,144 @@
+20.10.2021r
+Drogi pamietniku, próbuje nauczyc się obsługi githuba, linuxa, vima i wiele innych, nie jest łatwo ale trzeba sobie dawac radę, oby jakos to poszło.. :)
+
+4.11.21r. 
+Dzisiaj uczylem sie nadawać dostepy za pomoca komendy chmod na serwerze szuflandia. to czego sie uczyłem to:
+1)- tworzenie drzewa katalogów z różnymi prawami , próba połączenia z poszczególnymi katalogiami i srawdzenie co sie stanie
+- wejscie do katalogu kolegi  podrzucenie kukułczego jaja i zmiana uprawnień, aby nie mogł nic zrobic z tym plikiem.
+rm: usunąć zabezpieczony przed zapisem zwykły plik 'jajo.txt'? tak
+
+2)
+- po usunięciu praw do katalogu folder_700 kolega i ja nie mieliśmy absolutnie żadnego dostępu. Jedynie ja jako właściciel mogłem zmienić prawa do katalogu komenda chmod
+- próboweano równiez edytowac zawartośc katalogu podrzednego z odebranymi uprawnieniami, również brak dostępu po obu stronach 
+
+Dalej jednak duże problemy sprawia mi poruszanie się po githubie i korzystanie z komend gitowych...
+
+11.11.2021r.
+	 Dzisiaj od rana probuję ponownioe skonfigurować logowanie do githuba za pomocą klucza ssh, poniewaz nie czuje sie w tym temacier najmocniejszy.
+
+Poniżej lista zadań nr 1:
+Był to najprostrzy zestaw do wykonania zawierający podstawowe komendy do poruszania się po systemie, nie było z tym wiekszego problemu.
+
+1. Uruchomienie terminalu: "ctrl+alt+t".
+2. Wyswietlenie zawartości: "ls".
+3. aktualne połozenie: "pwd".
+4. Przejście na uplpit- ściezka wzgledna "cd ../../Desktop".
+5. Aktualne połozenie: "pwd". wynik: "/home/czaro/Desktop".
+6. Wyswietlenie zawartosci katalogu: "ls".
+7. Przechodząc w sposób graficzny otrzymamy to samo.
+8. home jest katalogiem domowym wyswietlenie jego zawartości przez przechodzenia do niego: "ls ~".
+9. Przejscie do katalogu obrazy- ściezka wzgledna: "cd ../../Pictures".
+10. Aktualne połozenie: "pwd". wynik: "/home/czaro/Desktop".
+11. Polecenie "cd ././././././" nie spowoduje przejscia do innego katalogu/pliku ponieważ kropka (.) oznacza aktualne połozenie.
+12. Przejscie do katalogu domowego : "cd ~" (tylda- oznacza home)
+13. Komenda "cd /root" - odmowa dostepu. Probowałem za pomoca sudo passwd root oraz restartowac i nie pomogło.
+14.Po wcisnięciu kominacji "ctrl+alt+F1" zostanę wylogowany- bardzo przydatne, nie wiedziałem o tym.
+~                                                                               
+~                                                                               
+~   Poniżej lista zadań z 2 zajęć:
+
+Najistotniejszym elementem (i najdrudniejszym) było nauczenie się przyznawania uprawnień użytkownikowi i innym. Rózne metody były przedstawione na zajęciach ale najbardziej intuicyjna jest bazowanie na bitach (4 write, 2 read, 1 execute). Bardzo przydatne.
+
+1.Utworzyłem drzewo katalogów
+Połączyłem się do kolegi Adriana
+cd /home/PJWSTK/s24588
+Stworzyłem u niego plik jajo.txt ,zmieniłem uprawnienia i nie mógł zrobić nic z tym plikiem
+rm: usunąć zabezpieczony przed zapisem zwykły plik 'jajo.txt'? tak
+
+2.Po usunięciu wszelkich praw z katalogu ani ja ani kolega nie mogliśmy ingerować w jego zawartość, ja mogłem ponieważ byłem właścicielem, to samo tyczy się katalogu nadrzędnego. Nie można było przejść do innych katalogów w pomimo posiadania praw na te niżej, i tak samo nie można było nic z nimi zrobić.
+
+3.Używając operatora ‘>’ nadpisywaliśmy wiadomość w pliku, natomiast używając ‘>>’ dopisywaliśmy. Polecenie ‘tail –f’ sprawiało że wyświetlane nam były zmiany od razu, bez konieczności uruchamiania za każdym razem ‘cat’
+
+4.Po utworzeniu takiego pliku w katalogu ‘public_html’ należało nadać katalogowi uprawnienia ‘execute’ dla grupy ‘other’,  a plikowi ‘read’ (też grupa ‘other’)
+
+5.Dzięki poleceniu  ‘umask’ można utworzyć domyślnie uprawnienia dla pliku/katalogu.
+Przykład:
+‘umask 000’ - wszyscy będą mieli prawa = chmod 777 (nazwa pliku)
+‘umask 033’ - właściciel będzie mieć pełne prawa ale cała reszta tylko odczyt = chmod 744 (nazwa pliku)
+Drugi przykład można przedstawić też tak 777 - 033 = 74
+
+Poniżej lista zadań z trzecich zajęć:
+
+Nauczyłem sie komendy grep  z różnymi parametrami służącej do wyszukiwnaia plików/katalogów w systemie, niezmierni ułatwi mi to prace, nawet juz sie przydaje w obecnej pracy wiec warto było szybko opanować. Komenda 'ps' swietnie pracuje z przenoszeniem procesu do pracy tle, oraz do wysyłania sygnalu do ubicia procesu. Nie było to trudne trzeba tylko nauczyć sie odpowiednich parametrów do tych komend poniewaz jest ich sporo. 
+
+1.Wywołanie komendy "ls -a": listuje całą zawartośc katalogu, łącznie z plikami ukrytymi.
+2. komenda "ls -a |grep D" : Wylistuje wsystkie pliki/katalogi zaczynajace sie od listery podanej po słowie grep, w tym przypadku "D".
+3. znak ">" jest kierunkiem strumienia zapisu danych, po tym znaku nalezy podac ściezke w jakiej dane powinny byc zapisane. uzycie ">>" spowoduje, dopisanie danych do juz istniejacej zawartości.
+4. komenda "ps" wyświetla tylko procesy skojarzone z terminalem.
+"ps -a" - lista wszystkich procesów a nie tylko te należące do użytkownika
+"ps -aux" - lista aktualnie uruchomionych procesów
+"ps -x" - lista wszystkich procesów, niezależnie od tego do jakiego terminala sa podpięte
+"ps -e" - lista wszystkich procesów
+
+Za pomocą komendy ps -e | grep vim znalazłem uruchomiony wcześniej edytor tekstowy vim. Uzywając komendy "kill" a nastepnie podając numer procesu udało mi sie go zamknąć.
+
+Komenda "killall" wysyła syngał do wszystkich uruchomionych procesów i je zamyka.
+parametr -SIGKILL powoduje natrychmiastowe wyłaczenie procesu
+ps -U root" wyswietla procesy należące do uzytkownika root
+
+zadanie 3:
+Po uruchomieniu komendy "cat" bez parametrów a nastepnie wciśnięciu ctrl+C przerywamy działanie komnedy kat i konsola jest dalej wolna do pisania.
+ Jezeli chodzi o zadanie związane z poleceniem "cat > wynik.txt" to skrót ctrl+C działa w ten sposób że wpisane słowo w konsoli nie zostało zapisane
+natomiast przy użuciu ctrl+D słowo zostało zapisane do pliku.
+
+zadanie 4:
+Uruchomiłem gimp -> wcisnąłem ctrl+Z -> w terminalu wyswietlił sie komunikat o zatrzymaniu procesu gimp ([1]+  Stopped                 gimp)
+komenda bg - gimp "ożył"
+komenda fg - powrót procesu gimp
+
+po uruchomieniu kilku programów ze znakiem "&" na końcu polecenia po spacji , terminal jest wolny, a proces działa uruchomiony w tle
+poleceniem "fg" mogłem przeniesć procesy pracujące w tle na pierwszy plan a nastepnie wcisnąć ctrl +c aby zakończyć  jego działanie.
+
+
+Poniżej lista zadań z 4 zajęć:
+
+Niejako była to powtórka rzeczy, których nauczyłem się wcześniej, jednak odświezyła mi wiadomości które trochę uleciały z głowy. 
+
+
+ zadanie 1
+Przejscie z katalogu 'kota' do 'ale':
+Scieżka względna:       cd ../../../kot/ma/ale
+Sciezka bezwzgledna     cd /tmp/ukos/kot/ma/ale
+
+zadanie 2
+utworzenie katalogów 'jan/kowalski' w katalogu 'ale', znajdując sie w katalogu 'kota' za pomoca jednej komendy:
+ mkdir -p ../../../kot/ma/ale/jan/kowalski
+
+zadanie 3
+Przeniesienie katalogu 'ale' do 'i', znajdując sie w 'kota':
+sciezka wzgledna:  mv ../../../kot/ma/ale ../../i/
+sciezka bezwzgledna:  mv tmp/ukos/kotm/ma/ale tmp/ukos/ala/i/
+
+zadanie 4
+Program, który nie reaguje na ctrl+c mozna zamknąc poprzez wysłanie sygnału, który może posłużyć do zamkniecia go komendą "kill", a nastepnie podać numer procesu.
+
+zadanie 5
+Wypisanie plików w katalogu zaczynających się od 'al':
+ls | grep -e ^u
+
+zadanie 6
+Nadanie uprawnień dla katalogu ala aby:
+a) każdy mógł do niego wejść: chmod 751 tmp/ukos/ala lub u=rwx,g=rx,o=x tm
+p/ukos/ala
+
+b) tylko grupa moze wyswietlić co w nim jest: chmod 740 tmp/ukos/ala
+c) właściciel ma pełne prawa: chmod 700 tmp/ukos/ala
+
+zadanie 7
+Utworzenie pliku z  listą plików w bieżącym katalogu :
+ls -p | grep -v / > list_of_files
+
+zadanie 8
+1)Mogły zostać zmienione uprawnienia użytkownika do danego konta.
+2) Brak miejsca na dysku/ profilu do utworznia pliku zawierającego hasło którego system uzywa do zalogowania do serwera graficznego, aby sesję graficzną wyswietlić.
+zadanie 9
+Przyspieszyc wpisywanie komend mozna poprzez używanie przycisku 'tab', który dokończy za nas wpisywanie nazwy pliku/katalogu.
+
+zadanie 10
+Jak uruchomic program, aby nie blokował terminala:
+1) uruchomić program ze znakiem '&' na koncu. Program zostanie wtedy uruchomiony w tle.
+2) trwający proces można zatrzymac komblinacją 'ctrl+z' a nastepnie wznowic jego pracę w tle za pomoca 'bg % <nr joba np.1>'
+
+
+PODSUMOWUJĄC:
+Praktyczna wiedza którą zacząłem stosować i ułatwia pracę. Wzrosła pewność poruszania sie i korzystania zterminalu jak na niecałe 2 miesiące nauki. Na ten moment nie mam większych problemów z materiałem. Wszystko super!! 

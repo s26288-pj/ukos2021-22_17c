@@ -1,0 +1,16 @@
+1. Otwieram terminal 
+Wpisuje komendy: 
+2.  ls
+3. pwd 
+4. cd Desktop 
+5. pwd
+6. ls 
+7. Tak, otrzymamy to samo 
+8. ls /Home
+9. cd ../Pictures
+10. pwd /Home/ubuntu/pictures
+11. Po użyciu cd ././././././ zostaje w tym samym folderze 
+12. cd /home
+13. Po wpisaniu komendy cd /root odmawia mi dostępu do tego folderu. Do tego 
+folderu dostęp ma tylko jego właściciel oraz root 
+14. Po wciśnięciu tej kombinacji przycisków wylogowywuje nas 

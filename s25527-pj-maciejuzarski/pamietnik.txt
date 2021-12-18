@@ -3,3 +3,15 @@ na dzisiejszych zajeciach z UKOS, nauczylem sie podstawowych koment do poruszani
 nauczylem sie rowniez, jak stworzyc repozytorium oraz jak ' wypchnac' swoje pliki lokalne do repozytorium zdalnego za pomoca Git-a;
 do zobaczenia na nastepnych zajeciach pamietniczku,
 Maciej 9.10.2021
+
+drogi pamietniczku, wykonalem wlasnie zadania z pierwszych zajec z UKOS. uruchomilem terminal, nastepnie uzywajac komendy ls wyswietlilem zawartosc biezacego katalogu; uzywajac komendy pwd wyswietlilem na ekranie sciezke do miejsca, w ktorym sie znajdowalem; nauczylem sie przemieszczac uzywajac sciezek wzglednych (wprowadzajac cd razem ze sciezka od biezacego miejsca) oraz bezwglednych (poprzedzajac adres znakiem / oraz podaniem pelnej, absolutnej sciezki do miejsca, do ktorego chce trafic); dowiedzialem sie tez dlaczego linux odmawia mi dostepu po wpisaniu cd /root, oraz uzylem kombinacji ctrl+alt+f1 i ctrl+alt+f7 by przelaczyc sie miedzy widokiem graficznym i konsolowym systemu ubuntu;
+9.10 Maciej
+
+drogi pamietniczku,
+na dzisiejszych zajeciach nauczylem sie oznaczen prawd dostepu - rwx oraz modyfikowac prawa dostepu dla plikow i katalogow uzywajac komendy chmod; dowiedzialem sie, ze moge nadac rozne prawa dla grupy (g), wlasciciela pliku (u) oraz pozostalych uzytkownikow (o); dowiedzialem sie tez jak ustawic umask - czyli zestaw bitow odebranych od domyslnych bitow uprawnien podczas tworzenia nowych plikow i katalogow;
+23.10 Maciej
+
+
+drogi pamietniczku,
+na dzisiejszych zajeciach uczylem sie o strumieniach wejsciowym, wyjsciowym oraz bledow dla procesow w systemach operacyjnych; wystwietlilem zawartosc swojego katalogu /home uzywajac komendy ls -a, ktora wypisala 4 wyniki; nastepnie uzylem eksperymentowalem uzywajac polecenia ls-a | grep z roznymi parametrami aby wypisac liste plikow z okreslonym wzorcem, uzylem tez przekierowania do pliku > aby te liste zapisac; uzywalem programu ps do wyswietlania listy procesow z rozynmi argumentami, ktore uzupelnialy dane o np. date uruchomienia procesu, czy zuzycie zasobow; uruchomilem gedit i odnalazlem jego PID - 1204; uzylem nastepnie na PID gedita polecenia kill, ktory zakonczyl dzialanie programu; przetestowałem też działanie skrótów CTRL + C (wylaczenie programu) oraz CTRL + D (zakonczenie biezacego strumienia wyjscia, dzieki czemu np. wprowadzona zawartosc zostaje zapisana); nauczyłem się również działać na uruchomionych programach poprzez ctrl+z - zatrzymanie biezacego procesu (w przypadku programow graficznych wyglada to doslownie jak zawieszenie sie programu) a takze ich wznawianie programu na ekranie (fg %numer joba - do wzieca z komendy jobs) lub w tle (bg %jobnumber); program można od razu uruchomić w tle np uzywajac gedit & 
+6.11 Maciej

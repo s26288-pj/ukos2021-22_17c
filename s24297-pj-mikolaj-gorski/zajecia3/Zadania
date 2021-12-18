@@ -1,0 +1,22 @@
+Ad 1)
+ls -a --- wypisało 35 plików
+ls -a | grep D --- wypisało 3 pliki zaczynające się na D
+ls -a |grep D > ListaPlikówZLiterkąD.txt --- wyniki poprzedniego polecenia zostały wypisane w pliku oraz sama nazwa pliku również została dodana
+
+ps --- wyświetla listę procesów
+ps -a --- 
+ps x --- wyświetla wszystkie procesy które są własnością aktualnego użytkownika
+ps aux --- wyświetla wszystkie procesy w systemie 
+
+
+Ad 2)
+po uruchomieniu gedit sprawdziłem PID które wynosiło 1845.
+Po wpisaniu kill 1845 edydot od razu się wyłączył. 
+
+Ad 3)
+Skrót Ctrl+C zatrzymuje dany proces bez zapisywania danych. Skrót Ctrl+D natomiast kończy wprowadzanie danych.
+
+Ad 4)
+Ctrl+Z wstrzymuje proces nie "zabijając" go. Ma on cały czas przypisane miejsce ale nie dzieją się z nim żadne akcje. po wpisaniu bg gimp znowu zaczął działać norlanie.
+Użycie znaku & na koniec uruchamianego procesu w terminalu pozwala nam na dalsze używanie terminala podczas działania programu np. gedit &.
+Komenda jobs wyświetla procesy w tle wraz z ich numerami.

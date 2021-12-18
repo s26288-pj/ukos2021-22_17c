@@ -1,0 +1,82 @@
+1. Uruchom terminal.
+
+2. Wyświetl zawartość aktualnego katalogu.
+	input: ls
+	output: Desktop    Downloads             Music     prg1    Templates  Videos
+		Documents  intro_to_programming  Pictures  Public  ukos
+
+3. Sprawdż gdzie aktualanie się znajdujesz. Porównaj to z tym co możesz zobaczyć w interfejsie graficznym.
+	input: pwd
+	output: /home/ubuntu
+
+	Odp.: Znajduję się obecnie w katalogu systemu ubuntu, który jest podkatalogiem katalogu 	      'home'. Na obecny katalog interpretacja w interfejsie graficznym znajduje się w 		      akcesorium 'FileManager PCManFM'. Oba przedstawienia mają podobny układ kolejności    		      alfabetycznej (komenda ls wyświetla kolumnami, nie wierszami), i za bardzo się między   		      sobą nie różnią.
+
+4. Przejdź do katalogu Pulpit za pomocą ścieżki względnej.
+       	input: cd Desktop/
+
+5. Sprawdź gdzie jesteś.
+	input: pwd
+	output: home/ubuntu/Desktop
+
+7. Zobacz czy przechodząc do tego katalogu w sposób graficzny (wyklikać) otrzymamy to samo?
+
+	Odp.: Nie do końca, gdyż komenda 'pwd' wyświetla nam samą ścieżkę obecnego katalogu. W 		      interfejsie graficznym otrzymujemy informacje na temat tej ścieżki, jak i widzimy co 		      jest zawartością tego katalogu. Żeby otrzymać taki efekt w terminalu:
+	              input: pwd
+	              input: ls
+
+8. Wyświetl zawartość swojego katalogu domowego bez przechodzenia do niego (ls z odpowiednim parametrem).
+	input: ls /home
+	output: ubuntu  vagrant
+
+9. Przejdź do katalogu Obrazy w twoim katalogu domowym za pomocą ścieżki względnej.
+	input: pwd
+	output: /home/ubuntu/Desktop
+	input: cd ../Pictures
+
+10. Sprawdź gdzie jesteś.
+	input: pwd
+	output: /home/ubuntu/Pictures
+
+11. Zobacz do jakiego katalogu przjedziesz za pomocą ścieżki ././././././
+	input: cd ././././././
+	input: pwd
+	output: /home/ubuntu/Pictures
+
+12. Przejdź do swojego katalogu domowego za pomocą ścieżki bezwzględnej.
+	input: readlink -f /home #źródło: https://stackoverflow.com/questions/5265702/how-to-get-full-path-of-a-file
+	output: /home
+	input: cd /home
+
+13. Zobacz co się stanie jak wpiszesz komendę 'cd /root'. Jak już to zrobisz, zastanów się co się stało.
+	input: cd /root
+	output: bash: cd: /root: Permission denied
+
+	Odp.: Folder root z tego co wiem ma dostęp tylko do użytkownika root, na którego w momencie wpisywania komendy,nie byłem zalogowany.
+
+14. Zobacz co się stanie, jeśli wpiszesz kombinacje klawiszy: Ctrl+Alt+F1
+	Odp.: Mam wrażenie, że przełączyłem się na najbardziej 'prymitywną' reprezentacje sustemu operacyjnego, która jest pozbawiona jakiejkolwiek reprezentacji graficznej.
+
+15. Korzystając z komend cd oraz mkdir stwórz nastepujące drzewo katalogów w swoim katalogu domowym.
+	a. W katalogu ukos/klamka stwórz pliki zajecia2.txt zajecia2.log inny.txt nowy.txt
+		input: touch zajecia2.txt zajecia2.log inny.txt nowy.txt
+	
+	b. Za pomocą jednego polecenia mkdir stwórz w katalogu ukos następujący katalog: ukos/to/jest/dluga/nazwa
+		input: mkdir -p ukos/to/jest/dluga/nazwa
+		input: cd ukos/to/jest/dluga/nazwa
+		input: touch dane.txt
+	
+	c. Usuń z katalogu ukos/klamka wszystkie pliki txt.
+		input: cd ukos/klamka
+		input: rm *.txt
+		Edit.: Za pomocą jednego polecenia: rm *.txt ukos/klamka
+	
+	d. Usuń katalog ukos/katalog/katalog2
+		input: rm ukos/katalog/katalog2
+	
+	e. Usuń cały katalog klamka za pomocą jednego polecenia.
+		input: rm /klamka
+
+
+  
+
+

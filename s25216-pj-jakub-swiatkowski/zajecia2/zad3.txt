@@ -1,0 +1,4 @@
+1. Po utworzeniu katalogów oraz plikow i zmienieniu uprawnień do nich, nie można było edytować pliku. Można było usunąć plik po ptwierdzeniu w terminalu, wydaje mi sie, że wynika to z uprawnień to katalogu nadrzędnego.
+2. Po usunięciu wszystkich praw nie można było podjąć żadnej interakicji, jednak właściciel pliku mógł zmienić uprawnienia.
+3. Przy użyciu operatora > przy echo, plik nadpisywał się od 1 linii, natomiast przy użyciu >> tekst dodawał się na końcu pliku.
+4. Należy nadaź uprawnienia  dla other dla wszytskich katalogów nadrzędnych liku html oraz do niego samego, dodatkowo należy nadac uprawnienia do odczytu dla pliku html.

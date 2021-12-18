@@ -3,3 +3,9 @@ Na dzisiejszych ćwiczeniach nauczyłem się do czego złużą katalogi w gł�
 
 10.22.2021
 Robiąc zadania które miliśmy do wykonania między zajęciami nauczyłem się w jaki sposób używać podstawowych komend Linuxa tj. tworzenie oraz usuwanie plików/katalogów oraz w jaki sposób używać parametróœ tych komend aby były one szybsze i wygodniejsze w użyciu.
+
+11.06.2021
+Robiąc zadania z dzisiejszych zajęć nauczyłem się w jaki sposób znaleźć PID procesu o jak je zatrzymywać i uruchamiać w tle, w jaki sposób filtrować wyniki wyświetlania ls w terminalu oraz poznałem dużo przydatnych skrótów klawiszowych w teminalu.
+
+11.20.2021
+Na dzisiejszych ćwiczeniach przygotowałem się na kolokwium. 

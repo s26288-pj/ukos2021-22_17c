@@ -1,0 +1,38 @@
+1
+cd ../../../kot/ma/ale- umożliwa przejście ścieżka względną
+cd /tmp/ukos/kot/ma/ale- przejscie scieżką bezwzględną
+
+2
+mkdir -p /tmp/ukos/kot/ma/ale/jan/kowalski pozwala na to parametr p
+
+3
+mv /tmp/ukos/kot/ma/ale ../../i/ przy użyciu sciezki bezwzgędnej i wzglednej
+
+4
+Należy sprawdzić jego pid przy uzyciu ps -a | grep [nazwa procesu], potem wysłać sygnał przy użyciu kill [pid]
+
+5
+Można użyć do tego REGEX-a
+ls | grep ^al
+
+6
+chmod 751 /tmp/ukos/ala
+
+7 - read/write/execute dla wlasciciela
+5 - read/execute dla grupy
+1 - execute dla innych
+
+7
+ls . lista.txt
+
+8
+nie mam uprawnień np:
+    - zabrano mi uprawnienia write
+    - zabrano uprawnienia grupy, gdy nie jestem w swoim katalogu
+
+9
+nalezy użyc tab dwukrotnie
+
+10
+przy starcie procesu użyć &- pozowli to na start procesu w tle
+przy istniejącym już procesie należy go zatrzymac i uzyc komendy bg aby umożliwic mu prace w tle

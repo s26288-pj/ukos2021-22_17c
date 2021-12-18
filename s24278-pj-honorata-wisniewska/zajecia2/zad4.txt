@@ -1,0 +1,33 @@
+Zadanie 4
+
+man umask
+umask - ustawia maske tworzenia pliku
+umask 022
+drwxr-xr-x    2 s24278 pjwstk  4096 paź 26 19:11 test1
+umask 000
+drwxrwxrwx    2 s24278 pjwstk  4096 paź 26 19:12 test2
+umask 011
+drwxrw-rw-    2 s24278 pjwstk  4096 paź 26 19:14 test3
+umask 222
+dr-xr-xr-x    2 s24278 pjwstk 4,0K paź 26 19:15 test4
+umask 044
+drwx-wx-wx    2 s24278 pjwstk 4,0K paź 26 19:15 test5
+Przy poleceniu umask wykonywanie jest odejmowanie na bitach domyślnych praw dostepu, np:
+> gdy umask 000
+ chmod 777
+777-000=777
+drwxrwxrwx
+> gdy umask 011
+chmod 766
+777-011=766
+drwxrw-rw- x=2^0=1 nastepuje odjecie 1 czyli execute
+> gdy umask 044
+chmod 722
+777-044=722
+drwx-wx-wx r=2^2=4 nastepuje odjecie 4 czyli read
+> gdy umask 222
+chmod 555
+777-222=555
+dr-xr-xr-x w=2^1=2 nastepuje odjecie 2 czyli write
+
+

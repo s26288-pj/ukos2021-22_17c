@@ -1,0 +1,24 @@
+Na wstępie powiem, że nie miałem z kim przeprowadzić tych ćwiczeń, więc część odpowiedzi może polegać tylko i wyłącznie na wiedzy, którą mam z wykładów. 
+
+1. 	Odp.:Załóżmy, że wszedłbym do katalogu pewnego użytkownika i chciałbym utworzyć plik "kukułcze jajo". Żeby móc to zrobić musiałbym mieć uprawnienia write i execute, a uzyskałbym je gdyby właściciel foldera nadał prawa dla write i execute dla grupy. Aby usunąć wystarczy mieć uprawnienia write.
+
+2.	input: mkdir -p test/test1/test2
+	input: chmod 000 test1
+	input: chmod 000 test
+	
+	Odp.: Odbierając wszystkie prawa dostępu nie jesteśmy w stanie użyć komendy cd. chmod możemy wywołać w każdym przypadku jeśli jesteśmy właścicielem "czegoś", czemu te prawa chcemy nadać. Nie możemy przeskoczyć do katalogu ABC/XYZ, bez praw wstępu do ABC.
+
+3. 	Odp.: Zmiana operatora '>' na '>>', nie spowodowała u mnie żadnych zmian, ale to może dlatego, że robiłem to samemu. Komenda tail -f <plik> w innym terminalu dała wynik jak cat, jednak proces nie chciał się ukończyć. W poprzednim terminalu uzyskałem taki sam rezultat.
+	Edit.: Faktycznie, doczytałem i jest różnica. Gdybym wywołał przekierowania dwa razy przy użyciu tylko '>', to miałbym w pliku tylko jedno hello, a że '>>' dopisuje, a nie nadpisuje w pliku obecne są dwa.
+
+4. Zalogowałem się na szuflandię i nadałem uprawnienia 755 dla strona.html i public.html. Wpisałem adres http://szuflandia.pjwstk.edu.pl/~s25940/public_html/strona.html niestety wyświetlił mi się błąd 404, więc nie wiem czy to problem z adresem, czy z uprawnieniami. Uważam, że uprawnienia 755 są wystarczające, gdyż pozwalają grupie others na execute, a do tego chyba zalicza się backend serwera. Nie do końca wiedziałem jak nadać uprawnienia swojemu katalogowi domowemu na serwerze.
+
+5.	input: touch test
+	input: ls -la
+	output: -rw-rw-r-- 1 ubuntu ubuntu    12 Dec  3 12:37 test	
+	input: umask 007
+	input: touch test1
+	input: ls -la
+	output: -rw-rw---- 1 ubuntu ubuntu     0 Dec  3 12:44 test1
+
+	Odp.: Operacją wykonywaną na bitach domyślnych praw dostępu przez umaska jest odejmowanie.

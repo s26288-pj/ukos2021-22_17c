@@ -1,0 +1,20 @@
+Zadanie 3
+
+ubuntu@bss-ubu1804:~$ cat
+^C
+Ctrl+C - zatrzymuje bierzacy proces
+
+ubuntu@bss-ubu1804:~$ cat > wynik1.txt
+witaj^C
+ubuntu@bss-ubu1804:~$ cat wynik1.txt
+ubuntu@bss-ubu1804:~$ ls
+Desktop  Documents  Downloads  ListaPlikowZLiterkaD.txt  Music  Pictures  Public  repo  Templates  testy  ukos  Videos  wynik1.txt
+Ctrl+C zatrzymuje bierzacy proces, plik tekstowy istnieje, ale jest pusty
+
+ubuntu@bss-ubu1804:~$ cat > wynik2.txt
+witajubuntu@bss-ubu1804:~$ ls
+Desktop  Documents  Downloads  ListaPlikowZLiterkaD.txt  Music  Pictures  Public  repo  Templates  testy  ukos  Videos  wynik1.txt  wynik2.txt
+ubuntu@bss-ubu1804:~$ cat wynik2.txt 
+witajubuntu@bss-ubu1804:~$ 
+Ctrl+D wysyla komunikat EOF (end-of-file) do terminala. Oznacza koniec wprowadzania danych
+ i zamyka terminal zapisujac zawartosc pliku.

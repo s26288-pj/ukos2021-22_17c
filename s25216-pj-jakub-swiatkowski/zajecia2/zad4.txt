@@ -1,0 +1,2 @@
+Polecenie umask umożliwa ustawienie maski uprawnień, wykonuje odejmowanie uprawnień.
+w przypadku umask 111 i użyciu chmod 777 nadanymi prawami będzie 666, czyli odczyt i zapis dla wszytskich użytkowników
